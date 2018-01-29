@@ -1,0 +1,3181 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://www.javenue.info/post/java-http-server
+Subject: Встроенный HTTP Server на Java
+=D0=BD=D0=B0 Java?=
+Date: Tue, 29 Jan 2018 12:15:14 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----"
+
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-272-d5eaeb85-056b-425b-bcdb-a745cd0b276b@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.javenue.info/post/java-http-server
+
+<!DOCTYPE html><html lang=3D"ru"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <meta name=3D"google-signin-client_id" content=3D"768694631251-v8fn91fu=
+amugmu7rtf06o1vhfts6kb9q.apps.googleusercontent.com">
+
+        <meta name=3D"description" content=3D"=D0=9A=D0=B0=D0=BA =D0=B7=D0=
+=B0=D0=BF=D1=83=D1=81=D1=82=D0=B8=D1=82=D1=8C =D0=BF=D1=80=D0=BE=D1=81=D1=
+=82=D0=BE=D0=B9 HTTP =D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=80 =D0=B2=D0=B5=D0=
+=B1-=D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=B9 =D1=81=D1=
+=80=D0=B5=D0=B4=D1=81=D1=82=D0=B2=D0=B0=D0=BC=D0=B8 Java? =D0=92 =D1=81=D1=
+=82=D0=B0=D1=82=D1=8C=D0=B5 =D0=B2=D1=8B =D0=BD=D0=B0=D0=B9=D0=B4=D0=B5=D1=
+=82=D0=B5 =D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=B8=D0=B5 =D0=BF=D0=B0=D0=
+=BA=D0=B5=D1=82=D0=B0 com.sun.net.httpserver =D0=B8 =D0=BF=D1=80=D0=B8=D0=
+=BC=D0=B5=D1=80 =D0=BA=D0=BE=D0=B4=D0=B0.">
+        <title>=D0=92=D1=81=D1=82=D1=80=D0=BE=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9=
+ HTTP Server =D0=BD=D0=B0 Java</title>
+
+        <link rel=3D"stylesheet" href=3D"http://www.javenue.info/css/main-m=
+in.css?1">
+        <link rel=3D"shortcut icon" type=3D"image/x-icon" href=3D"http://ww=
+w.javenue.info/img/favicon.ico">
+
+       =20
+       =20
+    <style type=3D"text/css">
+:root .adsbygoogle
+{ display: none !important; }
+:root *[mvjbuni][hidden] { display: none !important; }</style><style>.abcRi=
+oButton{-webkit-border-radius:1px;border-radius:1px;-webkit-box-shadow 0 2p=
+x 4px 0px rgba(0,0,0,.25);box-shadow:0 2px 4px 0 rgba(0,0,0,.25);-webkit-bo=
+x-sizing:border-box;box-sizing:border-box;-webkit-transition:background-col=
+or .218s,border-color .218s,box-shadow .218s;transition:background-color .2=
+18s,border-color .218s,box-shadow .218s;-webkit-user-select:none;-webkit-ap=
+pearance:none;background-color:#fff;background-image:none;color:#262626;cur=
+sor:pointer;outline:none;overflow:hidden;position:relative;text-align:cente=
+r;vertical-align:middle;white-space:nowrap;width:auto}.abcRioButton:hover{-=
+webkit-box-shadow:0 0 3px 3px rgba(66,133,244,.3);box-shadow:0 0 3px 3px rg=
+ba(66,133,244,.3)}.abcRioButtonBlue{background-color:#4285f4;border:none;co=
+lor:#fff}.abcRioButtonBlue:hover{background-color:#4285f4}.abcRioButtonBlue=
+:active{background-color:#3367d6}.abcRioButtonLightBlue{background-color:#f=
+ff;color:#757575}.abcRioButtonLightBlue:active{background-color:#eee;color:=
+#6d6d6d}.abcRioButtonIcon{float:left}.abcRioButtonBlue .abcRioButtonIcon{ba=
+ckground-color:#fff;-webkit-border-radius:1px;border-radius:1px}.abcRioButt=
+onSvg{display:block}.abcRioButtonContents{font-family:Roboto,arial,sans-ser=
+if;font-size:14px;font-weight:500;letter-spacing:.21px;margin-left:6px;marg=
+in-right:6px;vertical-align:top}.abcRioButtonContentWrapper{height:100%;wid=
+th:100%}.abcRioButtonBlue .abcRioButtonContentWrapper{border:1px solid tran=
+sparent}.abcRioButtonErrorWrapper,.abcRioButtonWorkingWrapper{display:none;=
+height:100%;width:100%}.abcRioButtonErrorIcon,.abcRioButtonWorkingIcon{marg=
+in-left:auto;margin-right:auto}.abcRioButtonErrorState,.abcRioButtonWorking=
+State{border:1px solid #d5d5d5;border:1px solid rgba(0,0,0,.17);-webkit-box=
+-shadow:0 1px 0 rgba(0,0,0,.05);box-shadow:0 1px 0 rgba(0,0,0,.05);color:#2=
+62626}.abcRioButtonErrorState:hover,.abcRioButtonWorkingState:hover{border:=
+1px solid #aaa;border:1px solid rgba(0,0,0,.25);-webkit-box-shadow:0 1px 0 =
+rgba(0,0,0,.1);box-shadow:0 1px 0 rgba(0,0,0,.1)}.abcRioButtonErrorState:ac=
+tive,.abcRioButtonWorkingState:active{border:1px solid #aaa;border:1px soli=
+d rgba(0,0,0,.25);-webkit-box-shadow:inset 0 1px 0 #ddd;box-shadow:inset 0 =
+1px 0 #ddd;color:#262626}.abcRioButtonWorkingState,.abcRioButtonWorkingStat=
+e:hover{background-color:#f5f5f5}.abcRioButtonWorkingState:active{backgroun=
+d-color:#e5e5e5}.abcRioButtonErrorState,.abcRioButtonErrorState:hover{backg=
+round-color:#fff}.abcRioButtonErrorState:active{background-color:#e5e5e5}.a=
+bcRioButtonWorkingState .abcRioButtonWorkingWrapper,.abcRioButtonErrorState=
+ .abcRioButtonErrorWrapper{display:block}.abcRioButtonErrorState .abcRioBut=
+tonContentWrapper,.abcRioButtonWorkingState .abcRioButtonContentWrapper,.ab=
+cRioButtonErrorState .abcRioButtonWorkingWrapper{display:none}.-webkit-keyf=
+rames abcRioButtonWorkingIconPathSpinKeyframes{0%{-webkit-transform:rotate(=
+0)}} </style><style type=3D"text/css">.fb_hidden{position:absolute;top:-100=
+00px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_inv=
+isible{display:none}.fb_reset{background:none;border:0;border-spacing:0;col=
+or:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verd=
+ana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal=
+;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:v=
+isible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-sh=
+adow:none;text-transform:none;visibility:visible;white-space:normal;word-sp=
+acing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyfra=
+mes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform=
+:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z=
+-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanc=
+ed{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-rad=
+ius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon=
+{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.pn=
+g) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15p=
+x;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_di=
+alog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-c=
+olor:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_ic=
+on:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII=
+6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:activ=
+e{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.p=
+ng) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color=
+:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_to=
+p_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{=
+height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_lef=
+t{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.p=
+ng) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(=
+https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -=
+10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://st=
+atic.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;botto=
+m:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx=
+.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;=
+bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_to=
+p,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha=
+(opacity=3D70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:=
+10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_rig=
+ht{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{=
+width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_hor=
+iz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_=
+dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;co=
+lor:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialo=
+g_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Co=
+u7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_=
+hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;positio=
+n:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loadi=
+ng{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.=
+gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden=
+;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.=
+centered{width:auto;height:auto;min-height:initial;min-width:initial;backgr=
+ound:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_sp=
+inner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_co=
+ntent{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;=
+display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialo=
+g_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;lef=
+t:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dia=
+log_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading if=
+rame{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow=
+:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 1=
+00%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d40=
+88;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflo=
+w:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:mid=
+dle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font=
+-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .=
+dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align=
+:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-s=
+ize:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_cont=
+ent .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, f=
+rom(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487=
+d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box=
+-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969=
+) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18=
+px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .to=
+uchable_button input{border:none;background:none;color:#fff;font:12px Helve=
+tica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;=
+text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_he=
+ader .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:=
+18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_con=
+tent{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-=
+2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0=
+;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1=
+px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{flo=
+at:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgb=
+a(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close=
+_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1=
+.2s linear infinite;background-color:transparent;background-image:url(https=
+://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:=
+no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rot=
+ateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget =
+span{display:inline-block;position:relative;text-align:justify}.fb_iframe_w=
+idget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_w=
+idget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:1=
+00%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relativ=
+e}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relativ=
+e;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-b=
+lock}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{wi=
+dth:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.=
+fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.n=
+et/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margi=
+n-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_m=
+obile_overlay_active{height:100%;overflow:hidden;position:fixed;width:100%}=
+.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms=
+;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;tr=
+ansform:scale(.75, .75)}</style></head>
+
+<body>
+<div class=3D"wrapper">
+
+    <header>
+
+        <div class=3D"logo-container">
+            <a class=3D"media-hide" href=3D"http://www.javenue.info/">
+                <img src=3D"http://www.javenue.info/img/javenue.jpg" width=
+=3D"150" alt=3D"Javenue logo">
+            </a>
+            <div>
+                <p class=3D"blog-title">Javenue</p>
+                <p class=3D"media-hide">=D0=9F=D1=80=D0=BE=D0=B3=D1=80=D0=
+=B0=D0=BC=D0=BC=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5 =D0=BD=D0=
+=B0 Java</p>
+                <p class=3D"media-hide">=D0=98=D0=BD=D1=84=D0=BE=D1=80=D0=
+=BC=D0=B0=D1=86=D0=B8=D0=BE=D0=BD=D0=BD=D1=8B=D0=B5 =D1=82=D0=B5=D1=85=D0=
+=BD=D0=BE=D0=BB=D0=BE=D0=B3=D0=B8=D0=B8</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li class=3D"media-show"><a href=3D"http://www.javenue.info=
+/" class=3D"highlight">Javenue Blog Home</a></li>
+                                    <li>
+                        <a href=3D"http://www.javenue.info/" class=3D" high=
+light                              first-item ">Home</a>
+                    </li>
+                                    <li>
+                        <a href=3D"http://www.javenue.info/themes/java" cla=
+ss=3D"                            ">Java</a>
+                    </li>
+                                    <li>
+                        <a href=3D"http://www.javenue.info/themes/open-sour=
+ce" class=3D"                            ">Open-Source</a>
+                    </li>
+                                    <li>
+                        <a href=3D"http://www.javenue.info/themes/off-topic=
+" class=3D"                            ">Off-Topic</a>
+                    </li>
+                                    <li>
+                        <a href=3D"http://www.javenue.info/about" class=3D"=
+                            ">About</a>
+                    </li>
+                            </ul>
+        </nav>
+
+        <div class=3D"popupMessage" style=3D"display: none;"></div>
+
+    </header>
+
+    <div class=3D"columns">
+        <aside class=3D"sidebar">
+            <div class=3D"sidebar-block follow">
+                <a href=3D"https://twitter.com/JavenueBlog" target=3D"_blan=
+k" rel=3D"nofollow" class=3D"follow-twitter">
+                    <img src=3D"http://www.javenue.info/img/twitter.png" al=
+t=3D"Javenue Twitter">
+                </a>
+                <a href=3D"http://feeds.feedburner.com/javenue-java" target=
+=3D"_blank" rel=3D"nofollow" class=3D"follow-rss">
+                    <img src=3D"http://www.javenue.info/img/rss.png" alt=3D=
+"Javenue RSS Feed">
+                </a>
+                <a href=3D"http://www.javenue.info/post/java-http-server#" =
+class=3D"follow-email">
+                    <img src=3D"http://www.javenue.info/img/email.png" alt=
+=3D"Javenue Email Subscription">
+                </a>
+
+                                <div class=3D"email-form" style=3D"display:=
+ none;">
+                    <input type=3D"text" placeholder=3D"=D0=92=D0=B2=D0=B5=
+=D0=B4=D0=B8=D1=82=D0=B5 =D0=B2=D0=B0=D1=88 E-Mail">
+                    <input type=3D"button" value=3D"=D0=A5=D0=BE=D1=87=D1=
+=83 =D0=B1=D1=8B=D1=82=D1=8C =D0=B2 =D1=82=D0=B5=D0=BC=D0=B5!" "=3D"">
+                </div>
+                            </div>
+
+            <div class=3D"sidebar-block">
+               =20
+               =20
+               =20
+            </div>
+
+            <div class=3D"sidebar-block">
+                <p class=3D"title">=D0=9A=D0=B0=D1=82=D0=B5=D0=B3=D0=BE=D1=
+=80=D0=B8=D0=B8</p>
+
+                <ul>
+                                        <li><a href=3D"http://www.javenue.i=
+nfo/themes/java">Java</a></li>
+                                        <li><a href=3D"http://www.javenue.i=
+nfo/themes/java-tutorial">=D0=A2=D1=83=D1=82=D0=BE=D1=80=D0=B8=D0=B0=D0=BB=
+=D1=8B =D0=BF=D0=BE =D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC=D0=BC=D0=B8=
+=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8E</a></li>
+                                        <li><a href=3D"http://www.javenue.i=
+nfo/themes/ood">=D0=9E=D0=9E=D0=9F =D0=B8 =D0=BF=D0=B0=D1=82=D1=82=D0=B5=D1=
+=80=D0=BD=D1=8B =D0=BF=D1=80=D0=BE=D0=B5=D0=BA=D1=82=D0=B8=D1=80=D0=BE=D0=
+=B2=D0=B0=D0=BD=D0=B8=D1=8F</a></li>
+                                        <li><a href=3D"http://www.javenue.i=
+nfo/themes/java-gui">=D0=93=D1=80=D0=B0=D1=84=D0=B8=D1=87=D0=B5=D1=81=D0=BA=
+=D0=B8=D0=B9 =D0=B8=D0=BD=D1=82=D0=B5=D1=80=D1=84=D0=B5=D0=B9=D1=81 =D0=BD=
+=D0=B0 Java</a></li>
+                                        <li><a href=3D"http://www.javenue.i=
+nfo/themes/db">=D0=91=D0=B0=D0=B7=D1=8B =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=
+=85 =D0=B8 =D1=8F=D0=B7=D1=8B=D0=BA =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81=D0=
+=BE=D0=B2 SQL</a></li>
+                                        <li><a href=3D"http://www.javenue.i=
+nfo/themes/trash">Trash</a></li>
+                                        <li><a href=3D"http://www.javenue.i=
+nfo/themes/open-source">Open-Source</a></li>
+                                        <li><a href=3D"http://www.javenue.i=
+nfo/themes/off-topic">Off-Topic</a></li>
+                                    </ul>
+            </div>
+        </aside>
+
+        <div class=3D"content"><article>
+    <h1>=D0=92=D1=81=D1=82=D1=80=D0=BE=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9 HTTP S=
+erver =D0=BD=D0=B0 Java</h1>
+
+    <div class=3D"post-info">
+        <span>2016-01-02</span>
+                    <a href=3D"http://www.javenue.info/themes/java">
+                Java
+            </a>
+                <span></span>
+    </div>
+
+    <p>=D0=92 =D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=82=D0=B5 =D0=B5=
+=D1=81=D1=82=D1=8C =D0=BC=D0=B8=D0=BB=D0=BB=D0=B8=D0=BE=D0=BD =D1=81=D1=82=
+=D0=B0=D1=82=D0=B5=D0=B9 =D0=BD=D0=B0 =D1=82=D0=B5=D0=BC=D1=83 - =D0=BA=D0=
+=B0=D0=BA=D0=BE=D0=B9 =D0=B2=D0=B5=D0=B1-=D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=
+=80 =D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D1=
+=8C =D0=B4=D0=BB=D1=8F java-=D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=
+=BD=D0=B8=D0=B9.
+    =D0=9E=D0=B1=D1=8B=D1=87=D0=BD=D0=BE =D0=B2=D1=81=D0=B5 =D1=81=D0=B2=D0=
+=BE=D0=B4=D0=B8=D1=82=D1=81=D1=8F =D0=BA =D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=
+=80=D0=B0=D0=BC =D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=
+=B9 =D1=82=D0=B8=D0=BF=D0=B0 JBoss =D0=B8=D0=BB=D0=B8 WebSphere, =D0=BB=D0=
+=B8=D0=B1=D0=BE =D0=BA =D0=B2=D0=B5=D0=B1-=D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=
+=80=D0=B0=D0=BC =D1=81 servlet-=D0=BA=D0=BE=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=
+=D0=B5=D1=80=D0=B0=D0=BC=D0=B8 =D1=82=D0=B8=D0=BF=D0=B0 Tomcat =D0=B8=D0=BB=
+=D0=B8 Jetty.</p>
+<p>=D0=9B=D0=B8=D1=87=D0=BD=D0=BE =D1=8F =D0=B2=D0=BE=D1=82 =D1=83=D0=B6=D0=
+=B5 =D0=B4=D0=BE=D0=BB=D0=B3=D0=BE=D0=B5 =D0=B2=D1=80=D0=B5=D0=BC=D1=8F =D0=
+=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D1=8E Jetty, =D0=BD=D0=BE =D1=
+=81=D0=B5=D0=B9=D1=87=D0=B0=D1=81 =D0=BD=D0=B5 =D0=BE=D0=B1 =D1=8D=D1=82=D0=
+=BE=D0=BC.
+    =D0=94=D0=B5=D0=BB=D0=BE =D0=B2 =D1=82=D0=BE=D0=BC, =D1=87=D1=82=D0=BE =
+=D0=B2 JDK =D0=BE=D1=82 Sun/Oracle =D1=83=D0=B6=D0=B5 =D0=B5=D1=81=D1=82=D1=
+=8C =D1=81=D1=82=D0=B0=D0=B1=D0=B8=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9 =D0=B8 =D0=
+=BF=D1=80=D0=BE=D1=81=D1=82=D0=BE=D0=B9 =D0=B2 =D0=B8=D1=81=D0=BF=D0=BE=D0=
+=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B8 HTTP =D1=81=D0=B5=D1=80=
+=D0=B2=D0=B5=D1=80.</p>
+<p>=D0=9A=D1=82=D0=BE =D0=BD=D0=B5 =D0=B7=D0=BD=D0=B0=D0=B5=D1=82, =D0=B2=
+=D0=B5=D0=B1-=D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=80 - =D1=8D=D1=82=D0=BE =D0=
+=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5, =D0=BA=D0=BE=D1=
+=82=D0=BE=D1=80=D0=BE=D0=B5 =D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=
+=83=D0=B5=D1=82 HTTP =D0=BF=D1=80=D0=BE=D1=82=D0=BE=D0=BA=D0=BE=D0=BB =D0=
+=B4=D0=BB=D1=8F =D0=BE=D0=B1=D1=80=D0=B0=D0=B1=D0=BE=D1=82=D0=BA=D0=B8 =D0=
+=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81=D0=BE=D0=B2 =D0=BE=D1=82 HTTP =D0=BA=D0=
+=BB=D0=B8=D0=B5=D0=BD=D1=82=D0=BE=D0=B2 (=D0=BE=D0=B1=D1=8B=D1=87=D0=BD=D0=
+=BE =D1=8D=D1=82=D0=BE =D0=B1=D1=80=D0=B0=D1=83=D0=B7=D0=B5=D1=80=D1=8B) =
+=D0=B2 =D1=81=D0=B5=D1=82=D0=B8 =D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=
+=D1=82.</p>
+
+<p>=D0=92 =D1=8D=D1=82=D0=BE=D0=B9 =D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B5 =D0=
+=B2=D1=8B =D0=BD=D0=B0=D0=B9=D0=B4=D0=B5=D1=82=D0=B5 =D0=BF=D1=80=D0=B8=D0=
+=BC=D0=B5=D1=80=D1=8B =D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=
+=B2=D0=B0=D0=BD=D0=B8=D1=8F =D0=BA=D0=BB=D0=B0=D1=81=D1=81=D0=BE=D0=B2 =D0=
+=B8=D0=B7 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0 com.sun.net.httpserver =D0=
+=B4=D0=BB=D1=8F =D0=B7=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0 HttpServer.
+    =D0=95=D1=81=D0=BB=D0=B8 =D0=B2=D1=8B =D1=81=D1=87=D0=B8=D1=82=D0=B0=D0=
+=B5=D1=82=D0=B5, =D1=87=D1=82=D0=BE =D1=8D=D1=82=D0=BE =D0=BF=D1=80=D0=BE=
+=D0=BF=D1=80=D0=B8=D0=B5=D1=82=D0=B0=D1=80=D0=BD=D0=BE=D0=B5 API =D0=B8 =D0=
+=B5=D0=B3=D0=BE =D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=
+=B0=D1=82=D1=8C =D0=BD=D0=B5=D0=BB=D1=8C=D0=B7=D1=8F, =D1=81=D1=80=D0=B0=D0=
+=B7=D1=83 =D0=BF=D0=B5=D1=80=D0=B5=D1=85=D0=BE=D0=B4=D0=B8=D1=82=D0=B5 =D0=
+=BA =D0=B7=D0=B0=D0=BA=D0=BB=D1=8E=D1=87=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D0=
+=BD=D0=BE=D0=B9 =D1=87=D0=B0=D1=81=D1=82=D0=B8 =D1=81=D1=82=D0=B0=D1=82=D1=
+=8C=D0=B8 =D0=B7=D0=B0 =D1=80=D0=B0=D0=B7=D1=8A=D1=8F=D1=81=D0=BD=D0=B5=D0=
+=BD=D0=B8=D1=8F=D0=BC=D0=B8 =D0=BF=D0=BE=D1=87=D0=B5=D0=BC=D1=83 =D0=B2=D1=
+=8B =D0=BD=D0=B5 =D0=BF=D1=80=D0=B0=D0=B2=D1=8B.</p>
+
+<p>=D0=9F=D0=BB=D0=B0=D0=BD =D0=BD=D0=B0 =D1=81=D0=B5=D0=B3=D0=BE=D0=B4=D0=
+=BD=D1=8F =D1=82=D0=B0=D0=BA=D0=BE=D0=B9:</p>
+<ul>
+    <li><a href=3D"http://www.javenue.info/post/java-http-server#run-server=
+">=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA com.sun.net.httpserver.HttpServer</a=
+></li>
+    <li><a href=3D"http://www.javenue.info/post/java-http-server#add-authen=
+ticator">=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D0=BC Authenticat=
+or</a></li>
+    <li><a href=3D"http://www.javenue.info/post/java-http-server#echo-web-s=
+erver">=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80 Echo =D0=B2=D0=B5=D0=B1-=D1=81=
+=D0=B5=D1=80=D0=B2=D0=B5=D1=80=D0=B0</a></li>
+    <li><a href=3D"http://www.javenue.info/post/java-http-server#conclusion=
+">=D0=97=D0=B0=D0=BA=D0=BB=D1=8E=D1=87=D0=B5=D0=BD=D0=B8=D0=B5</a></li>
+</ul>
+
+<h2 id=3D"run-server">=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA HttpServer</h2>
+<p>=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA =D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=
+=80=D0=B0 =D0=BD=D0=B0 Java =D0=B2=D1=8B=D0=B3=D0=BB=D1=8F=D0=B4=D0=B8=D1=
+=82 =D1=82=D0=B0=D0=BA=D0=B8=D0=BC =D0=BE=D0=B1=D1=80=D0=B0=D0=B7=D0=BE=D0=
+=BC:</p>
+<pre class=3D"lang-java hljs">HttpServer server =3D HttpServer.create();
+server.bind(<span class=3D"hljs-keyword">new</span> InetSocketAddress(<span=
+ class=3D"hljs-number">8765</span>), <span class=3D"hljs-number">0</span>);
+server.createContext(<span class=3D"hljs-string">"/"</span>, <span class=3D=
+"hljs-keyword">new</span> SomeHandler())
+server.start();
+</pre>
+
+<p>=D0=9C=D0=B5=D1=82=D0=BE=D0=B4 HttpServer.create() =D1=81=D0=BE=D0=B7=D0=
+=B4=D0=B0=D0=B5=D1=82 =D0=B2=D0=B5=D0=B1-=D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=
+=80. =D0=9C=D0=B5=D1=82=D0=BE=D0=B4 bind =D0=B2=D0=B2=D0=BE=D0=B4=D0=B8=D1=
+=82 =D1=81=D0=BE=D0=BE=D1=82=D0=B2=D0=B5=D1=82=D1=81=D1=82=D0=B8=D0=B2=D0=
+=B5 =D0=BC=D0=B5=D0=B6=D0=B4=D1=83 HTTP =D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=
+=80=D0=BE=D0=BC =D0=B8 =D1=81=D0=B2=D1=8F=D0=B7=D0=BA=D0=BE=D0=B9 =D0=B0=D0=
+=B4=D1=80=D0=B5=D1=81-=D0=BF=D0=BE=D1=80=D1=82.
+    =D0=9E=D0=B1=D1=80=D0=B0=D1=82=D0=B8=D1=82=D0=B5 =D0=B2=D0=BD=D0=B8=D0=
+=BC=D0=B0=D0=BD=D0=B8=D0=B5 =D0=BD=D0=B0 =D0=B2=D1=82=D0=BE=D1=80=D0=BE=D0=
+=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80 =D0=BC=D0=B5=D1=82=D0=
+=BE=D0=B4=D0=B0 - =D0=BE=D0=BD =D0=BD=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=
+=D1=82=D1=81=D1=8F backlog =D0=B8 =D1=83=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=
+=B0=D0=B5=D1=82 =D0=BC=D0=B0=D0=BA=D1=81=D0=B8=D0=BC=D0=B0=D0=BB=D1=8C=D0=
+=BD=D0=BE=D0=B5 =D0=BA=D0=BE=D0=BB=D0=B8=D1=87=D0=B5=D1=81=D1=82=D0=B2=D0=
+=BE TCP =D1=81=D0=BE=D0=B5=D0=B4=D0=B8=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9, =D0=
+=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =D0=B1=D1=83=D0=B4=D1=83=D1=82 =D1=
+=85=D1=80=D0=B0=D0=BD=D0=B8=D1=82=D1=8C=D1=81=D1=8F =D0=B2 =D0=BE=D1=87=D0=
+=B5=D1=80=D0=B5=D0=B4=D0=B8 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81=D0=BE=D0=
+=B2 =D1=81=D0=B5=D1=80=D0=B2=D0=B5=D1=80=D0=B0.
+    =D0=9A=D0=BE=D0=B3=D0=B4=D0=B0 =D0=BA=D0=BE=D0=BB=D0=B8=D1=87=D0=B5=D1=
+=81=D1=82=D0=B2=D0=BE =D1=81=D0=BE=D0=B5=D0=B4=D0=B8=D0=BD=D0=B5=D0=BD=D0=
+=B8=D0=B9 =D0=BF=D1=80=D0=B8=D0=B2=D1=8B=D1=81=D0=B8=D1=82 =D1=8D=D1=82=D0=
+=BE =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5, =D0=B2=D1=81=D0=B5 =
+=D0=BD=D0=BE=D0=B2=D1=8B=D0=B5 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81=D1=8B =
+=D0=B1=D1=83=D0=B4=D1=83=D1=82 =D0=B8=D0=B3=D0=BD=D0=BE=D1=80=D0=B8=D1=80=
+=D0=BE=D0=B2=D0=B0=D1=82=D1=8C=D1=81=D1=8F.</p>
+<p>=D0=94=D0=BB=D1=8F =D0=B7=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0 =D1=81=D0=
+=B5=D1=80=D0=B2=D0=B5=D1=80=D0=B0 =D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=
+=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F =D0=BC=D0=B5=D1=82=D0=BE=D0=B4 start. =D0=
+=9A=D1=80=D0=BE=D0=BC=D0=B5 =D1=82=D0=BE=D0=B3=D0=BE, =D1=83 =D0=BA=D0=BB=
+=D0=B0=D1=81=D1=81=D0=B0 =D0=B5=D1=81=D1=82=D1=8C =D0=B5=D1=89=D0=B5 =D0=BC=
+=D0=B5=D1=82=D0=BE=D0=B4 stop,
+    =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B9 =D0=BF=D1=80=D0=B8=D0=BD=D0=
+=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B2 =D0=BA=D0=B0=D1=87=D0=B5=D1=81=D1=82=D0=
+=B2=D0=B5 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=B0 int =D0=B7=
+=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 - =D0=B2=D1=80=D0=B5=D0=BC=D1=8F=
+ =D0=B2 =D1=81=D0=B5=D0=BA=D1=83=D0=BD=D0=B4=D0=B0=D1=85, =D1=87=D0=B5=D1=
+=80=D0=B5=D0=B7 =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D0=BE=D0=B5 =D0=B1=D1=83=D0=
+=B4=D0=B5=D1=82 =D0=B7=D0=B0=D0=BA=D1=80=D1=8B=D1=82 =D1=81=D0=BE=D0=BA=D0=
+=B5=D1=82, =D1=81=D0=BB=D1=83=D1=88=D0=B0=D1=8E=D1=89=D0=B8=D0=B9 TCP =D1=
+=81=D0=BE=D0=B5=D0=B4=D0=B8=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F.</p>
+<p>=D0=9D=D1=83 =D0=B8 =D1=81=D0=B0=D0=BC=D0=BE=D0=B5 =D0=B3=D0=BB=D0=B0=D0=
+=B2=D0=BD=D0=BE=D0=B5 - =D0=B4=D0=BB=D1=8F =D0=BE=D0=B1=D1=80=D0=B0=D0=B1=
+=D0=BE=D1=82=D0=BA=D0=B8 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81=D0=BE=D0=B2 =
+=D0=BD=D0=B0=D0=BC =D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC =
+=D1=81=D0=BF=D0=B5=D1=86=D0=B8=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9 =D0=BE=
+=D0=B1=D1=80=D0=B0=D0=B1=D0=BE=D1=82=D1=87=D0=B8=D0=BA - =D1=80=D0=B5=D0=B0=
+=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D1=8F =D0=B8=D0=BD=D1=82=D0=B5=D1=80=
+=D1=84=D0=B5=D0=B9=D1=81=D0=B0 HttpHandler
+    =D1=81 =D0=B5=D0=B4=D0=B8=D0=BD=D1=81=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D1=
+=8B=D0=BC =D0=BC=D0=B5=D1=82=D0=BE=D0=B4=D0=BE=D0=BC handle, =D0=BF=D1=80=
+=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D1=8E=D1=89=D0=B8=D0=BC =D0=BD=D0=B0 =D0=B2=
+=D1=85=D0=BE=D0=B4 HttpExchange.</p>
+
+<p>=D0=95=D1=81=D0=BB=D0=B8 =D0=BA=D1=82=D0=BE =D0=B7=D0=BD=D0=B0=D0=BA=D0=
+=BE=D0=BC =D1=81=D0=BE =D1=81=D0=BF=D0=B5=D1=86=D0=B8=D1=84=D0=B8=D0=BA=D0=
+=B0=D1=86=D0=B8=D0=B5=D0=B9 =D1=81=D0=B5=D1=80=D0=B2=D0=BB=D0=B5=D1=82=D0=
+=BE=D0=B2, =D1=82=D0=BE HttpExchange =D0=BF=D1=80=D0=B5=D0=B4=D1=81=D1=82=
+=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D1=82 =D0=B8=D0=B7 =D1=81=D0=B5=D0=B1=D1=8F =
+=D1=87=D1=82=D0=BE-=D1=82=D0=BE =D1=82=D0=B8=D0=BF=D0=B0 =D0=BE=D0=B1=D1=8A=
+=D0=B5=D0=B4=D0=B8=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F HTTPServletRequest =D0=B8 =
+HTTPServletResponse. =D0=A1=D0=BF=D0=B8=D1=81=D0=BE=D0=BA =D0=BF=D0=BE=D0=
+=BB=D0=B5=D0=B7=D0=BD=D1=8B=D1=85 =D0=BC=D0=B5=D1=82=D0=BE=D0=B4=D0=BE=D0=
+=B2 =D0=BA=D0=BB=D0=B0=D1=81=D1=81=D0=B0 HttpExchange:</p>
+<ul>
+    <li>getRequestBody - =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D0=B5=D0=BC =
+=D0=BF=D0=BE=D1=82=D0=BE=D0=BA, =D0=B8=D0=B7 =D0=BA=D0=BE=D1=82=D0=BE=D1=80=
+=D0=BE=D0=B3=D0=BE =D0=BC=D0=BE=D0=B6=D0=B5=D1=82 =D0=B1=D1=8B=D1=82=D1=8C =
+=D0=B2=D1=8B=D1=87=D0=B8=D1=82=D0=B0=D0=BD=D0=BE =D1=82=D0=B5=D0=BB=D0=BE =
+=D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81=D0=B0;</li>
+    <li>getRequestHeader - =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D0=B5=D0=BC=
+ =D0=BD=D0=B5=D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D1=8F=D0=B5=D0=BC=D1=83=D1=8E M=
+ap =D1=85=D0=B5=D0=B4=D0=B5=D1=80=D0=BE=D0=B2 =D0=B4=D0=B0=D0=BD=D0=BD=D0=
+=BE=D0=B3=D0=BE HTTP =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81=D0=B0;</li>
+    <li>getRequestURI - URI =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81=D0=B0;</li=
+>
+    <li>getResponseBody - =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D0=B5=D0=BC =
+=D0=BF=D0=BE=D1=82=D0=BE=D0=BA =D0=B4=D0=BB=D1=8F =D0=B7=D0=B0=D0=BF=D0=B8=
+=D1=81=D0=B8 =D0=BE=D1=82=D0=B2=D0=B5=D1=82=D0=B0 =D1=81=D0=B5=D1=80=D0=B2=
+=D0=B5=D1=80=D0=B0;</li>
+    <li>getResponseHeaders - =D0=BC=D0=BE=D0=B4=D0=B8=D1=84=D0=B8=D1=86=D0=
+=B8=D1=80=D1=83=D0=B5=D0=BC=D0=B0=D1=8F Map =D0=B4=D0=BB=D1=8F =D1=85=D0=B5=
+=D0=B4=D0=B5=D1=80=D0=BE=D0=B2 =D0=BE=D1=82=D0=B2=D0=B5=D1=82=D0=B0 =D1=81=
+=D0=B5=D1=80=D0=B2=D0=B5=D1=80=D0=B0;</li>
+    <li>close - =D0=B7=D0=B0=D0=BA=D1=80=D1=8B=D0=B2=D0=B0=D0=B5=D0=BC =D1=
+=82=D0=B5=D0=BA=D1=83=D1=89=D0=B8=D0=B9 exchange - =D0=BF=D1=80=D0=B8 =D1=
+=8D=D1=82=D0=BE=D0=BC =D1=81=D0=BD=D0=B0=D1=87=D0=B0=D0=BB=D0=B0 =D0=B7=D0=
+=B0=D0=BA=D1=80=D1=8B=D0=B2=D0=B0=D0=B5=D1=82=D1=81=D1=8F InputStream, =D0=
+=B0 =D0=BF=D0=BE=D1=82=D0=BE=D0=BC OutputStream, =D0=B5=D1=81=D0=BB=D0=B8 =
+=D0=BA=D0=BE=D0=BD=D0=B5=D1=87=D0=BD=D0=BE =D0=BE=D0=BD=D0=B8 =D0=B5=D1=89=
+=D0=B5 =D0=BD=D0=B5 =D0=B7=D0=B0=D0=BA=D1=80=D1=8B=D1=82=D1=8B =D0=B2=D1=80=
+=D1=83=D1=87=D0=BD=D1=83=D1=8E.</li>
+</ul>
+
+<h2 id=3D"add-authenticator">=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D1=8F=D0=
+=B5=D0=BC =D0=B0=D1=83=D1=82=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=
+=B0=D1=82=D0=BE=D1=80</h2>
+<p>=D0=94=D0=BB=D1=8F =D0=BE=D0=B3=D1=80=D0=B0=D0=BD=D0=B8=D1=87=D0=B5=D0=
+=BD=D0=B8=D1=8F =D0=B4=D0=BE=D1=81=D1=82=D1=83=D0=BF=D0=B0 =D0=BA =D0=B2=D0=
+=B5=D0=B1-=D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D1=8E =D0=
+=BC=D0=BE=D0=B6=D0=BD=D0=BE =D0=B2=D0=BE=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=
+=B7=D0=BE=D0=B2=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=B0=D1=83=D1=82=D0=B5=D0=
+=BD=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=82=D0=BE=D1=80=D0=BE=D0=BC, =D0=
+=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B9 =D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D0=
+=BB=D1=8F=D0=B5=D1=81=D1=8F =D0=B2 HttpContext =D1=81 =D0=BF=D0=BE=D0=BC=D0=
+=BE=D1=89=D1=8C=D1=8E =D0=BE=D0=B4=D0=BD=D0=BE=D0=B8=D0=BC=D0=B5=D0=BD=D0=
+=BD=D0=BE=D0=B3=D0=BE =D0=BC=D0=B5=D1=82=D0=BE=D0=B4=D0=B0 setAuthenticator=
+.</p>
+<p>=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80 =D0=BF=D1=80=D0=BE=D1=81=D1=82=D0=
+=BE=D0=B3=D0=BE =D0=B0=D1=83=D1=82=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=D0=
+=BA=D0=B0=D1=82=D0=BE=D1=80=D0=B0:</p>
+<pre class=3D"lang-java hljs"><span class=3D"hljs-class"><span class=3D"hlj=
+s-keyword">class</span> <span class=3D"hljs-title">Auth</span> <span class=
+=3D"hljs-keyword">extends</span> <span class=3D"hljs-title">Authenticator</=
+span> </span>{
+    <span class=3D"hljs-meta">@Override</span>
+    <span class=3D"hljs-function"><span class=3D"hljs-keyword">public</span=
+> Result <span class=3D"hljs-title">authenticate</span><span class=3D"hljs-=
+params">(HttpExchange httpExchange)</span> </span>{
+        <span class=3D"hljs-keyword">if</span> (<span class=3D"hljs-string"=
+>"/forbidden"</span>.equals(httpExchange.getRequestURI().toString()))
+            <span class=3D"hljs-keyword">return</span> <span class=3D"hljs-=
+keyword">new</span> Failure(<span class=3D"hljs-number">403</span>);
+        <span class=3D"hljs-keyword">else</span>
+            <span class=3D"hljs-keyword">return</span> <span class=3D"hljs-=
+keyword">new</span> Success(<span class=3D"hljs-keyword">new</span> HttpPri=
+ncipal(<span class=3D"hljs-string">"c0nst"</span>, <span class=3D"hljs-stri=
+ng">"realm"</span>));
+    }
+}
+</pre>
+<p>=D0=9C=D0=B5=D1=82=D0=BE=D0=B4 authenticate =D0=BF=D1=80=D0=B8=D0=BD=D0=
+=B8=D0=BC=D0=B0=D0=B5=D1=82 httpExchange =D0=B8 =D0=B2=D0=BE=D0=B7=D0=B2=D1=
+=80=D0=B0=D1=89=D0=B0=D0=B5=D1=82 Result. =D0=A0=D0=B5=D0=B7=D1=83=D0=BB=D1=
+=8C=D1=82=D0=B0=D1=82=D1=8B =D0=BC=D0=BE=D0=B3=D1=83=D1=82 =D0=B1=D1=8B=D1=
+=82=D1=8C =D1=82=D0=B0=D0=BA=D0=B8=D0=BC=D0=B8:</p>
+<ul>
+    <li>Success - =D0=B0=D1=83=D1=82=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=D0=
+=BA=D0=B0=D1=86=D0=B8=D1=8F =D1=83=D1=81=D0=BF=D0=B5=D1=88=D0=BD=D0=B0 =D1=
+=81 =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D0=B5=D0=B9 =D0=
+=BE =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=
+=B5;</li>
+    <li>Failure - =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D0=B0 =D0=B0=D1=83=D1=82=
+=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D0=B8 =D1=81 =
+=D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=B8=D0=B5=D0=BC =D0=BA=D0=BE=D0=B4=
+=D0=B0 =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D0=B8;</li>
+    <li>Retry - =D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=
+=BE =D0=BF=D0=BE=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D1=82=D1=8C =D0=BF=D0=BE=D0=
+=BF=D1=8B=D1=82=D0=BA=D1=83 =D0=B0=D1=83=D1=82=D0=B5=D0=BD=D1=82=D0=B8=D1=
+=84=D0=B8=D0=BA=D0=B0=D1=86=D0=B8=D0=B8.</li>
+</ul>
+<p>=D0=92 =D0=BD=D0=B0=D1=88=D0=B5=D0=BC =D1=81=D0=BB=D1=83=D1=87=D0=B0=D0=
+=B5, =D0=B5=D1=81=D0=BB=D0=B8 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81 =D0=BD=
+=D0=B0=D1=87=D0=B8=D0=BD=D0=B0=D0=B5=D1=82=D1=81=D1=8F =D1=81 forbidden, =
+=D1=82=D0=BE =D0=B2=D0=BE=D0=B7=D0=B2=D1=80=D0=B0=D1=89=D0=B0=D0=B5=D0=BC F=
+ailure, =D0=B2 =D0=BF=D1=80=D0=BE=D1=82=D0=B8=D0=B2=D0=BD=D0=BE=D0=BC =D1=
+=81=D0=BB=D1=83=D1=87=D0=B0=D0=B5 =D0=B2=D0=BE=D0=B7=D0=B2=D1=80=D0=B0=D1=
+=89=D0=B0=D0=B5=D0=BC =D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82 Success.
+    =D0=9A=D0=BB=D0=B0=D1=81=D1=81 Success =D1=81=D0=BE=D0=B4=D0=B5=D1=80=
+=D0=B6=D0=B8=D1=82 =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=
+=D1=8E =D0=BE=D0=B1 =D0=B0=D1=83=D1=82=D0=B5=D0=BD=D1=82=D0=B8=D1=84=D0=B8=
+=D1=86=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D0=BE=D0=BC =D0=BF=D0=BE=
+=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B5 - HttpPrincipa=
+l.</p>
+
+<h2 id=3D"echo-web-server">=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80 Echo =D1=81=
+=D0=B5=D1=80=D0=B2=D0=B5=D1=80=D0=B0</h2>
+<p>=D0=90 =D0=B2=D0=BE=D1=82 =D0=B8 =D0=BF=D0=BE=D0=BB=D0=BD=D1=8B=D0=B9 =
+=D0=BA=D0=BE=D0=B4 =D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80=D0=B0 =D0=BF=D1=80=
+=D0=BE=D1=81=D1=82=D0=BE=D0=B3=D0=BE echo =D0=B2=D0=B5=D0=B1-=D1=81=D0=B5=
+=D1=80=D0=B2=D0=B5=D1=80=D0=B0:</p>
+<pre class=3D"hljs java"><span class=3D"hljs-keyword">import</span> com.sun=
+.net.httpserver.*;
+
+<span class=3D"hljs-keyword">import</span> java.io.IOException;
+<span class=3D"hljs-keyword">import</span> java.io.OutputStream;
+<span class=3D"hljs-keyword">import</span> java.net.InetSocketAddress;
+
+<span class=3D"hljs-keyword">public</span> <span class=3D"hljs-class"><span=
+ class=3D"hljs-keyword">class</span> <span class=3D"hljs-title">SimpleHttpS=
+erver</span> </span>{
+    <span class=3D"hljs-function"><span class=3D"hljs-keyword">public</span=
+> <span class=3D"hljs-keyword">static</span> <span class=3D"hljs-keyword">v=
+oid</span> <span class=3D"hljs-title">main</span><span class=3D"hljs-params=
+">(String[] args)</span> <span class=3D"hljs-keyword">throws</span> Excepti=
+on </span>{
+        HttpServer server =3D HttpServer.create();
+        server.bind(<span class=3D"hljs-keyword">new</span> InetSocketAddre=
+ss(<span class=3D"hljs-number">8765</span>), <span class=3D"hljs-number">0<=
+/span>);
+
+        HttpContext context =3D server.createContext(<span class=3D"hljs-st=
+ring">"/"</span>, <span class=3D"hljs-keyword">new</span> EchoHandler());
+        context.setAuthenticator(<span class=3D"hljs-keyword">new</span> Au=
+th());
+
+        server.setExecutor(<span class=3D"hljs-keyword">null</span>);
+        server.start();
+    }
+
+    <span class=3D"hljs-keyword">static</span> <span class=3D"hljs-class"><=
+span class=3D"hljs-keyword">class</span> <span class=3D"hljs-title">EchoHan=
+dler</span> <span class=3D"hljs-keyword">implements</span> <span class=3D"h=
+ljs-title">HttpHandler</span> </span>{
+        <span class=3D"hljs-meta">@Override</span>
+        <span class=3D"hljs-function"><span class=3D"hljs-keyword">public</=
+span> <span class=3D"hljs-keyword">void</span> <span class=3D"hljs-title">h=
+andle</span><span class=3D"hljs-params">(HttpExchange exchange)</span> <spa=
+n class=3D"hljs-keyword">throws</span> IOException </span>{
+            StringBuilder builder =3D <span class=3D"hljs-keyword">new</spa=
+n> StringBuilder();
+
+            builder.append(<span class=3D"hljs-string">"&lt;h1&gt;URI: "</s=
+pan>).append(exchange.getRequestURI()).append(<span class=3D"hljs-string">"=
+&lt;/h1&gt;"</span>);
+
+            Headers headers =3D exchange.getRequestHeaders();
+            <span class=3D"hljs-keyword">for</span> (String header : header=
+s.keySet()) {
+                builder.append(<span class=3D"hljs-string">"&lt;p&gt;"</spa=
+n>).append(header).append(<span class=3D"hljs-string">"=3D"</span>)
+                        .append(headers.getFirst(header)).append(<span clas=
+s=3D"hljs-string">"&lt;/p&gt;"</span>);
+            }
+
+            <span class=3D"hljs-keyword">byte</span>[] bytes =3D builder.to=
+String().getBytes();
+            exchange.sendResponseHeaders(<span class=3D"hljs-number">200</s=
+pan>, bytes.length);
+
+            OutputStream os =3D exchange.getResponseBody();
+            os.write(bytes);
+            os.close();
+        }
+    }
+
+    <span class=3D"hljs-keyword">static</span> <span class=3D"hljs-class"><=
+span class=3D"hljs-keyword">class</span> <span class=3D"hljs-title">Auth</s=
+pan> <span class=3D"hljs-keyword">extends</span> <span class=3D"hljs-title"=
+>Authenticator</span> </span>{
+        <span class=3D"hljs-meta">@Override</span>
+        <span class=3D"hljs-function"><span class=3D"hljs-keyword">public</=
+span> Result <span class=3D"hljs-title">authenticate</span><span class=3D"h=
+ljs-params">(HttpExchange httpExchange)</span> </span>{
+            <span class=3D"hljs-keyword">if</span> (<span class=3D"hljs-str=
+ing">"/forbidden"</span>.equals(httpExchange.getRequestURI().toString()))
+                <span class=3D"hljs-keyword">return</span> <span class=3D"h=
+ljs-keyword">new</span> Failure(<span class=3D"hljs-number">403</span>);
+            <span class=3D"hljs-keyword">else</span>
+                <span class=3D"hljs-keyword">return</span> <span class=3D"h=
+ljs-keyword">new</span> Success(<span class=3D"hljs-keyword">new</span> Htt=
+pPrincipal(<span class=3D"hljs-string">"c0nst"</span>, <span class=3D"hljs-=
+string">"realm"</span>));
+        }
+    }
+}
+</pre>
+<p>=D0=95=D1=81=D0=BB=D0=B8 =D0=B2 =D0=B1=D1=80=D0=B0=D1=83=D0=B7=D0=B5=D1=
+=80=D0=B5 =D0=BF=D0=BE=D0=BF=D1=8B=D1=82=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=
+=BE=D1=82=D0=BA=D1=80=D1=8B=D1=82=D1=8C =D1=81=D1=82=D1=80=D0=B0=D0=BD=D0=
+=B8=D1=86=D1=83 =D1=81 =D0=B0=D0=B4=D1=80=D0=B5=D1=81=D0=BE=D0=BC http://lo=
+calhost:8765/some-url, =D1=82=D0=BE =D1=83=D0=B2=D0=B8=D0=B4=D0=B8=D0=BC =
+=D1=81=D1=82=D1=80=D0=B0=D0=BD=D0=B8=D1=86=D1=83 =D1=81=D0=BE =D1=81=D0=BB=
+=D0=B5=D0=B4=D1=83=D1=8E=D1=89=D0=B8=D0=BC =D1=81=D0=BE=D0=B4=D0=B5=D1=80=
+=D0=B6=D0=B8=D0=BC=D1=8B=D0=BC:</p>
+<pre class=3D"hljs">URI: /some-url
+Host=3Dlocalhost:8765
+Accept-encoding=3Dgzip, deflate, sdch
+Upgrade-insecure-requests=3D1
+Connection=3Dkeep-alive
+Accept-language=3Dru-RU,ru;q=3D0.8,en-US;q=3D0.6,en;q=3D0.4,uk;q=3D0.2
+User-agent=3DMozilla/5.0 (Windows NT 10.0; WOW64)
+Accept=3Dtext/html,application/xhtml+xml,application/xml;q=3D0.9,image/webp=
+,*/*;q=3D0.8
+</pre>
+
+<h2 id=3D"conclusion">=D0=97=D0=B0=D0=BA=D0=BB=D1=8E=D1=87=D0=B5=D0=BD=D0=
+=B8=D0=B5</h2>
+<p>=D0=95=D1=81=D1=82=D1=8C =D0=BC=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5, =D1=87=D1=
+=82=D0=BE =D0=BA=D0=BB=D0=B0=D1=81=D1=81=D1=8B =D0=B8=D0=B7 =D0=BF=D0=B0=D0=
+=BA=D0=B5=D1=82=D0=BE=D0=B2 com.sun.* =D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=
+=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=BD=D0=B5=D0=BB=D1=8C=D0=B7=D1=8F. =
+=D0=A7=D1=82=D0=BE =D1=8D=D1=82=D0=BE =D0=BD=D0=B0=D0=B1=D0=BE=D1=80 =D0=BA=
+=D0=BB=D0=B0=D1=81=D1=81=D0=BE=D0=B2, =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=
+=D0=B5 =D0=B2 =D0=B1=D1=83=D0=B4=D1=83=D1=89=D0=B5=D0=BC =D0=BC=D0=BE=D0=B3=
+=D1=83=D1=82 =D0=B1=D1=8B=D1=82=D1=8C =D0=B2 =D0=BA=D0=BE=D1=80=D0=BD=D0=B5=
+ =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D1=8B =D0=B8=D0=BB=D0=B8 =D0=B2=
+=D0=BE=D0=BE=D0=B1=D1=89=D0=B5 =D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D1=8B.<=
+/p>
+<p>=D0=A2=D0=B0=D0=BA =D0=B2=D0=BE=D1=82, Sun, =D0=B0 =D1=82=D0=B5=D0=BF=D0=
+=B5=D1=80=D1=8C Oracle, =D1=8F=D0=B2=D0=BB=D1=8F=D1=8E=D1=82=D1=81=D1=8F =
+=D1=80=D0=B0=D0=B7=D1=80=D0=B0=D0=B1=D0=BE=D1=82=D1=87=D0=B8=D0=BA=D0=B0=D0=
+=BC=D0=B8 =D1=81=D0=BE=D1=84=D1=82=D0=B0. =D0=95=D1=81=D1=82=D0=B5=D1=81=D1=
+=82=D0=B2=D0=B5=D0=BD=D0=BD=D0=BE =D1=81=D1=80=D0=B5=D0=B4=D0=B8 =D0=B8=D1=
+=85 =D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC=D0=BC=D0=BD=D0=BE=D0=B3=D0=
+=BE =D0=BE=D0=B1=D0=B5=D1=81=D0=BF=D0=B5=D1=87=D0=B5=D0=BD=D0=B8=D1=8F =D0=
+=BC=D0=BE=D0=B3=D1=83=D1=82 =D0=B1=D1=8B=D1=82=D1=8C =D0=BD=D0=B0=D0=B4=D1=
+=81=D1=82=D1=80=D0=BE=D0=B9=D0=BA=D0=B8 =D0=BD=D0=B0=D0=B4 Java SE.
+=D0=9A=D0=B0=D0=BA =D1=80=D0=B0=D0=B7 =D0=BE=D0=B4=D0=BD=D0=BE=D0=B9 =D0=B8=
+=D0=B7 =D1=82=D0=B0=D0=BA=D0=B8=D1=85 =D0=BD=D0=B0=D0=B4=D1=81=D1=82=D1=80=
+=D0=BE=D0=B5=D0=BA =D0=B8 =D1=8F=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =
+HttpServer. =D0=A0=D0=B0=D1=81=D1=81=D0=BC=D0=B0=D1=82=D1=80=D0=B8=D0=B2=D0=
+=B0=D0=B9=D1=82=D0=B5 =D0=B5=D0=B3=D0=BE =D0=BA=D0=B0=D0=BA =D0=BE=D0=B1=D1=
+=8B=D1=87=D0=BD=D1=83=D1=8E =D0=B4=D0=B6=D0=B0=D1=80=D0=BA=D1=83, =D0=BA=D0=
+=BE=D1=82=D0=BE=D1=80=D1=83=D1=8E =D0=B2=D1=8B =D0=BC=D0=BE=D0=B6=D0=B5=D1=
+=82=D0=B5 =D0=BF=D0=BE=D0=B4=D0=BA=D0=BB=D1=8E=D1=87=D0=B8=D1=82=D1=8C =D0=
+=BA =D1=81=D0=B2=D0=BE=D0=B5=D0=BC=D1=83 =D0=BF=D1=80=D0=BE=D0=B5=D0=BA=D1=
+=82=D1=83, =D0=B8 =D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D0=B2=D0=B0=D0=BC =D1=81=
+=D1=87=D0=B0=D1=81=D1=82=D1=8C=D0=B5.</p>
+<p>=D0=95=D1=81=D0=BB=D0=B8 =D1=83 =D0=B2=D0=B0=D1=81 =D0=B5=D1=81=D1=82=D1=
+=8C =D0=B2=D0=BE=D0=BF=D1=80=D0=BE=D1=81=D1=8B - =D0=BF=D0=B8=D1=88=D0=B8=
+=D1=82=D0=B5, =D0=BF=D0=BE=D1=81=D1=82=D0=B0=D1=80=D0=B0=D1=8E=D1=81=D1=8C =
+=D0=BF=D0=BE=D0=BC=D0=BE=D1=87=D1=8C.</p>
+</article>
+<div class=3D"shares" style=3D"left: 251.5px;">
+    <div class=3D"social">
+    <!-- facebook -->
+    <div id=3D"fb-root" class=3D" fb_reset"><div style=3D"position: absolut=
+e; top: -10000px; height: 0px; width: 0px;"><div><iframe name=3D"fb_xdm_fra=
+me_http" frameborder=3D"0" allowtransparency=3D"true" allowfullscreen=3D"tr=
+ue" scrolling=3D"no" id=3D"fb_xdm_frame_http" aria-hidden=3D"true" title=3D=
+"Facebook Cross Domain Communication Frame" tabindex=3D"-1" src=3D"cid:fram=
+e-278-b2bf8d6b-8932-4267-a2a6-6c94c7461a83@mhtml.blink" style=3D"border: no=
+ne;"></iframe><iframe name=3D"fb_xdm_frame_https" frameborder=3D"0" allowtr=
+ansparency=3D"true" allowfullscreen=3D"true" scrolling=3D"no" id=3D"fb_xdm_=
+frame_https" aria-hidden=3D"true" title=3D"Facebook Cross Domain Communicat=
+ion Frame" tabindex=3D"-1" src=3D"cid:frame-279-deb32dd9-e4c7-4ee9-8660-47f=
+ffd10bb43@mhtml.blink" style=3D"border: none;"></iframe></div></div><div st=
+yle=3D"position: absolute; top: -10000px; height: 0px; width: 0px;"><div><i=
+frame name=3D"f31fc6eaa221e04" frameborder=3D"0" allowtransparency=3D"true"=
+ allowfullscreen=3D"true" scrolling=3D"no" src=3D"cid:frame-283-3ce824f8-6c=
+08-428a-8140-1407082e68d5@mhtml.blink" style=3D"display: none;"></iframe></=
+div></div></div>
+   =20
+    <div class=3D"fb-share-button fb_iframe_widget" data-href=3D"http://www=
+.javenue.info/post/java-http-server" data-layout=3D"button" fb-xfbml-state=
+=3D"rendered" fb-iframe-plugin-query=3D"app_id=3D1648191008776808&amp;conta=
+iner_width=3D0&amp;href=3Dhttp%3A%2F%2Fwww.javenue.info%2Fpost%2Fjava-http-=
+server&amp;layout=3Dbutton&amp;locale=3Den_GB&amp;sdk=3Djoey"><span style=
+=3D"vertical-align: bottom; width: 59px; height: 20px;"><iframe name=3D"f14=
+6529f2bef948" width=3D"1000px" height=3D"1000px" frameborder=3D"0" allowtra=
+nsparency=3D"true" allowfullscreen=3D"true" scrolling=3D"no" title=3D"fb:sh=
+are_button Facebook Social Plugin" src=3D"cid:frame-286-96a4bc31-28bc-4876-=
+9835-7021cc02a22b@mhtml.blink" style=3D"border: none; visibility: visible; =
+width: 59px; height: 20px;" class=3D""></iframe></span></div>
+    </div>
+
+    <!-- twitter -->
+    <div class=3D"social">
+    <iframe id=3D"twitter-widget-0" scrolling=3D"no" frameborder=3D"0" allo=
+wtransparency=3D"true" class=3D"twitter-share-button twitter-share-button-r=
+endered twitter-tweet-button" title=3D"Twitter Tweet Button" src=3D"cid:fra=
+me-276-427ee9ff-70c2-41ca-8cc5-aa0dfde50262@mhtml.blink" style=3D"position:=
+ static; visibility: visible; width: 60px; height: 20px;"></iframe>
+   =20
+    </div>
+
+    <!-- google -->
+    <div class=3D"social">
+    <div id=3D"___plus_0" style=3D"text-indent: 0px; margin: 0px; padding: =
+0px; background: transparent; border-style: none; float: none; line-height:=
+ normal; font-size: 1px; vertical-align: baseline; display: inline-block; w=
+idth: 59px; height: 20px;"><iframe ng-non-bindable=3D"" frameborder=3D"0" h=
+space=3D"0" marginheight=3D"0" marginwidth=3D"0" scrolling=3D"no" style=3D"=
+position: static; top: 0px; width: 59px; margin: 0px; border-style: none; l=
+eft: 0px; visibility: visible; height: 20px;" tabindex=3D"0" vspace=3D"0" w=
+idth=3D"100%" id=3D"I0_1517228110490" name=3D"I0_1517228110490" src=3D"cid:=
+frame-275-627710f6-49cf-4786-8996-1a03601c4799@mhtml.blink" data-gapiattach=
+ed=3D"true" title=3D"G+"></iframe></div>
+    </div>
+
+    <!-- linkedin -->
+    <div class=3D"social">
+   =20
+   =20
+    </div>
+</div>
+
+<br>
+<div class=3D"related">
+    <p><strong>=D0=A5=D0=BE=D1=80=D0=BE=D1=88=D0=B8=D0=B5 =D1=81=D1=82=D0=
+=B0=D1=82=D1=8C=D0=B8 =D0=BF=D0=BE =D1=82=D0=B5=D0=BC=D0=B5:</strong></p>
+    <ul>
+                    <li><a href=3D"http://www.javenue.info/post/java-jdbc-a=
+pi">JDBC API =D0=B2 Java - =D0=BE=D0=B1=D0=B7=D0=BE=D1=80 =D0=B8 =D1=82=D1=
+=83=D1=82=D0=BE=D1=80=D0=B8=D0=B0=D0=BB</a></li>
+                    <li><a href=3D"http://www.javenue.info/post/launching-a=
+mazon-ec2-server">=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0=D0=B5=D0=BC Ja=
+va =D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BD=D0=
+=B0 Amazon =D1=85=D0=BE=D1=81=D1=82=D0=B8=D0=BD=D0=B3=D0=B5 - =D0=A2=D1=83=
+=D1=82=D0=BE=D1=80=D0=B8=D0=B0=D0=BB</a></li>
+                    <li><a href=3D"http://www.javenue.info/post/84">Reflect=
+ion =D0=B2 Java - java.lang.reflect API =D1=82=D1=83=D1=82=D0=BE=D1=80=D0=
+=B8=D0=B0=D0=BB </a></li>
+                    <li><a href=3D"http://www.javenue.info/post/80">=D0=A1=
+=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2=D1=8B=D0=B9 =D0=B4=D0=B2=D0=B8=
+=D0=B6=D0=BE=D0=BA =D0=B2 Java - Script Engine</a></li>
+                    <li><a href=3D"http://www.javenue.info/post/43">=D0=A0=
+=D0=B5=D0=B3=D1=83=D0=BB=D1=8F=D1=80=D0=BD=D1=8B=D0=B5 =D0=B2=D1=8B=D1=80=
+=D0=B0=D0=B6=D0=B5=D0=BD=D0=B8=D1=8F =D0=B2 Java =D0=B8 =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82 java.util.regex</a></li>
+            </ul>
+</div>
+<br>
+<div class=3D"comments">
+    <p class=3D"title">=D0=9A=D0=BE=D0=BC=D0=BC=D0=B5=D0=BD=D1=82=D0=B0=D1=
+=80=D0=B8=D0=B5=D0=B2: 0</p>
+    <p class=3D"user" style=3D"display: none;"><span></span> &nbsp; <a clas=
+s=3D"logout-link" href=3D"http://www.javenue.info/post/java-http-server#">=
+=D0=92=D1=8B=D0=B9=D1=82=D0=B8</a></p>
+    <textarea></textarea>
+    <div class=3D"buttons" style=3D"display: none;">
+        <input type=3D"button" data-url=3D"/post/java-http-server?comment" =
+value=3D"=D0=9E=D0=BF=D1=83=D0=B1=D0=BB=D0=B8=D0=BA=D0=BE=D0=B2=D0=B0=D1=82=
+=D1=8C"> <span> &nbsp; * =D0=B4=D0=BB=D1=8F =D0=BF=D1=83=D0=B1=D0=BB=D0=B8=
+=D0=BA=D0=B0=D1=86=D0=B8=D0=B8 =D0=BA=D0=BE=D0=BC=D0=BC=D0=B5=D0=BD=D1=82=
+=D0=B0=D1=80=D0=B8=D0=B5=D0=B2 =D0=BD=D1=83=D0=B6=D0=BD=D0=BE &nbsp; <a hre=
+f=3D"http://www.javenue.info/post/java-http-server#" class=3D"login-link">=
+=D0=92=D0=BE=D0=B9=D1=82=D0=B8</a></span>
+    </div>
+    </div></div>
+    </div>
+
+    <footer>
+        <p>=C2=A9 2005-2015 Javenue. All Rights Reserved</p>
+    </footer>
+
+   =20
+
+    <div class=3D"login-popup">
+        <div class=3D"login-wrapper">
+            <div class=3D"login-form">
+                <p>=D0=92=D0=BE=D0=B9=D1=82=D0=B8</p>
+                <div class=3D"buttons">
+                    <div id=3D"signin-button"><div style=3D"height:40px;wid=
+th:190px;" class=3D"abcRioButton abcRioButtonBlue"><div class=3D"abcRioButt=
+onContentWrapper"><div class=3D"abcRioButtonIcon" style=3D"padding:10px"><d=
+iv style=3D"width:18px;height:18px;" class=3D"abcRioButtonSvgImageWithFallb=
+ack abcRioButtonIconImage abcRioButtonIconImage18"><svg version=3D"1.1" xml=
+ns=3D"http://www.w3.org/2000/svg" width=3D"18px" height=3D"18px" viewBox=3D=
+"0 0 48 48" class=3D"abcRioButtonSvg"><g><path fill=3D"#EA4335" d=3D"M24 9.=
+5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5=
+.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill=
+=3D"#4285F4" d=3D"M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 =
+2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><p=
+ath fill=3D"#FBBC05" d=3D"M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14=
+.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6=
+.19z"></path><path fill=3D"#34A853" d=3D"M24 48c6.48 0 11.93-2.13 15.89-5.8=
+1l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6=
+.19C6.51 42.62 14.62 48 24 48z"></path><path fill=3D"none" d=3D"M0 0h48v48H=
+0z"></path></g></svg></div></div><span style=3D"font-size:14px;line-height:=
+38px;" class=3D"abcRioButtonContents"><span id=3D"not_signed_in5x9t3ot58zq9=
+">Sign in with Google</span><span id=3D"connected5x9t3ot58zq9" style=3D"dis=
+play:none">Signed in with Google</span></span></div></div></div>
+                </div>
+                <div class=3D"buttons">
+                    <div class=3D"fb-login-button fb_iframe_widget" data-ma=
+x-rows=3D"1" data-size=3D"xlarge" data-show-faces=3D"false" data-auto-logou=
+t-link=3D"false" scope=3D"public_profile,email" login_text=3D"" fb-xfbml-st=
+ate=3D"rendered" fb-iframe-plugin-query=3D"app_id=3D1648191008776808&amp;au=
+to_logout_link=3Dfalse&amp;container_width=3D0&amp;locale=3Den_GB&amp;max_r=
+ows=3D1&amp;scope=3Dpublic_profile%2Cemail&amp;sdk=3Djoey&amp;show_faces=3D=
+false&amp;size=3Dxlarge"><span style=3D"vertical-align: bottom; width: 123p=
+x; height: 39px;"><iframe name=3D"f23df1205056454" width=3D"1000px" height=
+=3D"1000px" frameborder=3D"0" allowtransparency=3D"true" allowfullscreen=3D=
+"true" scrolling=3D"no" title=3D"fb:login_button Facebook Social Plugin" sr=
+c=3D"cid:frame-285-9ad38840-2e4f-47db-8f6d-f354fc1b709e@mhtml.blink" class=
+=3D"" style=3D"border: none; visibility: visible; width: 123px; height: 39p=
+x;"></iframe></span></div>
+                </div>
+                <a href=3D"http://www.javenue.info/post/java-http-server#">=
+=D0=9E=D1=82=D0=BC=D0=B5=D0=BD=D0=B0</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<a class=3D"go-up media-hide hidden" href=3D"http://www.javenue.info/post/j=
+ava-http-server#">
+    <img src=3D"http://www.javenue.info/img/up.png" alt=3D"Look up" width=
+=3D"100">
+</a>
+
+
+
+
+
+
+
+
+<link rel=3D"stylesheet" href=3D"http://www.javenue.info/css/idea-min.css">
+
+
+
+
+
+
+<iframe scrolling=3D"no" frameborder=3D"0" allowtransparency=3D"true" src=
+=3D"cid:frame-274-1cc3a4fa-0b27-4d87-9fca-e3cf7456e970@mhtml.blink" style=
+=3D"display: none;"></iframe><iframe name=3D"oauth2relay644687129" id=3D"oa=
+uth2relay644687129" src=3D"cid:frame-277-3e16f212-bd6c-4a2a-898e-ea07ee50ff=
+c7@mhtml.blink" tabindex=3D"-1" aria-hidden=3D"true" style=3D"width: 1px; h=
+eight: 1px; position: absolute; top: -100px;"></iframe><iframe aria-hidden=
+=3D"true" id=3D"ssIFrame_google" sandbox=3D"allow-scripts allow-same-origin=
+" src=3D"cid:frame-280-398ee8cd-53ee-4e8f-a9da-de94de9a6990@mhtml.blink" st=
+yle=3D"position: absolute; width: 1px; height: 1px; left: -9999px; display:=
+ none;"></iframe><iframe id=3D"rufous-sandbox" scrolling=3D"no" frameborder=
+=3D"0" allowtransparency=3D"true" allowfullscreen=3D"true" style=3D"positio=
+n: absolute; visibility: hidden; display: none; width: 0px; height: 0px; pa=
+dding: 0px; border: none;" title=3D"Twitter analytics iframe"></iframe></bo=
+dy></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.javenue.info/css/main-min.css?1
+
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, b=
+lockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, f=
+ont, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b=
+, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, tabl=
+e, caption, tbody, tfoot, thead, tr, th, td { margin: 0px; padding: 0px; bo=
+rder: 0px; outline: 0px; font-size: 100%; vertical-align: baseline; backgro=
+und: transparent; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote::before, blockquote::after, q::before, q::after { content: none;=
+ }
+
+:focus { outline: 0px; }
+
+ins { text-decoration: none; }
+
+del { text-decoration: line-through; }
+
+table { border-collapse: collapse; border-spacing: 0px; }
+
+body { color: rgb(51, 51, 51); font-family: "Helvetica Neue", Helvetica, Ar=
+ial, sans-serif; font-size: 16px; }
+
+a, a:visited { text-decoration: none; color: lightskyblue; }
+
+article, section, aside, nav, header, footer, figure, figcaption { display:=
+ block; }
+
+strong { font-weight: bold; }
+
+body { background-color: rgb(242, 245, 246); }
+
+.wrapper { max-width: 1200px; margin-left: auto; margin-right: auto; paddin=
+g: 0px 10px; }
+
+header { height: 180px; background-color: rgb(242, 245, 246); margin-bottom=
+: 20px; }
+
+.logo-container { height: 115px; background-color: rgb(255, 255, 255); padd=
+ing: 0px 20px 10px; margin-bottom: 20px; border-bottom-left-radius: 7px; bo=
+rder-bottom-right-radius: 7px; }
+
+.logo-container a.media-hide { float: left; }
+
+.logo-container div { float: left; margin-left: 20px; }
+
+.logo-container p { font-size: 20px; line-height: 30px; font-weight: 200; }
+
+.logo-container p.blog-title { font-size: 30px; font-weight: 500; line-heig=
+ht: 45px; }
+
+nav ul { background-color: lightskyblue; color: rgb(255, 255, 255); float: =
+left; width: 100%; border-radius: 7px; }
+
+nav ul li { display: inline; }
+
+nav ul li a, nav ul li a:visited { font-size: 1em; padding: 10px 25px; back=
+ground-color: lightskyblue; color: rgb(255, 255, 255); text-decoration: non=
+e; float: left; border-right: 1px solid rgb(255, 255, 255); }
+
+.first-item { border-top-left-radius: 7px; border-bottom-left-radius: 7px; =
+}
+
+nav ul li a:hover { background-color: silver; color: rgb(255, 255, 255); }
+
+nav ul li a.highlight { color: rgb(68, 68, 68); font-weight: 600; }
+
+.content { background-color: rgb(255, 255, 255); border-radius: 7px; paddin=
+g: 0px 40px 20px; margin-bottom: 20px; margin-right: 305px; }
+
+.content h1 { font-size: 22px; line-height: 30px; padding-top: 30px; font-w=
+eight: 500; }
+
+h1 a img { margin-bottom: -2px; }
+
+.content h2 { font-size: 18px; line-height: 25px; padding-top: 30px; font-w=
+eight: 500; }
+
+article .small-image { float: left; margin-right: 30px; }
+
+article { padding-top: 35px; }
+
+.content article h1 { padding-top: 0px; }
+
+.content h2.feed-title { padding-top: 0px; }
+
+.content h2 a, .content h2 a:visited { text-decoration: underline; }
+
+.content p { padding-top: 16px; line-height: 24px; }
+
+.content li { margin-top: 8px; }
+
+.content p.annotation { padding-top: 7px; }
+
+.content pre { font-family: "Courier New", Courier, "Lucida Sans Typewriter=
+", "Lucida Typewriter", monospace; font-size: 16px; line-height: 18px; back=
+ground-color: rgb(242, 245, 246); border: 1px solid silver; border-radius: =
+7px; padding: 10px 12px; margin-top: 12px; overflow-y: visible; overflow-x:=
+ auto; }
+
+.content ul li { list-style: disc; margin-left: 15px; line-height: 20px; }
+
+.popupMessage { background-color: lightskyblue; border-radius: 7px; positio=
+n: fixed; z-index: 1000; padding: 20px; top: 20px; right: 20px; cursor: poi=
+nter; }
+
+.shares { position: fixed; top: 200px; left: 80px; border-radius: 5px; bord=
+er: 1px solid silver; padding: 5px; background-color: rgb(255, 255, 255); }
+
+.shares .social { margin: 12px 5px; }
+
+.vk { vertical-align: middle; }
+
+div.static { position: static; border: 0px; }
+
+div.static .social { display: inline; }
+
+div.static .vk { display: inline-block; margin-top: 3px; }
+
+.category { border-bottom: 1px dashed lightskyblue; padding-bottom: 15px; }
+
+.post-info { padding-top: 7px; }
+
+.post-info span { font-size: 14px; color: silver; }
+
+.post-info a, .post-info a:visited { font-size: 14px; color: silver; text-d=
+ecoration: underline; margin-left: 30px; }
+
+.sidebar { float: right; width: 285px; }
+
+.sidebar p { font-size: 16px; }
+
+.sidebar-block p.title { font-size: 20px; font-weight: 400; margin-bottom: =
+10px; }
+
+.sidebar-block { display: block; padding: 20px 25px; background-color: rgb(=
+255, 255, 255); border-radius: 7px; margin-bottom: 20px; }
+
+.sidebar-block ul li { font-size: 14px; line-height: 28px; border-bottom: 1=
+px solid rgb(242, 245, 246); }
+
+.sidebar-block input { font-size: inherit; box-sizing: border-box; width: 1=
+00%; padding: 5px 8px; margin-top: 18px; border-width: 0px; border-radius: =
+5px; text-align: center; }
+
+.sidebar-block input[type=3D"button"] { background-color: silver; cursor: p=
+ointer; }
+
+.sidebar .follow { border: 1px solid silver; background-color: rgb(192, 240=
+, 255); }
+
+.sidebar .follow a { display: inline-block; border: 1px solid silver; borde=
+r-radius: 5px; padding: 0px 10px; background-color: white; }
+
+.sidebar .follow a img { width: 40px; }
+
+.sticky { position: fixed; top: 20px; width: 235px; }
+
+a.follow-rss { margin: 0px 18px; }
+
+a.follow-twitter:hover { background-color: rgb(64, 153, 255); }
+
+a.follow-rss:hover { background-color: orange; }
+
+a.follow-email:hover { background-color: limegreen; }
+
+.email-form { display: none; }
+
+footer { clear: both; padding: 20px; border-top-left-radius: 7px; border-to=
+p-right-radius: 7px; background-color: rgb(255, 255, 255); }
+
+footer p { font-size: 12px; color: silver; text-align: center; }
+
+footer a { color: silver; text-decoration: none; }
+
+form { width: 100%; }
+
+form .errors { color: red; }
+
+form .fields label { display: block; }
+
+form .fields label input[type=3D"text"], form .fields label select { width:=
+ 100%; margin-bottom: 7px; }
+
+form .fields textarea { width: 100%; height: 360px; }
+
+form .fields textarea.small-area { height: 35px; }
+
+form .buttons { text-align: center; }
+
+.comments textarea { width: 100%; border-radius: 7px; padding: 5px; box-siz=
+ing: border-box; margin: 10px 0px; }
+
+.comments .title { font-weight: bold; font-size: 18px; line-height: 27px; }
+
+.comments .entry { background-color: rgb(242, 245, 246); border: 1px solid =
+silver; border-radius: 7px; padding: 10px 15px; margin-top: 20px; }
+
+.comments input { background-color: silver; cursor: pointer; font-size: 16p=
+x; line-height: 24px; padding: 2px 8px; border-width: 0px; border-radius: 5=
+px; }
+
+.comments .entry p { padding-top: 0px; }
+
+.comments .entry .author { font-weight: bold; }
+
+table.admin-table { margin-top: 7px; }
+
+table.admin-table tr td { padding: 10px; border-right: 1px solid rgb(242, 2=
+45, 246); border-bottom: 1px solid rgb(242, 245, 246); }
+
+table.admin-table thead tr td { text-align: center; }
+
+.paging div { display: inline-block; margin: 2px 5px; }
+
+.paging .disabled { color: silver; }
+
+.paging span, .paging a, .paging a:visited { display: inline-block; padding=
+: 8px 16px; margin: 20px 12px 0px 0px; font-size: 24px; border-radius: 7px;=
+ text-align: center; }
+
+.paging span, .paging a:hover { background-color: rgb(242, 245, 246); }
+
+.login-popup { position: fixed; top: 0px; left: 0px; display: none; width: =
+100%; height: 100%; background: rgba(192, 192, 192, 0.5); }
+
+.login-wrapper { display: table-cell; vertical-align: middle; }
+
+.login-form { margin-left: auto; margin-right: auto; width: 230px; height: =
+180px; padding: 20px; background-color: white; border: 1px solid silver; bo=
+rder-radius: 7px; }
+
+.login-popup p { font-size: 1.6em; text-align: center; margin-bottom: 15px;=
+ }
+
+.login-form .buttons { margin: 20px 0px; }
+
+.login-popup a { display: block; text-align: center; margin-top: 15px; font=
+-size: 1.1em; }
+
+.stop-scrolling { height: 100%; overflow: hidden; }
+
+a.go-up { position: fixed; right: 30px; bottom: 30px; opacity: 0.5; }
+
+a.go-up:hover { opacity: 1; }
+
+.hidden { display: none; }
+
+.media-show { display: none; }
+
+@media screen and (max-width: 800px) {
+  .sidebar { display: none; }
+  .content { margin-right: 0px; }
+}
+
+@media screen and (max-width: 550px) {
+  .media-hide { display: none; }
+  .media-show { display: block; }
+  .logo-container { display: none; }
+  nav ul, nav ul li a, nav ul li a:visited, .first-item, nav ul li a:hover =
+{ color: black; background-color: rgb(242, 245, 246); font-size: 1.1em; flo=
+at: none; }
+  nav ul li { display: block; }
+  nav ul li a, nav ul li a:visited { display: block; padding: 10px 25px; bo=
+rder-right: 0px; border-bottom: 1px solid silver; }
+  a.first-item { display: none; border-top-left-radius: 0px; border-bottom-=
+left-radius: 0px; }
+  nav ul li a:hover { background-color: silver; }
+  .content { padding: 0px 20px 10px; }
+}
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.javenue.info/img/javenue.jpg
+
+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
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.javenue.info/img/twitter.png
+
+iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAABWVBMVEUAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoWZ8BAAAAcnRSTlMA
+AQIDBAUGBwgJCw4PEBETFRgeHyAhIiMnKCkvMDU4Oz0/QUJFRkdITE5QUVRWX2FkZmhpa21wdXZ3
+eHmBgoWKi42TlJWWl5ian6Kjpqmrra+ytLW2ubq7vL3AwcPHzs/W2eTq7e/x8vT19vf4+fv8/f44
+nEekAAABWUlEQVQ4jWNgGAVkABEr/0hfM0Ewm50FJirIg6aMzSG3CAQyLJgZ+EwCmGDi9qEcKOpY
+A4tgICg0s1ANLpFYFMyFrNC2CAkUWjFJMULEubKLimKFEOoEspAVRrokGEAluHOA/GRdRphCwyJU
+YAeTYEwC84NloHxXFGX51gi7PKFCQRqsIK4XikJXJMdL58NEU/3MlEVdUBQ64vQmGrBBKON3VnAt
+xKnQCKGQPa2oALdCZSSbQ/DYnMePpFAdj8I4lMj1JsovQMDpj0tdgQSKQgYmvQTsCkNR1TFouXkn
+Y1NXqISmUDgTu4GBDOjAFKu6dFEMhYyWeVgs1sdQBwSygVnoCp0YsSkEJmAPVHU+LFiVMcpFo9rr
+jk0dk7hxDGq6yDLCsJfXNio+BS31FIZJYrNUJSwfRVl+mCoObzCIW0SkQ1WlhZuL4VAFdaaYoraO
+prwQE15VgxoAAD5bBHEBIvGUAAAAAElFTkSuQmCC
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.javenue.info/img/rss.png
+
+iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAACMVBMVEUAAAAUFBSPj4+YmJijo6Pe
+3t7r6+vw8PD///8AAACjo6Pr6+v9/f3+/v4AAAD9/f3+/v78/PwAAAD6+vr5+fn6+vr4+Pj5+fn7
++/sAAAD39/cAAADr6+v29vb19fX29vYUFBT09PTz8/Px8fEAAADt7e3t7e0AAADt7e3q6urr6+vu
+7u7o6Ojj4+Pk5OQAAADi4uLd3d0AAACjo6MAAADa2trY2NjX19fV1dXU1NTIyMjIyMgUFBQAAAC/
+v7+2trYAAACxsbGurq6qqqqrq6tbW1sAAAAuLi4AAACenp6bm5uXl5cAAACVlZWTk5MUFBSSkpKQ
+kJAAAACMjIyKioqIiIgAAACCgoKAgIAAAAB6enp4eHh5eXkAAAAAAAB3d3d3d3dzc3Nzc3NwcHAA
+AABwcHBvb28UFBRqamoAAABpaWloaGhkZGRiYmJiYmJgYGBdXV0AAABbW1sAAABaWlpZWVlWVlZV
+VVVTU1NTU1MAAABQUFAUFBQAAABISEgAAABFRUU+Pj4AAAAAAAA7Ozs5OTkAAAA3Nzc4ODg0NDQU
+FBQ0NDQxMTEnJycwMDAxMTEsLCwrKysqKioqKioAAAAUFBQlJSUkJCQjIyMAAAAAAAAAAAAcHBwb
+GxsAAAAZGRkXFxcVFRUWFhYTExMUFBQXFxcAAAAREREQEBAAAAAPDw8ODg4AAAAMDAwAAAALCwsJ
+CQkICAgAAAAGBgYFBQUCAgIAAAABAQECAgIAAAAAAAD9aUe4AAAAunRSTlMAAAAAAAAAAAABAQEB
+AQICAgMEBAUFBgYGBwcICAgJCQoKCw0QEBESEhQUFBYaGhscICIiIyQlJigpNDU7Pj5HTU1PUlJV
+VlteXmJlZ2hqa2ttcHJzdXZ7fX+ChISFhoaHiYqMjY2OkZKTk5WYmpudn6Gho6Okp6ipqqutsbS0
+tbi/wcLCxMbGx8jJyczNzc/R0tPU1tjY2drd3uDh4+Xl5ujo6+vr7Ozt7u/w8fHy8/T2+Pj5/P39
+/f7KJcRhAAAB7klEQVQ4jWPgIBIwDLDC3qldNen+NgqM6IAZTeGSXWCwqSnMiAEFMGFXCAQ72zwk
+iVIIBPOCpIlTuGvXbDdO4hTu2lWrT6TCXcsciFS4a1skJxaFSpoW9sFl81GVFgphKoQAfqu0xcgq
+q4RwKAQCed85SCqL+XAq5OCQi9iIUBmHrnDyjJZ8P0teiIhFHyKeXFlAgBXN19PCdSD2F8FVrjEB
+BRILRvBsTFYDcXmj4Sqb+bAq3LVrkTPY0Ci4gA8Ohbt2ZYiCRHLhUaSCS+GuOjmgiFg7jBuLU+Gu
+BnGgkOFaKG+dOpLCgITqhUgq80BigTBeGJJCUPzZVe6Aq/QECghPgnJm8qEoBALrCTCFq/SAXBcY
+zxZdIYdcBUyuAGTHdCgnE0mhYEDP6mkxyoKlULmt5kDBEChnFhdcoWA1WGSimlg3VDILKKq7Fcox
+hiv0horkcFhugbBWSAGFO6HC7uwwhR1QkfUiHNlQpj1QOB7KTmGDKVwK84Quh9lOCCsJKOwEFa2H
+K+yHimyW5eDogTAbgcKmUOEpcIWhUJFyIDsVwlwAZIpsh7BXwhVKtYIF5hoA2V4Qye3CQPZyCHsb
+NzwcFRMX79pQogtiOkJNVwWyYTlNBilmBLQlIAxxLQjgB7I1oGweDsxciBNQXyEAOrnRtOgn7+8A
+AAAASUVORK5CYII=
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.javenue.info/img/email.png
+
+iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAABO1BMVEUAAAD///8AAAAAAAAAAAAA
+AAAAAADp6ekAAADp6ekAAAAAAAAAAADX19cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADS0tIAAAAA
+AAAAAADS0tIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvr68AAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwcHBwcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAABzjVy1AAAAaHRSTlMAAAQFBggJCQoKDA8SFBYXGRodHh8jIyQmKSotLi8w
+NDU2OjtHSUpNTlBRV1hZWmBiY2tyhZqnqaqur7Czt7i9vr/Cxc3Q0dLV1tfY29ze4eLj5ebn6err
+7O3u8PHz9Pb3+Pn6+/z9/omHVbgAAAEwSURBVDiN7dPnUsJAFAXga4kiKBDBXrFX7B0UFFEj2E00
+FjSgnvd/ApM4kyG7m5gH4PzZ/fHNvTM7Z6kpYKgB/4XtG77pdWAXfDPvglpGmAIHayskSLLEwiPU
+lnmXKEN9csP4Pqpp1nWXoI6eu2GnlEV10e3iF6YjFpIpjYV6JytQR4iHFMris07K9jwRpFAOxpyz
+V4E+RmJI4RwqM848PUVekMJ5VKatS8xxHvAY+JgiihaBh35vaK0+w1t64hT6La77vGDbIYzZyInV
+Az3Vc4+rpBhKf88T2dLe8+a7DNyhnBDB1gPUluxlzZJ9DKm4lHnYssfVYliDEmNhbBtfq2wpxp9R
+jDIwg5811pnyFYUbprjf67wjmnzhGv64uyOKwsFAn6tj0zeDDgySBvTNL9fTiaCvxqYxAAAAAElF
+TkSuQmCC
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.javenue.info/img/up.png
+
+iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAABg1BMVEUAAABCwPtCwPtCwPtCwPtC
+wPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtC
+wPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtC
+wPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtC
+wPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtC
+wPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtC
+wPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtC
+wPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtCwPtp3kV3AAAAgHRSTlMAAAIEBggKDA4QEhQWGBoc
+HiAiJCYoKiwuMDI0Njg6PD5AQkRGSEpMTlBSVFZYWlxeYGJkZmhqbG5wcnR2eHp8foGDhYeJi42P
+kZOVl5mbnZ+ho6Wnqautr7Gztbe5u72/wcPFx8nLzc/R09XX2dvd3+Hj5efp6+3v8fP19/n7/cXR
+vhYAAAzCSURBVHic7Z3nQxNLF8Z3ZgMJkAQCQaSDCkq53BhUQJRyEbuCgEBUMFKkXIHQIaTwp98k
+gCypuzPn7Mz6vr/PZM4+D7tTzjRFEUOR09vQ9lfvs/5H3fdb673OIkHPYS6EuFu6B8anFjePztMJ
+by3Pf/jH3+pRCRH9nAhQ1dP2dGL5OEN3JtHthTf+Rgf9Y2wgtOTeWPBUh3Qt8e3A8zvWd4FQZ+fr
+1ahB8dcvw9r7Hrd1TSC2+tGfMVbxV8TWxu/aqWgtxqGO9g+7vOKvOJ33OS3lAXF0z51Aqb/g7Nsj
+l0U8IGr92wNY9RdEAp12+esD6nryM44hP8X+mzpVtMK8qE3TRts7g8SWeqR9DUjRg+/clb4Odp67
+ZawNSIl/He/dv8nJu2rZLCCu5zsmqU9xNlEjU2VASgf3zZSfJDJdK4sFxO7fMlt+yoIJrxQfQnHX
+mgj5SY5fuIS3COrdoFlVXzZ2+x1C5ZOKjxGB8pOs3BFYFRT7wcY77EQ+VAj6Dmjdgsi3/5pdf7EA
++aRsFHjAx0583vz2gDYLq/uzseczOa1sH5Tm339BbNpjYk1AvF/k+Pq1bLeb1hzYuiWo/DMJD5vU
+J3C+Y07z4hIPVJnwGZCaZdFCc7Pdht4a0PaQaJX5OOmz4eov6kdOefESfV2Cqb/snRk5Lz6+4LWH
+pGpBtDo9rNchOUDq/xWtTR+hOyhVIW2RuvrTctiF4ABtMz3tx87pY/DGgHbrWdwgDZEh4MGR6pe8
++UsnOgrqgG3gTLQio4A6oD4RnfljANAB6rfc/z8JmAO0x2Lf/xXRQZC2gHZYqv7XEnkCkCOhbYei
+dbAT9nH3iEiLhfo/mZx08jpQvS1aAx8HTXwjI2dQtAJefnl59Ns/iX5+fpbc7PrVEfTs9xH+JzbL
+nCymf6N3AA9aqjaxY8THGLsDpDlzVT8wu42Kgu9ApIetKahATwDt1ifjVP3EjnPYyNIUFM9gP1eo
+4dJpdAc2yo3rp33YCeDt27/ftVXkUOefDI+LSBP29O92zXU0dAdij4xWAy7s6X+t/oQD2PNtR/XG
+9Ns+ID/QVs3NgK4gcsDlUiP6qQ95AnjrdnpIdAdGjHwElchDwF8Z+vEdODHwEdimcJ9lozpbu4zt
+wKJdr37SgfsBbOQYoLmDqGHjj/V+BE7cLmAu/QkHvqMG3q/Sp18dR32M3PrRHZjRNypqDGM+RD79
+2A7EuvSMCew/MJ8hv/5ETfgFM/qWq7B+0ouZBFkvmKByojrwqnA9WIaZoimsH9mB05pC4ekQYvj1
+6sL6kR2YLjRVUoE4DaJPP64D0ZYCL8BrvNh69eM6sJg/M1CDNw+6rLMbknIggPYY8fZ8gdVptMDL
+lfr1ozrwI19vqBFtEGBMf6I/gOZAvldA/YwV1ah+TAfyvAI1WBMhxvUjOpD7FaBYeTAW/YgOLOTq
+C3iQRkFs+vEciOXIDVGkYTCrfjwHJrOPCEpRjj7h0I/mQNiTLRjpRQnGox/NgbFseQEbyuwMn34s
+B/azbStpxsgD8OrHcqA3MxDFSIXz60dyYCmzJXQhtIEQ+nEciGUmRh7BR4HRj+PAeHo1qMKnY6H0
+ozgQSj9ywAM+DoTTj+JA2oCADEIHgNSP4cDszd6gCr1MB1Y/ggPhm10BL3AnAFo/ggNdN4ofgC0c
+Xj+8A9Pab4DCtgEY+sEdONK2A07QVBCOfnAH2jRF+yALxtIP7cCH674QnQUsF08/sAN71+MBG+B8
+GKZ+YAeuxwO1cIXi6od1oO93qU/BysTWD+rA/FVDSMHmIvH1QzpweDVDYoPaGWmGfkgHrtLjUFWA
+OfoBHXh6WSBQLsQs/XAOzF30BMhHkNLM0w/mwM5FLUjXIQozUz+UA/GLIXExRDLIXP1QDrSmymoE
+KMls/UAO9KeKAqgDzdcPs4pmMlUS/8IwEfpB1pKtJZsBwn1A2ErWyVYrOBBONgOE94QsUfohHEju
+LHdw5kPF6QdwoDlRSJ119fM74EuU0W1h/dwOjCqcyQDR+nkdmEqU8MbS+hWljMeB5UQB89bWz+fA
+duL37LOCcujncuA08XPmxXGrFaKVX1H2ldkBVVFYuwGrkvz/k5StsBrgVEoYfxluFq1aC/M+h1tK
+JeMvY62iRWthNqBZqWf9aVfhxzIP5mrwgXKP9acjokVrKGJuynzsPeFvwi95usbDfOODj31mfJ/r
+mDZY+phHtI85lga8lOYVcLMfeNDPkRE86xEt/BI7R3ZwQOln/3F4RPepHJjULbFLSFTlHAacn+++
+9bVWl4m46CoJdbhq2/sDXIcecxpwSfz0ZD8U2tlYX19fDaYIzCeZmZx8wnuoac/k5EyqsECq4B8/
+E0E2Q6HQ4QnIac8wBuRhlvdkX8Td3En+5w0YxtgnoEV2A/phlwhm8n8DJDeglzMrXhDZDfCxjwb1
+IbsBHez5AH3IbkArc0ZIJ7IbUMucE9SJ7AZ42LPC+pDdAAfHvIAuJDcgrvDMDOlBcgP2Fa65QR1I
+bsCKwjc7XBjJDfisQG4WyIbkBrxUeFeIFEJyA5KbRjjXCBVAcgM6EhHsqB0ByQ1I7psiqNecyG1A
+NLlphqCeYiq3AZupuZ2XmCHkNuBzyoCHmCHkNmA4FQJw22QmchvQmQphw7xPUW4DLpb5U8yztKU2
+4OBy2gqzFpTagMDlBH8nYgypDRi+jFGB2BeU2oB7lzEoYl9QZgNiVzfvAG0dzYrMBqz9nrr/Cy+I
+zAa8+r3IyYV3r5rMBlwfIwOzezgrEhtwdn2YFnmFFkViA4Ka1TutaFEkNmBYs86xCG12RF4D4nWa
+KHQSK4y8BmzdeLIHWGHkNeDmSl8H1gWb8hpwc8cL6GliWqQ1YC/tmgWs6ZE5WQ14m7bW3YHUDnwz
+fN+tOQbEm9LiEKQ5UlkN2Mi4aKQOJynAbcB7lMc6f56x20PFufuY2wCcHkokc9cn6UOJJKkBX7PU
+zS6UrsCCnAZk2/RIUb62Jc5dNeQTxlNtZd3kUotxzxavASpKD20w64Y39RtCqBUZDTjOcfXofYSW
+cD3bdSZGDJiDf6bzdzk2MhVvwsfa4DTAxn42Qk6iWW4+T4HREu6U8RlQHIR/ptzjk9Id8GDHbj4D
+SuDztdGGnNEI/BayGOdBc07mfeE5CeQZoJbCT5K15Y6mBy942xzNd/YHgd9E954rIUDg17F+yftA
+JVvQ8U4K3vWcDzf48+R9AVBegVmOrpAN/grEqQJvpAN8+0BsON89t3mhPvBLUE8K3v58H3yiNDLu
+YNNfNAA/QB0ruJvdBn+pUzx4j+ElUBvm4EdnoRyjAC11CNfOhRee32+srfZ6PJ4KV17KE3/irb7d
+0NY/D3XmvYZ4r45zT1SkNGTk5PBgNxTa2fqVj+1QaHf/4PgMJ0P5XVeFXA7f+ZKE09ydYC3Eh7dg
+RCwvdJ7nUYS7kUwY/zr16VeUasBrd+Qh2qH75CfKfjSVxBgZldgXRT8tPBs6ugDX1P5xH0H4jqGj
+z6j/T2sJ/jF4olMRyoSEOIKGk7NuhBSxOPZzJYJzQ1oxd9KYTKSb4Ugz+uzPaQvHmfJydozr2IWw
+WFpYbTZczOc1y8VOwSxQLmr3RD87BMfGegBaaAdCcsRsIg85znRUn1m+PxQf4ZqYKH4rWgAvk5wL
+FBwzohXw8U13DiAXLksPDJfKefUrigf3pCVU1qv49StKDfj8nFls1YCc/k0aUE8ZwWOvAej0c4s6
+sNfCe6iztR0A1G9JB0D1W9CBEKz+hAO1eNtrEdiCqv80DlQFRavSzzpM+5eG2zIzZitenNs/Sies
+kSRbQLsEzT4KvmYHntgE5+rcfKh/Sz9jFBlBvfGDNrPfaGMKxw95d2oWgFRibKsAYxO6+c9C6Stp
+K4L4bIUZlz/ZuiRdRBQeMuneI+L9KmN7+Ksd+fPX4BiSLl8emyo38+4zemdNtOKbHPh5d2gahJS9
+kOgliAVu4df+6ajNy6J1X7HrE3PdWckQ1skjhohOmtL4ZYPWzgufOosv3zWv8s/E9kBwnmT3seA7
+D0nJAO4dHXk5feUWf+8nrXgraDVRZLLa/Lo/G7R6AuTyQ2NE5+tFfvw3obcmTR4hRQPN8shPQmun
+THwLzqYk+u9fQatempQuOnknybefDi3r/4Uvf3esQk75SUhx5yLGSSS/iS12O8Q3fHlRq0bQ1hMc
+vq6R79PPhBTd/YQwSAjP9cj+z7+GlnbPgO57DM/3lMr75WeF2u9/BOokH81aTv0FxNY0tMCZNoku
+jTQVWVL9JbS4dfQHowmnS286rPmvT4PabvW8XDDUS0po992yUctUejogxN3ycGxm9aiA8rXZcX+L
++4+Snoa9sr6tp28kg8GH7Q2V5uf2/gNzvkchqb6R8QAAAABJRU5ErkJggg==
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.javenue.info/css/idea-min.css
+
+@charset "utf-8";
+
+.hljs { display: block; }
+
+.hljs, .hljs-subst { color: rgb(0, 0, 0); }
+
+.hljs-keyword, .hljs-attribute, .hljs-selector-tag, .hljs-meta-keyword, .hl=
+js-doctag, .hljs-name { font-weight: bold; color: navy; }
+
+.hljs-built_in, .hljs-literal, .hljs-bullet, .hljs-code, .hljs-addition { c=
+olor: rgb(31, 129, 31); }
+
+.hljs-regexp, .hljs-symbol, .hljs-variable, .hljs-template-variable, .hljs-=
+link, .hljs-selector-attr, .hljs-selector-pseudo { color: rgb(188, 96, 96);=
+ }
+
+.hljs-type, .hljs-string, .hljs-selector-id, .hljs-selector-class, .hljs-qu=
+ote, .hljs-template-tag, .hljs-deletion { color: rgb(31, 129, 31); font-wei=
+ght: bold; }
+
+.hljs-number { color: rgb(0, 0, 255); }
+
+.hljs-comment { color: rgb(136, 136, 136); }
+
+.hljs-meta { color: olive; }
+
+.hljs-emphasis { font-style: italic; }
+
+.hljs-strong { font-weight: bold; }
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-274-1cc3a4fa-0b27-4d87-9fca-e3cf7456e970@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://platform.twitter.com/widgets/widget_iframe.83d5793f6ebbe2046330abda6016ae93.html?origin=http%3A%2F%2Fwww.javenue.info
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><meta chartset=3D"utf-8">
+<title>Twitter Widget Iframe</title>
+<style type=3D"text/css">
+:root .suggested-tweet-stream-container,
+:root .stream-tweet[label=3D"promoted"],
+:root .stream-item[data-item-type=3D"tweet"][data-item-id*=3D":"],
+:root .stream-item-group-start[label=3D"promoted"],
+:root .promotion,
+:root .promoted-trend,
+:root .promoted-account,
+:root .is-promoted,
+:root .has-profile-promoted-tweet,
+:root .promoted-tweet[data-disclosure-type=3D"promoted"],
+:root .stream .tweet[data-card2-type=3D"promo_website"]
+{ display: none !important; }</style></head><body>
+
+
+</body></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-275-627710f6-49cf-4786-8996-1a03601c4799@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://apis.google.com/u/0/se/0/_/+1/sharebutton?plusShare=true&usegapi=1&action=share&annotation=none&hl=en-GB&origin=http%3A%2F%2Fwww.javenue.info&url=http%3A%2F%2Fwww.javenue.info%2Fpost%2Fjava-http-server&gsrc=3p&ic=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.ru.xSluke16lWI.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCPVxHT825QsYGqvpMG5mQAddITztw#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&id=I0_1517228110490&_gfid=I0_1517228110490&parent=http%3A%2F%2Fwww.javenue.info&pfname=&rpctoken=61223019
+
+<!DOCTYPE html><html lang=3D"en" dir=3D"ltr"><head><meta http-equiv=3D"Cont=
+ent-Type" content=3D"text/html; charset=3DUTF-8"><base href=3D"https://apis=
+.google.com/u/0/se/0/wm/1/"><style>body {-webkit-font-smoothing: antialiase=
+d;}/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-=
+xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F=
+, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-=
+xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-=
+xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-=
+xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-=
+xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-=
+xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+2=
+0AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) f=
+ormat('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+0=
+2DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U=
++2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/77FXFjRbGzN4aCrSFhlh3hJtnKITppO=
+I_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F=
+, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/isZ-wbCXNKAbnjo6_TwHThJtnKITppO=
+I_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/UX6i4JxQDm3fVTc1CPuwqhJtnKITppO=
+I_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/jSN2CGVDbcVyCnfJfjSdfBJtnKITppO=
+I_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/PwZc-YbIL414wB9rB1IAPRJtnKITppO=
+I_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/97uahxiqZRoncBaCEI3aWxJtnKITppO=
+I_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+2=
+0AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOFtXRa8TVwT=
+ICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+0=
+2DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U=
++2215, U+FEFF, U+FFFD;
+}
+</style><style type=3D"text/css">
+:root div[style^=3D"height: 16px; font: bold 12px/16px"],
+:root [style=3D"border: 1px solid rgb(51, 102, 204);"],
+:root [style=3D"border: 1px solid rgb(51, 102, 153);"],
+:root [style=3D"border: 1px solid rgb(241, 250, 248);"],
+:root [style=3D"border: 1px solid rgb(145, 117, 77);"],
+:root [style=3D"border: 1px solid rgb(0, 90, 136);"],
+:root .ts[style=3D"margin:0 0 12px;height:92px;width:100%"],
+:root .nH.MC,
+:root .c[style=3D"margin: 0pt;"],
+:root .GISRH3UDHB,
+:root .GGQPGYLCMCB,
+:root .GGQPGYLCD5,
+:root .GC3LC41DERB + div[style=3D"position: relative; height: 170px;"],
+:root #tadsc,
+:root #ad,
+:root #sqh,
+:root .widget-pane-section-result[data-result-ad-type],
+:root .section-result[data-result-ad-type],
+:root .rscontainer > .ellip,
+:root .rhsvw[style=3D"background-color:#fff;margin:0 0 14px;padding-bottom:=
+1px;padding-top:1px;"],
+:root .ra[width=3D"30%"][align=3D"right"] + table[width=3D"70%"][cellpaddin=
+g=3D"0"],
+:root .ra[align=3D"right"][width=3D"30%"],
+:root .ra[align=3D"left"][width=3D"30%"],
+:root .mw > #rcnt > #center_col > #taw > .c,
+:root .mw > #rcnt > #center_col > #taw > #tvcap > .c,
+:root .mod > ._jH + .rscontainer,
+:root .lads[width=3D"100%"][style=3D"background:#FFF8DD"],
+:root .commercial-unit-mobile-top,
+:root .commercial-unit-mobile-bottom,
+:root .commercial-unit-desktop-top,
+:root .commercial-unit-desktop-rhs,
+:root .ch[onclick=3D"ga(this,event)"],
+:root .GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XEDJBB,
+:root .GKJYXHBF2 > .GKJYXHBE2 > .GKJYXHBH5,
+:root .GJJKPX2N1 > .GJJKPX2M1 > .GJJKPX2P4,
+:root .GHOFUQ5BG2 > .GHOFUQ5BF2 > .GHOFUQ5BG5,
+:root .GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5,
+:root .GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5,
+:root .GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-,
+:root #topstuff > #tads,
+:root #tadsto.c,
+:root #tadsb.c,
+:root #tads.c,
+:root #tads + div + .c,
+:root #ssmiwdiv[jsdisplay],
+:root #rhswrapper > #rhssection[border=3D"0"][bgcolor=3D"#ffffff"],
+:root #rhs_block > script + .c._oc._Ve.rhsvw,
+:root #rhs_block > ol > .rhsvw > .kp-blk > .xpdopen > ._OKe > ol > ._DJe > =
+.luhb-div,
+:root #rhs_block > .ts[cellspacing=3D"0"][cellpadding=3D"0"][style=3D"paddi=
+ng:0"],
+:root #rhs_block > #mbEnd,
+:root #rhs_block .xpdopen > ._OKe > div > .mod > ._yYf,
+:root #rhs_block .mod > .luhb-div > div[data-async-type=3D"updateHotelBooki=
+ngModule"],
+:root #rhs_block .mod > .gws-local-hotels__booking-module,
+:root #resultspanel > #topads,
+:root #mn div[style=3D"position:relative"] > #center_col > div > ._dPg,
+:root #mn div[style=3D"position:relative"] > #center_col > ._Ak,
+:root #mn #center_col > div > h2.spon:first-child + ol:last-child,
+:root #mn #center_col > div > h2.spon:first-child,
+:root #mclip_container:last-child,
+:root #mbEnd[cellspacing=3D"0"][cellpadding=3D"0"],
+:root #main_col > #center_col div[style=3D"font-size:14px;margin:0 4px;padd=
+ing:1px 5px;background:#fff7ed"],
+:root #cnt #center_col > #taw > #tvcap > .c._oc._Lp,
+:root #cnt #center_col > #res > #topstuff > .ts,
+:root #center_col > div[style=3D"font-size:14px;margin-right:0;min-height:5=
+px"] > div[style=3D"font-size:14px;margin:0 4px;padding:1px 5px;background:=
+#fff8e7"],
+:root #center_col > #taw > #tvcap > .rscontainer,
+:root #center_col > #resultStats + div[style=3D"border:1px solid #dedede;ma=
+rgin-bottom:11px;padding:5px 7px 5px 6px"],
+:root #center_col > #resultStats + div + #res + #tads,
+:root #center_col > #resultStats + #tads + #res + #tads,
+:root #center_col > #resultStats + #tads,
+:root #center_col > #res > #topstuff + #search > div > #ires > #rso > #flun=
+,
+:root #center_col > #main > .dfrd > .mnr-c > .c._oc._zs,
+:root #center_col > #\5f Emc
+{ display: none !important; }</style></head><body class=3D"kv8eNc " marginw=
+idth=3D"0" marginheight=3D"0"><div id=3D"root"><style>
+    .ozWidgetRioButton_ {
+        border: 1px solid #d5d5d5;
+        border: 1px solid rgba(0,0,0,.17);
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.05);
+        box-shadow: 0 1px 0 rgba(0,0,0,.05);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: background-color .218s,border-color .218s,box-s=
+hadow .218s;
+        transition: background-color .218s,border-color .218s,box-shadow .2=
+18s;
+        -webkit-user-select: none;
+        -webkit-appearance: none;
+        background-color: #fff;
+        background-image: none;
+        color: #262626;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: auto
+    }
+
+    .ozWidgetRioButton_:hover {
+        border: 1px solid #aaa;
+        border: 1px solid rgba(0,0,0,.25);
+        -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 1px 0 rgba(0,0,0,0.1)
+    }
+
+    .ozWidgetRioButton_:active {
+        background-color: #e5e5e5;
+        border: 1px solid #aaa;
+        border: 1px solid rgba(0,0,0,.25);
+        -webkit-box-shadow: inset 0 1px 0 #ddd;
+        box-shadow: inset 0 1px 0 #ddd;
+        color: #262626
+    }
+
+    .ozWidgetRioButtonIcon_ {
+        float: left
+    }
+
+    .ozWidgetRioButtonSvg_ {
+        display: block
+    }
+
+    .ozWidgetRioButtonContentWrapper_ {
+        height: 100%;
+        width: 100%
+    }
+
+    .ozWidgetRioPlusOneButton_,.ozWidgetRioPlusOneButton_:hover,.ozWidgetRi=
+oPlusOneButton_:active {
+        color: #db4437
+    }
+
+    .ozWidgetRioButtonIconImage_ {
+          fill: #db4437
+    }
+
+    .ozWidgetRioButtonContents_ {
+        font-family: Roboto,arial,sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        margin-left: 6px;
+        margin-right: 6px;
+        vertical-align: top
+    }
+
+    .ozWidgetRioButtonIconImage_ {
+        fill: #db4437
+    }
+
+    .ozWidgetRioButtonGreen_ .ozWidgetRioButtonIconImage_,.ozWidgetRioButto=
+nRed_ .ozWidgetRioButtonIconImage_,.ozWidgetRioButtonBlue_ .ozWidgetRioButt=
+onIconImage_,.ozWidgetRioButtonDarkGray_ .ozWidgetRioButtonIconImage_,.ozWi=
+dgetRioButtonGrayedOut_ .ozWidgetRioButtonIconImage_ {
+        fill: #fff
+    }
+
+    .ozWidgetPlusButtonHeight15_ .ozWidgetPlusButton_ {
+        font-size: 9px;
+        line-height: 10px
+    }
+
+    .ozWidgetPlusButtonHeight20_ .ozWidgetPlusButton_ {
+        font-size: 11px;
+        line-height: 14px
+    }
+
+    .ozWidgetPlusButtonHeight24_ .ozWidgetPlusButton_ {
+        font-size: 11px;
+        line-height: 14px
+    }
+
+    .ozWidgetPlusButtonHeight28_ .ozWidgetPlusButton_ {
+        font-size: 12px;
+        line-height: 16px
+    }
+
+    .ozWidgetPlusButtonHeight60_ .ozWidgetPlusButton_ {
+        font-size: 30px;
+        line-height: 32px
+    }
+
+    .ozWidgetPlusButtonHeight15_ .ozWidgetPlusButton_ {
+        padding: 1px 5px 2px 15px
+    }
+
+    .ozWidgetPlusButtonHeight20_ .ozWidgetPlusButton_ {
+        padding: 2px 8px 2px 17px
+    }
+
+    .ozWidgetPlusButtonHeight24_ .ozWidgetPlusButton_ {
+        padding: 4px 18px 4px 32px
+    }
+
+    .ozWidgetPlusButtonHeight28_ .ozWidgetPlusButton_ {
+        padding: 5px 18px 5px 32px
+    }
+
+    .ozWidgetPlusButtonHeight60_ .ozWidgetPlusButton_ {
+        padding: 13px 25px 13px 75px
+    }
+
+    .ozWidgetRioButtonSvgImageWithFallback_ {
+        background-position: top left;
+        background-repeat: no-repeat
+    }
+
+    .ozWidgetBodyTransparent_ {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ozWidgetBodyOpaque_ {
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 5px
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    </style><table cellpadding=3D"0" cellspacing=3D"0"><tbody><tr><td valig=
+n=3D"top"><a href=3D"https://plus.google.com/share?app=3D110&amp;url=3Dhttp=
+%3A%2F%2Fwww.javenue.info%2Fpost%2Fjava-http-server" target=3D"_blank"><div=
+ dir=3D"ltr" class=3D"ozWidgetPlusButtonHeight20_"><span id=3D"widget_bound=
+s" style=3D""><div style=3D"height:20px;" class=3D"ozWidgetRioButton_ ozIdP=
+lusShareButton_" id=3D"button" title=3D"Share"><div class=3D"ozWidgetRioBut=
+tonContentWrapper_"><div style=3D"margin:2px 0 0 2px;" class=3D"ozWidgetRio=
+ButtonIcon_"><div style=3D"width:14px;height:14px;" class=3D"ozWidgetRioBut=
+tonSvgImageWithFallback_ ozWidgetRioButtonIconImage_ ozWidgetRioButtonIconI=
+mage14_"><svg version=3D"1.1" xmlns=3D"http://www.w3.org/2000/svg" width=3D=
+"14px" height=3D"14px" viewBox=3D"0 0 14 14" class=3D"ozWidgetRioButtonSvg_=
+"><path d=3D"M12.5,6.2V4.7h-1.1v1.5H9.8v1.1h1.5v1.5h1.1V7.3H14V6.2H12.5z"><=
+/path><path d=3D"M4.4,6.1v1.7h2.3c-0.2,1-1.1,1.8-2.3,1.8C3,9.6,1.8,8.4,1.8,=
+7S3,4.4,4.4,4.4C5,4.4,5.6,4.6,6,5l1.3-1.3 C6.5,3.1,5.6,2.6,4.4,2.6C2,2.6,0,=
+4.6,0,7s2,4.4,4.4,4.4c2.5,0,4.2-1.8,4.2-4.3c0-0.3,0-0.7-0.1-1C8.5,6.1,4.4,6=
+.1,4.4,6.1z"></path></svg></div></div><span style=3D"font-size:10px;line-he=
+ight:18px;" class=3D"ozWidgetRioButtonContents_">Share</span></div></div></=
+span></div></a></td></tr></tbody></table></div></body></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: font/woff2
+Content-Transfer-Encoding: base64
+Content-Location: https://fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2
+
+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
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-276-427ee9ff-70c2-41ca-8cc5-aa0dfde50262@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://platform.twitter.com/widgets/tweet_button.83d5793f6ebbe2046330abda6016ae93.en.html#dnt=false&id=twitter-widget-0&lang=en&original_referer=http%3A%2F%2Fwww.javenue.info%2Fpost%2Fjava-http-server&size=m&text=%D0%92%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%20HTTP%20Server%20%D0%BD%D0%B0%20Java&time=1517228110550&type=share&url=http%3A%2F%2Fwww.javenue.info%2Fpost%2Fjava-http-server
+
+<!DOCTYPE html><html data-scribe=3D"page:button" lang=3D"en"><head><meta ht=
+tp-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+ =20
+  <link rel=3D"dns-prefetch" href=3D"https://twitter.com/">
+  <title>Tweet Button</title>
+  <base target=3D"_blank">
+  <style type=3D"text/css">html{margin:0;padding:0;font:normal normal norma=
+l 11px/18px 'Helvetica Neue',Arial,sans-serif;color:#333;-webkit-user-selec=
+t:none;-ms-user-select:none;-moz-user-select:none;user-select:none}body{mar=
+gin:0;padding:0;background:0 0}a{outline:0;text-decoration:none}body.rtl{di=
+rection:rtl}#widget{display:inline-block;white-space:nowrap;overflow:hidden=
+;text-align:left}#count,.btn,.btn .label,.btn-o,.count-o{display:inline-blo=
+ck;vertical-align:top;zoom:1}.btn-o{max-width:100%}.btn{position:relative;h=
+eight:20px;box-sizing:border-box;padding:1px 8px 1px 6px;background-color:#=
+1b95e0;color:#fff;border-radius:3px;font-weight:500;cursor:pointer}.rtl .bt=
+n{padding:1px 6px 1px 8px}.btn:active,.btn:focus,.btn:hover{background-colo=
+r:#0c7abf}.btn:active{box-shadow:inset 0 3px 5px rgba(0,0,0,.1)}.xl .btn:ac=
+tive{box-shadow:inset 0 3px 7px rgba(0,0,0,.1)}.btn i{position:relative;top=
+:2px;display:inline-block;width:14px;height:14px;background:transparent 0 0=
+ no-repeat;background-image:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http=
+%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2072%2072%22%3E%3C=
+path%20fill%3D%22none%22%20d%3D%22M0%200h72v72H0z%22%2F%3E%3Cpath%20class%3=
+D%22icon%22%20fill%3D%22%23fff%22%20d%3D%22M68.812%2015.14c-2.348%201.04-4.=
+87%201.744-7.52%202.06%202.704-1.62%204.78-4.186%205.757-7.243-2.53%201.5-5=
+.33%202.592-8.314%203.176C56.35%2010.59%2052.948%209%2049.182%209c-7.23%200=
+-13.092%205.86-13.092%2013.093%200%201.026.118%202.02.338%202.98C25.543%202=
+4.527%2015.9%2019.318%209.44%2011.396c-1.125%201.936-1.77%204.184-1.77%206.=
+58%200%204.543%202.312%208.552%205.824%2010.9-2.146-.07-4.165-.658-5.93-1.6=
+4-.002.056-.002.11-.002.163%200%206.345%204.513%2011.638%2010.504%2012.84-1=
+.1.298-2.256.457-3.45.457-.845%200-1.666-.078-2.464-.23%201.667%205.2%206.5=
+%208.985%2012.23%209.09-4.482%203.51-10.13%205.605-16.26%205.605-1.055%200-=
+2.096-.06-3.122-.184%205.794%203.717%2012.676%205.882%2020.067%205.882%2024=
+.083%200%2037.25-19.95%2037.25-37.25%200-.565-.013-1.133-.038-1.693%202.558=
+-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E)}.btn .label{margin=
+-left:3px;white-space:nowrap}.btn .label b{font-weight:500;white-space:nowr=
+ap}.rtl .btn .label{margin-right:3px}.rtl .btn .label b{display:inline-bloc=
+k;direction:ltr}.xl{font-size:13px;line-height:26px}.xl .btn{height:28px;bo=
+rder-radius:4px;padding:1px 10px 1px 9px}.rtl.xl .btn{padding:1px 9px 1px 1=
+0px}.xl .btn i{top:4px;height:18px;width:18px}.xl .btn .label{margin-left:4=
+px}.rtl.xl .btn .label{margin-right:4px}.aria{position:absolute;left:-999em=
+}.rtl .aria{left:auto;right:-999em}.count-o{position:relative;background:#f=
+ff;border:#8799A6 solid 1px;border-radius:3px;visibility:hidden;min-height:=
+18px;min-width:15px;text-align:center}#count{white-space:nowrap;color:#292F=
+33}#count:focus,#count:hover{color:#333;text-decoration:underline}.ncount .=
+count-o{display:none}.count-ready .count-o{visibility:visible}.count-o i,.c=
+ount-o u{position:absolute;zoom:1;line-height:0;width:0;height:0;left:0;top=
+:50%;margin:-4px 0 0 -4px;border:4px transparent solid;border-right-color:#=
+66757f;border-left:0}.count-o u{margin-left:-3px;border-right-color:#fff}.r=
+tl .count-o i,.rtl .count-o u{left:auto;right:0;margin:-4px -4px 0 0;border=
+:4px transparent solid;border-left-color:#66757f;border-right:0}.rtl .count=
+-o u{margin-right:-3px;border-left-color:#fff}.hcount .count-o{margin:0 0 0=
+ 5px}.hcount.rtl .count-o{margin:0 5px 0 0}.hcount #count{padding:0 5px}.xl=
+ .count-o{font-size:11px;border-radius:4px}.xl.hcount .count-o{margin:0 0 0=
+ 6px}.xl.rtl.hcount .count-o{margin:0 6px 0 0}.xl.hcount .count-o i,.xl.hco=
+unt .count-o u{margin:-5px 0 0 -5px;border-width:5px 5px 5px 0}.xl.hcount .=
+count-o u{margin-left:-4px}.xl.rtl.hcount .count-o i,.xl.rtl.hcount .count-=
+o u{margin:-5px -5px 0 0;border-width:5px 0 5px 5px}.xl.rtl.hcount .count-o=
+ u{margin-right:-4px}.xl #count{padding:0 7px}</style>
+<style type=3D"text/css">
+:root .suggested-tweet-stream-container,
+:root .stream-tweet[label=3D"promoted"],
+:root .stream-item[data-item-type=3D"tweet"][data-item-id*=3D":"],
+:root .stream-item-group-start[label=3D"promoted"],
+:root .promotion,
+:root .promoted-trend,
+:root .promoted-account,
+:root .is-promoted,
+:root .has-profile-promoted-tweet,
+:root .promoted-tweet[data-disclosure-type=3D"promoted"],
+:root .stream .tweet[data-card2-type=3D"promo_website"]
+{ display: none !important; }</style></head>
+<body data-scribe=3D"section:share" class=3D" regular ltr ready">
+<div id=3D"widget">
+  <div class=3D"btn-o" data-scribe=3D"component:button" style=3D"width: 60p=
+x;"><a href=3D"https://twitter.com/intent/tweet?original_referer=3Dhttp%3A%=
+2F%2Fwww.javenue.info%2Fpost%2Fjava-http-server&amp;ref_src=3Dtwsrc%5Etfw&a=
+mp;text=3D%D0%92%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%20HT=
+TP%20Server%20%D0%BD%D0%B0%20Java&amp;tw_p=3Dtweetbutton&amp;url=3Dhttp%3A%=
+2F%2Fwww.javenue.info%2Fpost%2Fjava-http-server" class=3D"btn" id=3D"b"><i>=
+</i><span class=3D"label" id=3D"l">Tweet</span></a></div>
+</div>
+
+
+
+</body></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-277-3e16f212-bd6c-4a2a-898e-ea07ee50ffc7@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fwww.javenue.info&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.ru.xSluke16lWI.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCPVxHT825QsYGqvpMG5mQAddITztw#rpctoken=2053760629&forcesecure=1
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><title></title><meta http-equiv=3D"X-UA-Compatible=
+" content=3D"IE=3Dedge"><meta name=3D"viewport" content=3D"width=3Ddevice-w=
+idth, initial-scale=3D1, minimum-scale=3D1, maximum-scale=3D1, user-scalabl=
+e=3D0"><style type=3D"text/css">
+:root div[style^=3D"height: 16px; font: bold 12px/16px"],
+:root [style=3D"border: 1px solid rgb(51, 102, 204);"],
+:root [style=3D"border: 1px solid rgb(51, 102, 153);"],
+:root [style=3D"border: 1px solid rgb(241, 250, 248);"],
+:root [style=3D"border: 1px solid rgb(145, 117, 77);"],
+:root [style=3D"border: 1px solid rgb(0, 90, 136);"],
+:root .ts[style=3D"margin:0 0 12px;height:92px;width:100%"],
+:root .nH.MC,
+:root .c[style=3D"margin: 0pt;"],
+:root .GISRH3UDHB,
+:root .GGQPGYLCMCB,
+:root .GGQPGYLCD5,
+:root .GC3LC41DERB + div[style=3D"position: relative; height: 170px;"],
+:root #tadsc,
+:root #ad,
+:root #sqh,
+:root .widget-pane-section-result[data-result-ad-type],
+:root .section-result[data-result-ad-type],
+:root .rscontainer > .ellip,
+:root .rhsvw[style=3D"background-color:#fff;margin:0 0 14px;padding-bottom:=
+1px;padding-top:1px;"],
+:root .ra[width=3D"30%"][align=3D"right"] + table[width=3D"70%"][cellpaddin=
+g=3D"0"],
+:root .ra[align=3D"right"][width=3D"30%"],
+:root .ra[align=3D"left"][width=3D"30%"],
+:root .mw > #rcnt > #center_col > #taw > .c,
+:root .mw > #rcnt > #center_col > #taw > #tvcap > .c,
+:root .mod > ._jH + .rscontainer,
+:root .lads[width=3D"100%"][style=3D"background:#FFF8DD"],
+:root .commercial-unit-mobile-top,
+:root .commercial-unit-mobile-bottom,
+:root .commercial-unit-desktop-top,
+:root .commercial-unit-desktop-rhs,
+:root .ch[onclick=3D"ga(this,event)"],
+:root .GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XEDJBB,
+:root .GKJYXHBF2 > .GKJYXHBE2 > .GKJYXHBH5,
+:root .GJJKPX2N1 > .GJJKPX2M1 > .GJJKPX2P4,
+:root .GHOFUQ5BG2 > .GHOFUQ5BF2 > .GHOFUQ5BG5,
+:root .GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5,
+:root .GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5,
+:root .GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-,
+:root #topstuff > #tads,
+:root #tadsto.c,
+:root #tadsb.c,
+:root #tads.c,
+:root #tads + div + .c,
+:root #ssmiwdiv[jsdisplay],
+:root #rhswrapper > #rhssection[border=3D"0"][bgcolor=3D"#ffffff"],
+:root #rhs_block > script + .c._oc._Ve.rhsvw,
+:root #rhs_block > ol > .rhsvw > .kp-blk > .xpdopen > ._OKe > ol > ._DJe > =
+.luhb-div,
+:root #rhs_block > .ts[cellspacing=3D"0"][cellpadding=3D"0"][style=3D"paddi=
+ng:0"],
+:root #rhs_block > #mbEnd,
+:root #rhs_block .xpdopen > ._OKe > div > .mod > ._yYf,
+:root #rhs_block .mod > .luhb-div > div[data-async-type=3D"updateHotelBooki=
+ngModule"],
+:root #rhs_block .mod > .gws-local-hotels__booking-module,
+:root #resultspanel > #topads,
+:root #mn div[style=3D"position:relative"] > #center_col > div > ._dPg,
+:root #mn div[style=3D"position:relative"] > #center_col > ._Ak,
+:root #mn #center_col > div > h2.spon:first-child + ol:last-child,
+:root #mn #center_col > div > h2.spon:first-child,
+:root #mclip_container:last-child,
+:root #mbEnd[cellspacing=3D"0"][cellpadding=3D"0"],
+:root #main_col > #center_col div[style=3D"font-size:14px;margin:0 4px;padd=
+ing:1px 5px;background:#fff7ed"],
+:root #cnt #center_col > #taw > #tvcap > .c._oc._Lp,
+:root #cnt #center_col > #res > #topstuff > .ts,
+:root #center_col > div[style=3D"font-size:14px;margin-right:0;min-height:5=
+px"] > div[style=3D"font-size:14px;margin:0 4px;padding:1px 5px;background:=
+#fff8e7"],
+:root #center_col > #taw > #tvcap > .rscontainer,
+:root #center_col > #resultStats + div[style=3D"border:1px solid #dedede;ma=
+rgin-bottom:11px;padding:5px 7px 5px 6px"],
+:root #center_col > #resultStats + div + #res + #tads,
+:root #center_col > #resultStats + #tads + #res + #tads,
+:root #center_col > #resultStats + #tads,
+:root #center_col > #res > #topstuff + #search > div > #ires > #rso > #flun=
+,
+:root #center_col > #main > .dfrd > .mnr-c > .c._oc._zs,
+:root #center_col > #\5f Emc
+{ display: none !important; }</style></head><body></body></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-278-b2bf8d6b-8932-4267-a2a6-6c94c7461a83@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://staticxx.facebook.com/connect/xd_arbiter/r/lY4eZXm_YWu.js?version=42#channel=f3658ab2d9b4664&origin=http%3A%2F%2Fwww.javenue.info
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><title>Facebook Cross-Domain Messaging helper</tit=
+le><style type=3D"text/css">
+:root ul[id^=3D"typeahead_list_"] > ._20e._6_k._55y_,
+:root div[id^=3D"substream_"] .userContentWrapper > ._1ifo,
+:root div[id^=3D"sponsoredTickerStory_"],
+:root div[class=3D"pagelet n_1bbmy10ju8 ego_column"],
+:root div[class=3D"pagelet l_1br60i3rxk ego_column"],
+:root div[class=3D"ego_column"],
+:root div[class=3D"ego_column pagelet"],
+:root div[class=3D"ego_column pagelet n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _y92"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt"],
+:root div[class=3D"ego_column pagelet _5qrt n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _y92"],
+:root div[class=3D"ego_column pagelet _5qrt _y92 _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _xi9"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm w_kz0xdhkq7"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm _xi9"],
+:root div[class=3D"ego_column _8_9"],
+:root div[class=3D"ego_column _5qrt"],
+:root button[data-gt*=3D"\"ref\":\"ad\""],
+:root [href^=3D"https://l.facebook.com/"][href*=3D"%2526ad_id%"],
+:root [href^=3D"/ajax/emu/end.php?"],
+:root a[ajaxify*=3D"&eid=3D"] + a[href^=3D"https://l.facebook.com/l.php?u=
+=3D"],
+:root [href^=3D"/ads/adboard/"],
+:root [data-referrer=3D"pagelet_side_ads"],
+:root .ownsection[role=3D"option"],
+:root .muffin.group,
+:root .fixedAux .pbm,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_source"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_medium"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+https%3A%2F%2Fgoo.gl%2F"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+adfarm.mediaplex.com"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+.intelliad.de"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%3Fcampaign%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26adgroup_id%"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_source"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_medium"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"%=
+26adgroup_id%"],
+:root .adv,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"] + div,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"],
+:root #pagelet_ads_when_no_friend_list_suggestion,
+:root #home_stream > .uiUnifiedStory[data-ft*=3D"\"ei\":\""],
+:root #home_sponsor_nile,
+:root #MessagingNetegoWrapper
+{ display: none !important; }</style></head><body><b id=3D"warning" style=
+=3D"display: none; color:red"> SECURITY WARNING: Please treat the URL above=
+ as you would your password and do not share it with anyone. See the <a hre=
+f=3D"https://l.facebook.com/l.php?u=3Dhttps%3A%2F%2Fon.fb.me%2F1mXNHhm&amp;=
+h=3DATM-9i4Fi5pV4a3GbJud8KVYIoc3Te4GwfZeGKKrGAAveK4stWYCq24dXkRv-de5qb5Q6Oz=
+Ftkeqb76VGZqkMI9ljvxQ_d8gEs6gYA" target=3D"_blank" data-lynx-mode=3D"origin=
+" rel=3D"nofollow">Facebook Help Center</a> for more information. </b></bod=
+y></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-279-deb32dd9-e4c7-4ee9-8660-47fffd10bb43@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://staticxx.facebook.com/connect/xd_arbiter/r/lY4eZXm_YWu.js?version=42#channel=f3658ab2d9b4664&origin=http%3A%2F%2Fwww.javenue.info
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><title>Facebook Cross-Domain Messaging helper</tit=
+le><style type=3D"text/css">
+:root ul[id^=3D"typeahead_list_"] > ._20e._6_k._55y_,
+:root div[id^=3D"substream_"] .userContentWrapper > ._1ifo,
+:root div[id^=3D"sponsoredTickerStory_"],
+:root div[class=3D"pagelet n_1bbmy10ju8 ego_column"],
+:root div[class=3D"pagelet l_1br60i3rxk ego_column"],
+:root div[class=3D"ego_column"],
+:root div[class=3D"ego_column pagelet"],
+:root div[class=3D"ego_column pagelet n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _y92"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt"],
+:root div[class=3D"ego_column pagelet _5qrt n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _y92"],
+:root div[class=3D"ego_column pagelet _5qrt _y92 _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _xi9"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm w_kz0xdhkq7"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm _xi9"],
+:root div[class=3D"ego_column _8_9"],
+:root div[class=3D"ego_column _5qrt"],
+:root button[data-gt*=3D"\"ref\":\"ad\""],
+:root [href^=3D"https://l.facebook.com/"][href*=3D"%2526ad_id%"],
+:root [href^=3D"/ajax/emu/end.php?"],
+:root a[ajaxify*=3D"&eid=3D"] + a[href^=3D"https://l.facebook.com/l.php?u=
+=3D"],
+:root [href^=3D"/ads/adboard/"],
+:root [data-referrer=3D"pagelet_side_ads"],
+:root .ownsection[role=3D"option"],
+:root .muffin.group,
+:root .fixedAux .pbm,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_source"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_medium"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+https%3A%2F%2Fgoo.gl%2F"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+adfarm.mediaplex.com"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+.intelliad.de"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%3Fcampaign%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26adgroup_id%"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_source"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_medium"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"%=
+26adgroup_id%"],
+:root .adv,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"] + div,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"],
+:root #pagelet_ads_when_no_friend_list_suggestion,
+:root #home_stream > .uiUnifiedStory[data-ft*=3D"\"ei\":\""],
+:root #home_sponsor_nile,
+:root #MessagingNetegoWrapper
+{ display: none !important; }</style></head><body><b id=3D"warning" style=
+=3D"display: none; color:red"> SECURITY WARNING: Please treat the URL above=
+ as you would your password and do not share it with anyone. See the <a hre=
+f=3D"https://l.facebook.com/l.php?u=3Dhttps%3A%2F%2Fon.fb.me%2F1mXNHhm&amp;=
+h=3DATM-9i4Fi5pV4a3GbJud8KVYIoc3Te4GwfZeGKKrGAAveK4stWYCq24dXkRv-de5qb5Q6Oz=
+Ftkeqb76VGZqkMI9ljvxQ_d8gEs6gYA" target=3D"_blank" data-lynx-mode=3D"origin=
+" rel=3D"nofollow">Facebook Help Center</a> for more information. </b></bod=
+y></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-280-398ee8cd-53ee-4e8f-a9da-de94de9a6990@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://accounts.google.com/o/oauth2/iframe#origin=http%3A%2F%2Fwww.javenue.info&rpcToken=327066292.9908272&clearCache=1
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><title></title><meta http-equiv=3D"X-UA-Compatible=
+" content=3D"IE=3Dedge"><meta name=3D"viewport" content=3D"width=3Ddevice-w=
+idth, initial-scale=3D1, minimum-scale=3D1, maximum-scale=3D1, user-scalabl=
+e=3D0"><style type=3D"text/css">
+:root div[style^=3D"height: 16px; font: bold 12px/16px"],
+:root [style=3D"border: 1px solid rgb(51, 102, 204);"],
+:root [style=3D"border: 1px solid rgb(51, 102, 153);"],
+:root [style=3D"border: 1px solid rgb(241, 250, 248);"],
+:root [style=3D"border: 1px solid rgb(145, 117, 77);"],
+:root [style=3D"border: 1px solid rgb(0, 90, 136);"],
+:root .ts[style=3D"margin:0 0 12px;height:92px;width:100%"],
+:root .nH.MC,
+:root .c[style=3D"margin: 0pt;"],
+:root .GISRH3UDHB,
+:root .GGQPGYLCMCB,
+:root .GGQPGYLCD5,
+:root .GC3LC41DERB + div[style=3D"position: relative; height: 170px;"],
+:root #tadsc,
+:root #ad,
+:root #sqh,
+:root .widget-pane-section-result[data-result-ad-type],
+:root .section-result[data-result-ad-type],
+:root .rscontainer > .ellip,
+:root .rhsvw[style=3D"background-color:#fff;margin:0 0 14px;padding-bottom:=
+1px;padding-top:1px;"],
+:root .ra[width=3D"30%"][align=3D"right"] + table[width=3D"70%"][cellpaddin=
+g=3D"0"],
+:root .ra[align=3D"right"][width=3D"30%"],
+:root .ra[align=3D"left"][width=3D"30%"],
+:root .mw > #rcnt > #center_col > #taw > .c,
+:root .mw > #rcnt > #center_col > #taw > #tvcap > .c,
+:root .mod > ._jH + .rscontainer,
+:root .lads[width=3D"100%"][style=3D"background:#FFF8DD"],
+:root .commercial-unit-mobile-top,
+:root .commercial-unit-mobile-bottom,
+:root .commercial-unit-desktop-top,
+:root .commercial-unit-desktop-rhs,
+:root .ch[onclick=3D"ga(this,event)"],
+:root .GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XEDJBB,
+:root .GKJYXHBF2 > .GKJYXHBE2 > .GKJYXHBH5,
+:root .GJJKPX2N1 > .GJJKPX2M1 > .GJJKPX2P4,
+:root .GHOFUQ5BG2 > .GHOFUQ5BF2 > .GHOFUQ5BG5,
+:root .GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5,
+:root .GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5,
+:root .GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-,
+:root #topstuff > #tads,
+:root #tadsto.c,
+:root #tadsb.c,
+:root #tads.c,
+:root #tads + div + .c,
+:root #ssmiwdiv[jsdisplay],
+:root #rhswrapper > #rhssection[border=3D"0"][bgcolor=3D"#ffffff"],
+:root #rhs_block > script + .c._oc._Ve.rhsvw,
+:root #rhs_block > ol > .rhsvw > .kp-blk > .xpdopen > ._OKe > ol > ._DJe > =
+.luhb-div,
+:root #rhs_block > .ts[cellspacing=3D"0"][cellpadding=3D"0"][style=3D"paddi=
+ng:0"],
+:root #rhs_block > #mbEnd,
+:root #rhs_block .xpdopen > ._OKe > div > .mod > ._yYf,
+:root #rhs_block .mod > .luhb-div > div[data-async-type=3D"updateHotelBooki=
+ngModule"],
+:root #rhs_block .mod > .gws-local-hotels__booking-module,
+:root #resultspanel > #topads,
+:root #mn div[style=3D"position:relative"] > #center_col > div > ._dPg,
+:root #mn div[style=3D"position:relative"] > #center_col > ._Ak,
+:root #mn #center_col > div > h2.spon:first-child + ol:last-child,
+:root #mn #center_col > div > h2.spon:first-child,
+:root #mclip_container:last-child,
+:root #mbEnd[cellspacing=3D"0"][cellpadding=3D"0"],
+:root #main_col > #center_col div[style=3D"font-size:14px;margin:0 4px;padd=
+ing:1px 5px;background:#fff7ed"],
+:root #cnt #center_col > #taw > #tvcap > .c._oc._Lp,
+:root #cnt #center_col > #res > #topstuff > .ts,
+:root #center_col > div[style=3D"font-size:14px;margin-right:0;min-height:5=
+px"] > div[style=3D"font-size:14px;margin:0 4px;padding:1px 5px;background:=
+#fff8e7"],
+:root #center_col > #taw > #tvcap > .rscontainer,
+:root #center_col > #resultStats + div[style=3D"border:1px solid #dedede;ma=
+rgin-bottom:11px;padding:5px 7px 5px 6px"],
+:root #center_col > #resultStats + div + #res + #tads,
+:root #center_col > #resultStats + #tads + #res + #tads,
+:root #center_col > #resultStats + #tads,
+:root #center_col > #res > #topstuff + #search > div > #ires > #rso > #flun=
+,
+:root #center_col > #main > .dfrd > .mnr-c > .c._oc._zs,
+:root #center_col > #\5f Emc
+{ display: none !important; }</style></head><body></body></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-281-640b3cd6-34cf-4e11-9374-917de1de2cfc@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+
+<html class=3D"SandboxRoot"><head><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3DUTF-8"><style type=3D"text/css">.SandboxRoot { dis=
+play: none; }</style><base target=3D"_blank"></head><body></body></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-283-3ce824f8-6c08-428a-8140-1407082e68d5@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.facebook.com/connect/ping?client_id=1648191008776808&domain=www.javenue.info&origin=1&redirect_uri=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FlY4eZXm_YWu.js%3Fversion%3D42%23cb%3Df1c5b9d1a20b3f4%26domain%3Dwww.javenue.info%26origin%3Dhttp%253A%252F%252Fwww.javenue.info%252Ff3658ab2d9b4664%26relation%3Dparent&response_type=token%2Csigned_request%2Ccode&sdk=joey
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"><style type=3D"text/css">
+:root ul[id^=3D"typeahead_list_"] > ._20e._6_k._55y_,
+:root div[id^=3D"substream_"] .userContentWrapper > ._1ifo,
+:root div[id^=3D"sponsoredTickerStory_"],
+:root div[class=3D"pagelet n_1bbmy10ju8 ego_column"],
+:root div[class=3D"pagelet l_1br60i3rxk ego_column"],
+:root div[class=3D"ego_column"],
+:root div[class=3D"ego_column pagelet"],
+:root div[class=3D"ego_column pagelet n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _y92"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt"],
+:root div[class=3D"ego_column pagelet _5qrt n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _y92"],
+:root div[class=3D"ego_column pagelet _5qrt _y92 _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _xi9"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm w_kz0xdhkq7"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm _xi9"],
+:root div[class=3D"ego_column _8_9"],
+:root div[class=3D"ego_column _5qrt"],
+:root button[data-gt*=3D"\"ref\":\"ad\""],
+:root [href^=3D"https://l.facebook.com/"][href*=3D"%2526ad_id%"],
+:root [href^=3D"/ajax/emu/end.php?"],
+:root a[ajaxify*=3D"&eid=3D"] + a[href^=3D"https://l.facebook.com/l.php?u=
+=3D"],
+:root [href^=3D"/ads/adboard/"],
+:root [data-referrer=3D"pagelet_side_ads"],
+:root .ownsection[role=3D"option"],
+:root .muffin.group,
+:root .fixedAux .pbm,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_source"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_medium"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+https%3A%2F%2Fgoo.gl%2F"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+adfarm.mediaplex.com"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+.intelliad.de"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%3Fcampaign%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26adgroup_id%"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_source"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_medium"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"%=
+26adgroup_id%"],
+:root .adv,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"] + div,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"],
+:root #pagelet_ads_when_no_friend_list_suggestion,
+:root #home_stream > .uiUnifiedStory[data-ft*=3D"\"ei\":\""],
+:root #home_sponsor_nile,
+:root #MessagingNetegoWrapper
+{ display: none !important; }</style></head><body><div><span>=D0=9E=D1=88=
+=D0=B8=D0=B1=D0=BA=D0=B0 =D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=
+=D0=B8=D1=8F: =D0=92=D0=BE=D0=B7=D0=BD=D0=B8=D0=BA=D0=BB=D0=B0 =D0=BF=D1=80=
+=D0=BE=D0=B1=D0=BB=D0=B5=D0=BC=D0=B0 =D0=BF=D1=80=D0=B8 =D0=BF=D0=BE=D0=BB=
+=D1=83=D1=87=D0=B5=D0=BD=D0=B8=D0=B8 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=88=
+=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =D0=B2=D0=B0=D0=BC=D0=B8 =D0=B4=D0=B0=D0=BD=
+=D0=BD=D1=8B=D1=85 =D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=
+=D1=8F. =D0=9F=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BC=
+=D0=BE=D0=B6=D0=B5=D1=82 =D0=B1=D1=8B=D1=82=D1=8C =D0=BD=D0=B5=D0=B4=D0=B5=
+=D0=B9=D1=81=D1=82=D0=B2=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=BC, =
+=D0=B8=D0=BB=D0=B8 =D0=BF=D1=80=D0=BE=D0=B8=D0=B7=D0=BE=D1=88=D0=B5=D0=BB =
+=D0=B2=D1=80=D0=B5=D0=BC=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9 =D1=81=D0=B1=D0=BE=
+=D0=B9. =D0=9F=D0=BE=D0=B6=D0=B0=D0=BB=D1=83=D0=B9=D1=81=D1=82=D0=B0, =D0=
+=BF=D0=BE=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=D0=BF=D1=
+=8B=D1=82=D0=BA=D1=83 =D0=BF=D0=BE=D0=B7=D0=B6=D0=B5.</span></div></body></=
+html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-285-9ad38840-2e4f-47db-8f6d-f354fc1b709e@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.facebook.com/v2.5/plugins/login_button.php?app_id=1648191008776808&auto_logout_link=false&channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FlY4eZXm_YWu.js%3Fversion%3D42%23cb%3Dfc65e6dfc5f4e%26domain%3Dwww.javenue.info%26origin%3Dhttp%253A%252F%252Fwww.javenue.info%252Ff3658ab2d9b4664%26relation%3Dparent.parent&container_width=0&locale=en_GB&max_rows=1&scope=public_profile%2Cemail&sdk=joey&show_faces=false&size=xlarge
+
+<!DOCTYPE html><html lang=3D"ru" id=3D"facebook" class=3D"svg "><head><meta=
+ http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><meta n=
+ame=3D"referrer" content=3D"origin-when-crossorigin" id=3D"meta_referrer"><=
+title>Facebook</title><style>._32qa button{opacity:.4}._59ov{height:100%;he=
+ight:910px;position:relative;top:-10px;width:100%}._5ti_{background-size:co=
+ver;height:100%;width:100%}._5tj2{height:900px}._2mm3 ._5a8u .uiBoxGray{bac=
+kground:#fff;margin:0;padding:12px}._2494{height:100vh}._2495{margin-top:-1=
+0px;top:10px}body.plugin{background:transparent;font-family:Helvetica, Aria=
+l, sans-serif;line-height:1.28;overflow:hidden;-webkit-text-size-adjust:non=
+e}.plugin,.plugin button,.plugin input,.plugin label,.plugin select,.plugin=
+ td,.plugin textarea{font-size:11px}body{background:#fff;color:#1d2129;dire=
+ction:ltr;line-height:1.34;margin:0;padding:0;unicode-bidi:embed}body,butto=
+n,input,label,select,td,textarea{font-family:Helvetica, Arial, sans-serif;f=
+ont-size:12px}h1,h2,h3,h4,h5,h6{color:#1d2129;font-size:13px;margin:0;paddi=
+ng:0}h1{font-size:14px}h4,h5,h6{font-size:12px}p{margin:1em 0}a{color:#3658=
+99;cursor:pointer;text-decoration:none}button{margin:0}a:hover{text-decorat=
+ion:underline}img{border:0}td,td.label{text-align:left}dd{color:#000}dt{col=
+or:#777}ul{list-style-type:none;margin:0;padding:0}abbr{border-bottom:none;=
+text-decoration:none}hr{background:#d9d9d9;border-width:0;color:#d9d9d9;hei=
+ght:1px}.clearfix:after{clear:both;content:".";display:block;font-size:0;he=
+ight:0;line-height:0;visibility:hidden}.clearfix{zoom:1}.datawrap{word-wrap=
+:break-word}.word_break{display:inline-block}.flexchildwrap{min-width:0;wor=
+d-wrap:break-word}.ellipsis{overflow:hidden;text-overflow:ellipsis;white-sp=
+ace:nowrap}.aero{opacity:.5}.column{float:left}.center{margin-left:auto;mar=
+gin-right:auto}#facebook .hidden_elem{display:none !important}#facebook .in=
+visible_elem{visibility:hidden}#facebook .accessible_elem{clip:rect(1px 1px=
+ 1px 1px);clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position=
+:absolute;white-space:nowrap;width:1px}.direction_ltr{direction:ltr}.direct=
+ion_rtl{direction:rtl}.text_align_ltr{text-align:left}.text_align_rtl{text-=
+align:right}.pluginFontArial,.pluginFontArial button,.pluginFontArial input=
+,.pluginFontArial label,.pluginFontArial select,.pluginFontArial td,.plugin=
+FontArial textarea{font-family:Arial, sans-serif}.pluginFontLucida,.pluginF=
+ontLucida button,.pluginFontLucida input,.pluginFontLucida label,.pluginFon=
+tLucida select,.pluginFontLucida td,.pluginFontLucida textarea{font-family:=
+Lucida Grande, sans-serif}.pluginFontSegoe,.pluginFontSegoe button,.pluginF=
+ontSegoe input,.pluginFontSegoe label,.pluginFontSegoe select,.pluginFontSe=
+goe td,.pluginFontSegoe textarea{font-family:Segoe UI, sans-serif}.pluginFo=
+ntTahoma,.pluginFontTahoma button,.pluginFontTahoma input,.pluginFontTahoma=
+ label,.pluginFontTahoma select,.pluginFontTahoma td,.pluginFontTahoma text=
+area{font-family:Tahoma, sans-serif}.pluginFontTrebuchet,.pluginFontTrebuch=
+et button,.pluginFontTrebuchet input,.pluginFontTrebuchet label,.pluginFont=
+Trebuchet select,.pluginFontTrebuchet td,.pluginFontTrebuchet textarea{font=
+-family:Trebuchet MS, sans-serif}.pluginFontVerdana,.pluginFontVerdana butt=
+on,.pluginFontVerdana input,.pluginFontVerdana label,.pluginFontVerdana sel=
+ect,.pluginFontVerdana td,.pluginFontVerdana textarea{font-family:Verdana, =
+sans-serif}.pluginFontHelvetica,.pluginFontHelvetica button,.pluginFontHelv=
+etica input,.pluginFontHelvetica label,.pluginFontHelvetica select,.pluginF=
+ontHelvetica td,.pluginFontHelvetica textarea{font-family:Helvetica, Arial,=
+ sans-serif}._4z_b{background-color:#4267b2;color:#fff;cursor:pointer;displ=
+ay:inline-block;vertical-align:top}._4z_8:active{background-color:#4267b2}.=
+_4z_e,._4z_5,._4z_5 .img{vertical-align:top}._4z_b:active ._4z_e,form.async=
+_saving ._4z_e,._4z_5{display:none}form.async_saving ._4z_5{display:inline-=
+block}._4z_9,form.async_saving ._4z_9:active{border-bottom:1px solid #1a356=
+e;border-right:1px solid #29447e;border-top:1px solid #29447e;display:inlin=
+e-block}._4z_9:active{border-color:#29487d}._4z_f,form.async_saving ._4z_8:=
+active ._4z_f{border-top:1px solid #879ac0;display:inline-block;white-space=
+:nowrap}._4z_8:active ._4z_f{border-top-color:#50609c}._4z_7 ._4z_f{font-si=
+ze:10px;line-height:10px;padding:0 6px}._4z_d ._4z_f{font-size:11px;line-he=
+ight:14px;padding:2px 6px}._4z_6 ._4z_f{font-size:13px;line-height:16px;pad=
+ding:0 6px}._4z_c ._4z_f{font-size:24px;line-height:30px;padding:3px 8px}fo=
+rm.async_saving ._4z_b,._4z_a{background-color:#577fbc;cursor:default}._4z_=
+5{border-bottom:1px solid #1a356e;border-left:1px solid #29447e;border-righ=
+t:1px solid #405b91;border-top:1px solid #29447e}._4z_5 .img{border-top:1px=
+ solid #879ac0}._559s{height:18px}._4z_7{height:18px}._4z_d{height:22px}._4=
+z_6{height:25px}._4z_c{height:39px}._559s ._55a2{height:16px;width:16px}._4=
+z_7 ._55a2{height:14px;width:14px}._4z_d ._55a2{height:16px;width:16px}._4z=
+_6 ._55a2{height:20px;width:20px}._4z_c ._55a2{height:31px;width:31px}._4z_=
+b{background:#4c69ba;background:linear-gradient(#4c69ba, #3b55a0);border-co=
+lor:#4c69ba;border-radius:2px;color:#fff;font-family:"Helvetica neue";-webk=
+it-font-smoothing:antialiased;text-shadow:0 -1px 0 #354c8c}._4z_b:hover{bac=
+kground:linear-gradient(#5b7bd5, #4864b1);border-bottom-color:#365899;borde=
+r-left-color:#4961a8;border-right-color:#4961a8;border-top-color:#5874c3;bo=
+x-shadow:inset 0 1px 0 #607fd6;cursor:pointer}._239w{background:#5b5b5b;bac=
+kground:linear-gradient(#5b5b5b, #3c3c3c);text-shadow:0 -1px 0 #4c4c4c}._23=
+9w:hover{background:linear-gradient(#6a6a6a, #4b4b4b);box-shadow:inset 0 1p=
+x 0 #323232}._4z_b ._4z_g{overflow:none;white-space:nowrap}._4z_b ._4z_e{fl=
+oat:left}._4z_5 .img,._4z_5,._4z_f{border:none;padding-left:3px;padding-top=
+:3px}form.async_saving ._4z_9,form.async_saving ._4z_9:active,._4z_9,._4z_9=
+:active{border:none}._4z_b:active ._4z_e{display:block}form.async_saving ._=
+4z_b:active ._4z_e{display:none}._559s ._55a2{margin:1px}._4z_7 ._4z_e{marg=
+in:2px 0 -2px 3px}._4z_d ._4z_e{margin:3px 0 0 3px}._4z_6 ._4z_e{margin:2px=
+ 0 0 3px}._4z_c ._4z_e{margin:4px 0 0 4px}.no_svg ._55a2,.svg ._55at{displa=
+y:none}._51mz{border:0;border-collapse:collapse;border-spacing:0}._5f0n{tab=
+le-layout:fixed;width:100%}.uiGrid .vTop{vertical-align:top}.uiGrid .vMid{v=
+ertical-align:middle}.uiGrid .vBot{vertical-align:bottom}.uiGrid .hLeft{tex=
+t-align:left}.uiGrid .hCent{text-align:center}.uiGrid .hRght{text-align:rig=
+ht}._51mx:first-child>._51m-{padding-top:0}._51mx:last-child>._51m-{padding=
+-bottom:0}._51mz ._51mw{padding-right:0}._51mz ._51m-:first-child{padding-l=
+eft:0}.fss{font-size:9px}.fsm{font-size:12px}.fsl{font-size:14px}.fsxl{font=
+-size:16px}.fsxxl{font-size:18px}.fwn{font-weight:normal}.fwb{font-weight:b=
+old}.fcb{color:#333}.fcg{color:#90949c}.fcw{color:#fff}._4mr9{-webkit-touch=
+-callout:none;-webkit-user-select:none}._4mra{-webkit-touch-callout:default=
+;-webkit-user-select:auto}._li._li._li{overflow:initial}._5h0c{background-c=
+olor:#4267b2;color:#fff;cursor:pointer;display:inline-block;vertical-align:=
+top}._5h0c._5h0d{border-radius:4px;max-width:400px;min-width:240px}._29o8{d=
+isplay:inline-block}._xvm ._5h0c._5h0d{min-width:initial}._5h0c._5h0f{borde=
+r-radius:3px;max-width:320px;min-width:200px}._xvm ._5h0c._5h0f{min-width:i=
+nitial}._5h0c._5h0g{border-radius:3px;max-width:200px}._5h0c._5h0h{border-r=
+adius:2px;margin:10px 0;max-width:268px}._5h0g ._5h0i{height:20px;width:aut=
+o}._5h0g ._5h0i td:first-child,._5h0g ._xvp._5h0i td:last-child{width:20px}=
+._5h0f ._5h0i{height:28px}._xvm ._5h0c._5h0f ._5h0i{max-width:240px;min-wid=
+th:initial;width:auto}._5h0f ._5h0i td:first-child,._5h0f ._xvp._5h0i td:la=
+st-child{width:28px}._xvm ._5h0c._5h0d ._5h0i{max-width:272px;min-width:ini=
+tial;width:auto}._5h0d ._5h0i{height:40px}._5h0d ._5h0i td:first-child,._5h=
+0d ._xvp._5h0i td:last-child,._41tb ._5h0d ._5h0i td:nth-child(3){width:40p=
+x}._5h0h._5h0c ._5h0i{height:40px;table-layout:auto;width:268px}._5h0c ._5h=
+0j{overflow:none;white-space:nowrap}._5h0c ._5h0k{float:left}._5h0h ._5h0k{=
+height:24px;margin-left:8px}._5h0d td:last-child ._5h0k{margin-left:0}._5h0=
+d ._5h0k{height:24px;margin:8px}._5h0f ._5h0k{height:16px;margin:6px}._5h0g=
+ ._5h0k{height:12px;margin:4px}._5h0h ._5h0l,._5h0h ._5h0m,._5h0d ._5h0l,._=
+5h0d ._5h0m{height:24px;width:24px}._5h0f ._5h0l,._5h0f ._5h0m{height:16px;=
+width:16px}._5h0g ._5h0l,._5h0g ._5h0m{height:12px;width:12px}._5h0o{border=
+:none;font-family:Helvetica, Arial, sans-serif;letter-spacing:.25px;overflo=
+w:hidden;text-align:center;text-overflow:clip;white-space:nowrap}._5h0g ._5=
+h0o{font-size:11px;max-width:150px;padding:0 8px 0 2px}._5h0f ._5h0o{font-s=
+ize:13px;margin-right:8px}._xvm ._5h0f ._5h0q ._5h0o{margin:0 12px 0 6px;ma=
+x-width:166px}._5h0d ._5h0o{font-size:16px;margin-right:12px}._29o8._41tb .=
+_5h0d td:only-child ._5h0o{margin:auto 16px}._xvm ._5h0d ._5h0o{margin:0 24=
+px 0 12px}._xvm ._5h0d ._5h0q ._5h0o{margin:0 12px 0 4px;max-width:176px}._=
+5h0h ._5h0o{font-size:15px;font-weight:bold;letter-spacing:normal;line-heig=
+ht:16px;padding:0 22px;white-space:normal}._5h0h ._5h0o._4lqf{font-size:12p=
+x;line-height:14px}._5h0h ._5h0s{max-width:100%}.no_svg ._5h0m,.svg ._5h0l{=
+display:none}._5h0t{float:right;vertical-align:top}._5h0c._5h0g ._5h0t{bord=
+er-bottom-right-radius:3px;border-top-right-radius:3px;height:20px;width:20=
+px}._5h0c._5h0f ._5h0t{border-bottom-right-radius:3px;border-top-right-radi=
+us:3px;height:28px;width:28px}._xvm ._5h0c._5h0d td:first-child ._5h0t{marg=
+in-right:8px}._5h0c._5h0d td:first-child ._5h0t{border-bottom-left-radius:4=
+px;border-bottom-right-radius:0;border-top-left-radius:4px;border-top-right=
+-radius:0}._5h0c._5h0d ._5h0t{border-bottom-right-radius:4px;border-top-rig=
+ht-radius:4px;height:40px;width:40px}._5h0c._5h0h ._5h0t{border-bottom-righ=
+t-radius:2px;border-top-right-radius:2px;height:40px;width:40px}._29o8 ._37=
+q-{background-color:#e9ebee;border-bottom-left-radius:4px;border-bottom-rig=
+ht-radius:4px;height:25px;margin-top:-3px;text-align:center}._29o8 ._37q- .=
+_37q_{display:inline-block;margin-bottom:2px;margin-top:0;vertical-align:mi=
+ddle}._29o8 ._37q- ._37r0{color:#4b4f56;display:inline-block;font-size:11px=
+;line-height:22px;margin-top:3px;padding-left:4px}.uiLayer{outline:none}._4=
+qba{font-style:normal}._4qbb,._4qbc,._4qbd{background:none;font-style:norma=
+l;padding:0;width:auto}._4qbd{border-bottom:1px solid #f99}._4qbb,._4qbc{bo=
+rder-bottom:1px solid #999}._4qbb:hover,._4qbc:hover,._4qbd:hover{backgroun=
+d-color:#fcc;border-top:1px solid #ccc;cursor:help}</style><style type=3D"t=
+ext/css">
+:root ul[id^=3D"typeahead_list_"] > ._20e._6_k._55y_,
+:root div[id^=3D"substream_"] .userContentWrapper > ._1ifo,
+:root div[id^=3D"sponsoredTickerStory_"],
+:root div[class=3D"pagelet n_1bbmy10ju8 ego_column"],
+:root div[class=3D"pagelet l_1br60i3rxk ego_column"],
+:root div[class=3D"ego_column"],
+:root div[class=3D"ego_column pagelet"],
+:root div[class=3D"ego_column pagelet n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _y92"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt"],
+:root div[class=3D"ego_column pagelet _5qrt n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _y92"],
+:root div[class=3D"ego_column pagelet _5qrt _y92 _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _xi9"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm w_kz0xdhkq7"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm _xi9"],
+:root div[class=3D"ego_column _8_9"],
+:root div[class=3D"ego_column _5qrt"],
+:root button[data-gt*=3D"\"ref\":\"ad\""],
+:root [href^=3D"https://l.facebook.com/"][href*=3D"%2526ad_id%"],
+:root [href^=3D"/ajax/emu/end.php?"],
+:root a[ajaxify*=3D"&eid=3D"] + a[href^=3D"https://l.facebook.com/l.php?u=
+=3D"],
+:root [href^=3D"/ads/adboard/"],
+:root [data-referrer=3D"pagelet_side_ads"],
+:root .ownsection[role=3D"option"],
+:root .muffin.group,
+:root .fixedAux .pbm,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_source"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_medium"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+https%3A%2F%2Fgoo.gl%2F"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+adfarm.mediaplex.com"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+.intelliad.de"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%3Fcampaign%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26adgroup_id%"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_source"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_medium"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"%=
+26adgroup_id%"],
+:root .adv,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"] + div,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"],
+:root #pagelet_ads_when_no_friend_list_suggestion,
+:root #home_stream > .uiUnifiedStory[data-ft*=3D"\"ei\":\""],
+:root #home_sponsor_nile,
+:root #MessagingNetegoWrapper
+{ display: none !important; }</style></head><body dir=3D"ltr" class=3D"plug=
+in _4mr9 chrome webkit win x1 Locale_en_GB"><div class=3D"_li"><div class=
+=3D"pluginSkinLight pluginFontHelvetica"><div class=3D"pluginLoginButton pl=
+uginLoginButtonxlarge" id=3D"u_0_0" style=3D"width: 300px;"><div><div class=
+=3D"_4z_b _4z_8 _4z_c" role=3D"button" tabindex=3D"0" id=3D"u_0_1"><table c=
+lass=3D"uiGrid _51mz" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr class=
+=3D"_51mx"><td class=3D"_51m-"><div class=3D"_4z_g"><span class=3D"_4z_e"><=
+svg xmlns=3D"http://www.w3.org/2000/svg" viewBox=3D"0 0 216 216" class=3D"_=
+55a2"><path fill=3D"white" d=3D"
+          M204.1 0H11.9C5.3 0 0 5.3 0 11.9v192.2c0 6.6 5.3 11.9 11.9
+          11.9h103.5v-83.6H87.2V99.8h28.1v-24c0-27.9 17-43.1 41.9-43.1
+          11.9 0 22.2.9 25.2 1.3v29.2h-17.3c-13.5 0-16.2 6.4-16.2
+          15.9v20.8h32.3l-4.2 32.6h-28V216h55c6.6 0 11.9-5.3
+          11.9-11.9V11.9C216 5.3 210.7 0 204.1 0z"></path></svg><img class=
+=3D"_55at img" src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/jVG1f1Gs=
+lU7.png" alt=3D"" width=3D"31" height=3D"31"></span><img class=3D"_4z_5 img=
+" src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/luFYNPLo3dO.gif" alt=
+=3D"" width=3D"37" height=3D"36"></div></td><td class=3D"_51m- _51mw"><span=
+ class=3D"_4z_9"><span class=3D"_4z_f fwb">Log In</span></span></td></tr></=
+tbody></table></div></div></div></div></div></body></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/jVG1f1GslU7.png
+
+iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAQAAAC1p96yAAABs0lEQVR42u3Vu0vDcBAH8GtCfYFu
+ii+kdhcXtfhXFHHVRbfqIoggKDhJh1JdHAq666RQ6mChBQXRpdYXCoI2TaP4QkNrXm1+MempkFKb
+xNnvQUgOPgR+IXegxwUU0OB2VLRuXIghMykmCEM4jbVVOcKIicwkWiozIV8SVXMWVT6/GQMKgBYS
+iJ2FlMQ40ABuwji35QsDboNzmkWUt0K8sCGFpZXCOr8js9glHPJcLaoWpfTjYmwAGsBInbcnv6lh
+WBtcSJ2PgClKyDZXXp9noSLSim3Ox6L9Blmiwo27rfsde53QLEbs8zWoN3ik6XRUuiAKUUrvqmib
+S0EoJ9Up35Ci0SF62ebyMvLjXkQY21xZRX7mNbWJBecX+EB+SpjhfciPWj70Z70C7LR4YPn2pXYD
+4ZmDOW38liU/8cAvufYLKUse7YGvaC4zf5pXXiz5nf92iPU9Due6EYUbHwZZH+s77BO2nZx8CPmV
+x9R2/t3/eTXOOeXmWcf8ieOkxTnvnOOct9gyUrAqxy0zDtT3jkuqWcKRXEV9yHPI013k/qfLqVkx
+iTuu9oalgcIf1rirtmE/AWJ5V67Ffv+KAAAAAElFTkSuQmCC
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/luFYNPLo3dO.gif
+
+R0lGODlhJQAkAIQYAFJvp3mOup6sy+Dl7vHz+OXp8fT2+WV+sOjr8oiawae10OPn74mbwaKxzrrF
+2+zv9ens8/L0+O/y99DX5sDJ3a+71e/y9vf5+////////////////////////////////yH/C05F
+VFNDQVBFMi4wAwEAAAAh+QQFCAAfACwGAAYAGAAYAAAFZuAnjmRpnmiqrmzrvsQlX8QYz7V4y4Q1
+X5aRbxYUDWWWI1D4K36UySaTOEVCq0tj86qldq3Sb/a5DZO9ZzCamway3+W1GQqXE+tIrGVHs/1y
+H3wEBj1JBiOESRaHIomGL5CRkpMrIQAh+QQFCAAfACwGAAoABgARAAAFF6BBWKR4nRfxrWzrvnAs
+z3RNoKlIWkYIACH5BAkIAB8ALAYABgAPABgAAAVOIHMAJPOdKHpUbHWkMNBWAJzKbW2fOKt/BoJl
+aOjRUJaUxfizMXe8WTMmhX6eUOxO66xmvVtwN2flUsmnJFJLuLgvBPNNfPZZRSSACRoCACH5BAkI
+AB8ALAYABgAYABgAAAWI4CeOI3MAKEOuTRK8zXhUdHWsZEDtVDACtQoAN9LxfCJgbUj8GHfIj5LG
+/BgIlqzh2fsFqxaShRudCptOXjf5RZO9S7e63G6+2XH7HE6VH/lnen94fYJQgFU4d1J1RItmiSuP
+jYp7hIEfYSNjlox5HwQXohcEk5+Vg56FRAlqCYhoaCYoACpNIQAh+QQJCAAfACwGAAYAGAAYAAAF
+neAnjmQ5MgegMubYJEHcjEdlV4ejCLwzBpQgJTAC3CoAxWQ5UfyEw+IRIGBOBE8hUWS8Ua1YEVAr
+9VaZ4c84uP10bV90ll2Gn5fpdZQ7vV/ne259YIBtb0h+eVCGg3Jii3WIhI9kfGaTapCWdph6jJeO
+mZWCoHiFkXGmlHSbkqGeqEpMTquBhwA6PAI+tZ9wLSIJUAmowMYfKCoADCEAIfkECQgAHwAsBgAG
+ABgAGAAABZDgJ45kaZ6o2SRB26SOIszOGFA4FaTK5E8KW04HWQyOkJHgNxEIc4GBZCoZKJlO0Q0q
+pVpFy1/2s8VFqdWr+GnuTr+fsG9c1rnTYCzbjobLm3tnXmpzgXd+elpDgm+EgIpcfY50i4eThpJ5
+a5BtmXGJZJWef5RQC2gLl5w6PExBqzsoMTMCNbApKQlDCbi9IyEAIfkECQgAHwAsBgAGABgAGAAA
+BZDgJ45kaZ5oqq6OIrzOeipTPSkptAw8NAq2iQARKUYQo4FkKRn8goKCMVJIMptPW3RaFSmZThFQ
+KzV2P99l+DOubc1WcNZdLp7TWDG0To2r50J8d1drbYFcfnlse4hehIBvdomFjHCOcnpkjWiPmW5E
+RkiXf55CDwgFqQ8jC1cLkDImNDY4sSQtLwIxtry9IiEAIfkECQgAHwAsBgAGABgAGAAABYjgJ45k
+aZ5oqq5s66bQMswQcd0XMSJRHyGjgWQoGVhwF8uo4IsUgsTiEacUMX1PkZBoRFY/1172sx12qcvm
+uCz1prFQ7vT2DTvj5nnyLca30VZqfmd0fHdaUYR7gXCIcm6MfY55kGCCk0U2ODoiPD5AmAMGBBal
+BiMPCAWrDyMLUQsvsrO0tSshACH5BAUIAB8ALAYABgAYABgAAAV44CeOZGmeaKqubOu+xCVfxBjP
+tYhEfIRYs4tlBJwNRYVepFCUHT9N4SjZYwaf0SeVZzUSr1Nl1/n1IsXZMvlcTYvcn+0SDpePpW8w
+m0vXx9F+dYBmUH52NzI5H4g0Izs9CAYEFpQGI5KUFpYiDwgFnw8voqOkpSshACH5BAEUAB8ALBgA
+CwAGAA8AAAUcoEFYpHid14he5Nqi7xmzllvDt5zTdg+LJIshBAA7
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: text/html
+Content-ID: <frame-286-96a4bc31-28bc-4876-9835-7021cc02a22b@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.facebook.com/v2.5/plugins/share_button.php?app_id=1648191008776808&channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FlY4eZXm_YWu.js%3Fversion%3D42%23cb%3Df30c3a9b2ccf098%26domain%3Dwww.javenue.info%26origin%3Dhttp%253A%252F%252Fwww.javenue.info%252Ff3658ab2d9b4664%26relation%3Dparent.parent&container_width=0&href=http%3A%2F%2Fwww.javenue.info%2Fpost%2Fjava-http-server&layout=button&locale=en_GB&sdk=joey
+
+<!DOCTYPE html><html lang=3D"ru" id=3D"facebook" class=3D"svg "><head><meta=
+ http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><meta n=
+ame=3D"referrer" content=3D"origin-when-crossorigin" id=3D"meta_referrer"><=
+title>Facebook</title><style>._32qa button{opacity:.4}._59ov{height:100%;he=
+ight:910px;position:relative;top:-10px;width:100%}._5ti_{background-size:co=
+ver;height:100%;width:100%}._5tj2{height:900px}._2mm3 ._5a8u .uiBoxGray{bac=
+kground:#fff;margin:0;padding:12px}._2494{height:100vh}._2495{margin-top:-1=
+0px;top:10px}body.plugin{background:transparent;font-family:Helvetica, Aria=
+l, sans-serif;line-height:1.28;overflow:hidden;-webkit-text-size-adjust:non=
+e}.plugin,.plugin button,.plugin input,.plugin label,.plugin select,.plugin=
+ td,.plugin textarea{font-size:11px}body{background:#fff;color:#1d2129;dire=
+ction:ltr;line-height:1.34;margin:0;padding:0;unicode-bidi:embed}body,butto=
+n,input,label,select,td,textarea{font-family:Helvetica, Arial, sans-serif;f=
+ont-size:12px}h1,h2,h3,h4,h5,h6{color:#1d2129;font-size:13px;margin:0;paddi=
+ng:0}h1{font-size:14px}h4,h5,h6{font-size:12px}p{margin:1em 0}a{color:#3658=
+99;cursor:pointer;text-decoration:none}button{margin:0}a:hover{text-decorat=
+ion:underline}img{border:0}td,td.label{text-align:left}dd{color:#000}dt{col=
+or:#777}ul{list-style-type:none;margin:0;padding:0}abbr{border-bottom:none;=
+text-decoration:none}hr{background:#d9d9d9;border-width:0;color:#d9d9d9;hei=
+ght:1px}.clearfix:after{clear:both;content:".";display:block;font-size:0;he=
+ight:0;line-height:0;visibility:hidden}.clearfix{zoom:1}.datawrap{word-wrap=
+:break-word}.word_break{display:inline-block}.flexchildwrap{min-width:0;wor=
+d-wrap:break-word}.ellipsis{overflow:hidden;text-overflow:ellipsis;white-sp=
+ace:nowrap}.aero{opacity:.5}.column{float:left}.center{margin-left:auto;mar=
+gin-right:auto}#facebook .hidden_elem{display:none !important}#facebook .in=
+visible_elem{visibility:hidden}#facebook .accessible_elem{clip:rect(1px 1px=
+ 1px 1px);clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position=
+:absolute;white-space:nowrap;width:1px}.direction_ltr{direction:ltr}.direct=
+ion_rtl{direction:rtl}.text_align_ltr{text-align:left}.text_align_rtl{text-=
+align:right}.pluginFontArial,.pluginFontArial button,.pluginFontArial input=
+,.pluginFontArial label,.pluginFontArial select,.pluginFontArial td,.plugin=
+FontArial textarea{font-family:Arial, sans-serif}.pluginFontLucida,.pluginF=
+ontLucida button,.pluginFontLucida input,.pluginFontLucida label,.pluginFon=
+tLucida select,.pluginFontLucida td,.pluginFontLucida textarea{font-family:=
+Lucida Grande, sans-serif}.pluginFontSegoe,.pluginFontSegoe button,.pluginF=
+ontSegoe input,.pluginFontSegoe label,.pluginFontSegoe select,.pluginFontSe=
+goe td,.pluginFontSegoe textarea{font-family:Segoe UI, sans-serif}.pluginFo=
+ntTahoma,.pluginFontTahoma button,.pluginFontTahoma input,.pluginFontTahoma=
+ label,.pluginFontTahoma select,.pluginFontTahoma td,.pluginFontTahoma text=
+area{font-family:Tahoma, sans-serif}.pluginFontTrebuchet,.pluginFontTrebuch=
+et button,.pluginFontTrebuchet input,.pluginFontTrebuchet label,.pluginFont=
+Trebuchet select,.pluginFontTrebuchet td,.pluginFontTrebuchet textarea{font=
+-family:Trebuchet MS, sans-serif}.pluginFontVerdana,.pluginFontVerdana butt=
+on,.pluginFontVerdana input,.pluginFontVerdana label,.pluginFontVerdana sel=
+ect,.pluginFontVerdana td,.pluginFontVerdana textarea{font-family:Verdana, =
+sans-serif}.pluginFontHelvetica,.pluginFontHelvetica button,.pluginFontHelv=
+etica input,.pluginFontHelvetica label,.pluginFontHelvetica select,.pluginF=
+ontHelvetica td,.pluginFontHelvetica textarea{font-family:Helvetica, Arial,=
+ sans-serif}.inlineBlock{display:inline-block;zoom:1}._4qba{font-style:norm=
+al}._4qbb,._4qbc,._4qbd{background:none;font-style:normal;padding:0;width:a=
+uto}._4qbd{border-bottom:1px solid #f99}._4qbb,._4qbc{border-bottom:1px sol=
+id #999}._4qbb:hover,._4qbc:hover,._4qbd:hover{background-color:#fcc;border=
+-top:1px solid #ccc;cursor:help}._2tga{background:#4267b2;border:1px solid =
+#4267b2;color:#fff;cursor:pointer;font-family:Helvetica, Arial, sans-serif;=
+-webkit-font-smoothing:antialiased;margin:0;-webkit-user-select:none;white-=
+space:nowrap}._2tga.active{background:#4080ff;border:1px solid #4080ff}._2t=
+ga._4kae.active,._2tga._4kae.active:hover{background:#577fbc;border:1px sol=
+id #577fbc}._2tga._49ve{border-radius:3px;font-size:11px;height:20px;paddin=
+g:0 0 0 2px}.chrome ._2tga._49ve{padding-bottom:1px}._2tga._3e2a{border-rad=
+ius:4px;font-size:13px;height:28px;padding:0 4px 0 6px}._2tga._5n6f{border-=
+top-left-radius:0;border-top-right-radius:0}._2tga:hover{background:#365899=
+;border:1px solid #365899}._2tga:active{background:#577fbc;border:1px solid=
+ #577fbc}._2tga:focus{outline-color:transparent;outline-style:none}._2tga.a=
+ctive:hover{background:#4080ff;border:1px solid #4080ff}._11qm{background:#=
+fff;border:1px solid #ced0d4;color:#4267b2}._11qm:hover{background:#f6f7f9;=
+border:1px solid #ced0d4}._11qm.active{border:1px solid #4080ff;color:#fff}=
+._3oi2{background:#0084ff;border:1px solid #0084ff;color:#fff}._3oi2:hover{=
+background:#0077e5;border:1px solid #0077e5}._3e2a ._3jn-{position:relative=
+;top:-1px}._3jn-{height:16px;vertical-align:middle;width:16px}._3jn_{backgr=
+ound:none;display:none;height:28px;left:-6px;position:absolute;top:-6px;wid=
+th:28px}@keyframes burst{from{background-position:0 0}to{background-positio=
+n:-616px 0}}._2tga.is_animating ._3jn_{animation:burst .24s steps(22) forwa=
+rds;background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/B4-pzLJTRP0=
+.png) no-repeat;background-position:0 0;background-size:616px 28px;display:=
+inline-block;zoom:1}._49ve._2tga.is_animating ._3jn_{left:-6px;position:rel=
+ative;top:-6px}._49vg,._5n2y{vertical-align:middle}._2tga ._5n2y,._2tga.act=
+ive ._49vg,._2tga.active.is_animating ._5n2y{display:none}._2tga ._49vg,._2=
+tga.active ._5n2y,._2tga.active:hover ._4kag{display:inline-block;zoom:1}#f=
+acebook ._2tga span._49vh,#facebook ._2tga span._5n6h,._49vh,._5n6h{font-fa=
+mily:Helvetica, Arial, sans-serif;vertical-align:middle}._49vh{font-weight:=
+bold}._5n6h{font-weight:normal}._5n6j{border-radius:3px;height:20px;line-he=
+ight:20px}._5n6k{border-radius:4px;height:30px;line-height:30px}._5n6l{back=
+ground:#fff;border:1px solid #90949c;border-bottom:none;border-bottom-left-=
+radius:0;border-bottom-right-radius:0;box-sizing:border-box;color:#1d2129;t=
+ext-align:center;width:100%}._2tga ._1pbq{height:16px;width:16px}.no_svg ._=
+2tga ._1pbq,.svg ._2tga ._1pbs{display:none}._2n-v ._49vh{padding-left:2px}=
+._2phz{padding:4px}._2ph-{padding:8px}._2ph_{padding:12px}._2pi0{padding:16=
+px}._2pi1{padding:20px}._40c7{padding:24px}._2o1j{padding:36px}._2pi2{paddi=
+ng-bottom:4px;padding-top:4px}._2pi3{padding-bottom:8px;padding-top:8px}._2=
+pi4{padding-bottom:12px;padding-top:12px}._2pi5{padding-bottom:16px;padding=
+-top:16px}._2pi6{padding-bottom:20px;padding-top:20px}._2o1k{padding-bottom=
+:24px;padding-top:24px}._2o1l{padding-bottom:36px;padding-top:36px}._2pi7{p=
+adding-left:4px;padding-right:4px}._2pi8{padding-left:8px;padding-right:8px=
+}._2pi9{padding-left:12px;padding-right:12px}._2pia{padding-left:16px;paddi=
+ng-right:16px}._2pib{padding-left:20px;padding-right:20px}._2o1m{padding-le=
+ft:24px;padding-right:24px}._2o1n{padding-left:36px;padding-right:36px}._2p=
+ic{padding-top:4px}._2pid{padding-top:8px}._2pie{padding-top:12px}._2pif{pa=
+dding-top:16px}._2pig{padding-top:20px}._2owm{padding-top:24px}._2pih{paddi=
+ng-right:4px}._2pii{padding-right:8px}._2pij{padding-right:12px}._2pik{padd=
+ing-right:16px}._2pil{padding-right:20px}._31wk{padding-right:24px}._2phb{p=
+adding-right:32px}._2pim{padding-bottom:4px}._2pin{padding-bottom:8px}._2pi=
+o{padding-bottom:12px}._2pip{padding-bottom:16px}._2piq{padding-bottom:20px=
+}._2o1p{padding-bottom:24px}._2pir{padding-left:4px}._2pis{padding-left:8px=
+}._2pit{padding-left:12px}._2piu{padding-left:16px}._2piv{padding-left:20px=
+}._2o1q{padding-left:24px}._2o1r{padding-left:36px}._li._li._li{overflow:in=
+itial}.uiLayer{outline:none}._5f0v{outline:none}._3oxt{outline:1px dotted #=
+3b5998;outline-color:invert}.webkit ._3oxt{outline:5px auto #5b9dd9}.win.we=
+bkit ._3oxt{outline-color:#e59700}._42ft{cursor:pointer;display:inline-bloc=
+k;text-decoration:none;white-space:nowrap}._42ft:hover{text-decoration:none=
+}._42ft+._42ft{margin-left:4px}._42fr,._42fs{cursor:default}._2agf{word-wra=
+p:normal}._2agf._4o_4{display:inline-flex}._55pe{display:inline-block;overf=
+low:hidden;text-overflow:ellipsis;vertical-align:top;white-space:nowrap}.te=
+xtMetrics{border:none;height:1px;overflow:hidden;padding:0;position:absolut=
+e;top:-9999999px}.textMetricsInline{white-space:pre}._1f8a{display:inline;f=
+loat:left}._1f8b{float:left}</style><style type=3D"text/css">
+:root ul[id^=3D"typeahead_list_"] > ._20e._6_k._55y_,
+:root div[id^=3D"substream_"] .userContentWrapper > ._1ifo,
+:root div[id^=3D"sponsoredTickerStory_"],
+:root div[class=3D"pagelet n_1bbmy10ju8 ego_column"],
+:root div[class=3D"pagelet l_1br60i3rxk ego_column"],
+:root div[class=3D"ego_column"],
+:root div[class=3D"ego_column pagelet"],
+:root div[class=3D"ego_column pagelet n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _y92"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt"],
+:root div[class=3D"ego_column pagelet _y92 _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt"],
+:root div[class=3D"ego_column pagelet _5qrt n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _y92"],
+:root div[class=3D"ego_column pagelet _5qrt _y92 _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _xi9"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm w_kz0xdhkq7"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm n_1bbmy10ju8"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm l_1br60i3rxk"],
+:root div[class=3D"ego_column pagelet _5qrt _1snm _xi9"],
+:root div[class=3D"ego_column _8_9"],
+:root div[class=3D"ego_column _5qrt"],
+:root button[data-gt*=3D"\"ref\":\"ad\""],
+:root [href^=3D"https://l.facebook.com/"][href*=3D"%2526ad_id%"],
+:root [href^=3D"/ajax/emu/end.php?"],
+:root a[ajaxify*=3D"&eid=3D"] + a[href^=3D"https://l.facebook.com/l.php?u=
+=3D"],
+:root [href^=3D"/ads/adboard/"],
+:root [data-referrer=3D"pagelet_side_ads"],
+:root .ownsection[role=3D"option"],
+:root .muffin.group,
+:root .fixedAux .pbm,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_source"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+utm_medium"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+https%3A%2F%2Fgoo.gl%2F"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+fb_source%3Dad%26tag%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+adfarm.mediaplex.com"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+.intelliad.de"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%3Fcampaign%3D"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26adgroup_id%"],
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"] + div,
+:root .ego_section a[href^=3D"https://l.facebook.com/l.php?u=3D"][href*=3D"=
+%26ad_id%"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_source"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"u=
+tm_medium"],
+:root .ego_section a[href^=3D"http://l.facebook.com/l.php?u=3D"][href*=3D"%=
+26adgroup_id%"],
+:root .adv,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"] + div,
+:root #pagelet_ego_pane a[ajaxify*=3D"&eid=3D"],
+:root #pagelet_ads_when_no_friend_list_suggestion,
+:root #home_stream > .uiUnifiedStory[data-ft*=3D"\"ei\":\""],
+:root #home_sponsor_nile,
+:root #MessagingNetegoWrapper
+{ display: none !important; }</style></head><body dir=3D"ltr" class=3D"plug=
+in chrome webkit win x1 Locale_en_GB"><div class=3D"_li"><div class=3D"plug=
+inSkinLight pluginFontHelvetica"><div><div class=3D"inlineBlock" id=3D"u_0_=
+0"><a class=3D"_2vmz" href=3D"https://www.facebook.com/sharer/sharer.php?ap=
+p_id=3D1648191008776808&amp;kid_directed_site=3D0&amp;sdk=3Djoey&amp;u=3Dht=
+tp%3A%2F%2Fwww.javenue.info%2Fpost%2Fjava-http-server&amp;display=3Dpopup&a=
+mp;ref=3Dplugin&amp;src=3Dshare_button" target=3D"_blank" id=3D"u_0_1"><div=
+><button type=3D"submit" class=3D"inlineBlock _2tga _49ve" id=3D"u_0_2"><di=
+v class=3D""><span class=3D"_3jn- inlineBlock"><span class=3D"_3jn_"></span=
+><span class=3D"_49vg"><svg xmlns=3D"http://www.w3.org/2000/svg" viewBox=3D=
+"0 0 16 16" class=3D"_1pbq" color=3D"#ffffff"><path fill=3D"#ffffff" fill-r=
+ule=3D"evenodd" d=3D"M8 14H3.667C2.733 13.9 2 13.167 2 12.233V3.667A1.65 1.=
+65 0 0 1
+            3.667 2h8.666A1.65 1.65 0 0 1 14 3.667v8.566c0 .934-.733
+            1.667-1.667
+            1.767H10v-3.967h1.3l.7-2.066h-2V6.933c0-.466.167-.9.867-.9H12v-=
+1.8c.033
+            0-.933-.266-1.533-.266-1.267 0-2.434.7-2.467
+            2.133v1.867H6v2.066h2V14z"></path></svg><img class=3D"_1pbs inl=
+ineBlock img" src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/uPlIYLfyn=
+qH.png" alt=3D"" width=3D"16" height=3D"16"></span></span><span class=3D"_4=
+9vh _2pi7">Share</span></div></button></div></a></div></div></div></div></b=
+ody></html>
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/uPlIYLfynqH.png
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAHlBMVEVMaXH/////////////////
+///////////////////Z6AnKAAAACXRSTlMA9iZY5HLFhAI8N2GQAAAAQklEQVQIW2NgwASBM4FA
+FCguCWJMBDKAVFLTTAhDgQHKYEiEMAQZBCEMBgYmGIMdJiUJUwySBhnIADbQBMRwxmI3AK9+HZ+9
+XdqAAAAAAElFTkSuQmCC
+------MultipartBoundary--e046XWaZlDFVNWpk0JvbHIa1eK3mUUTxiBrbfcHRxH------

@@ -1,0 +1,1373 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://www.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html
+Subject: Getting Starting with JSP with Examples
+Date: Tue, 29 Jan 2018 12:18:20 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--WUBJSeyi6cd8QZDKnIfRpyYxbdjNRSNQbjm5f0plmz----"
+
+------MultipartBoundary--WUBJSeyi6cd8QZDKnIfRpyYxbdjNRSNQbjm5f0plmz----
+Content-Type: text/html
+Content-ID: <frame-292-0117c2f0-b2b1-4a5e-b686-070145bb4364@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns=3D"http://www.w3.org/1999/xht=
+ml"><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8">
+
+<title>Getting Starting with JSP with Examples</title>
+
+<!-- @@ start change in v1 -->
+<link href=3D"http://www.ntu.edu.sg/home/ehchua/programming/css/programming=
+_notes_v1.css" rel=3D"stylesheet" type=3D"text/css">
+
+<link rel=3D"shortcut icon" href=3D"http://www.ntu.edu.sg/home/ehchua/progr=
+amming/favicon.ico" type=3D"image/x-icon"><style type=3D"text/css">
+:root #header + #content > #left > #rlblock_left
+{ display: none !important; }</style></head>
+
+<body>
+
+<div id=3D"wrap-outer">
+
+<!-- header filled by JavaScript -->
+<div id=3D"header" class=3D"header-footer"><p>yet another insignificant pro=
+gramming notes... &nbsp;&nbsp;| &nbsp;&nbsp;<a href=3D"http://www.ntu.edu.s=
+g/home/ehchua/programming/index.html">HOME</a></p></div>
+
+<div id=3D"wrap-inner">
+
+<div id=3D"wrap-toc">
+<h5>TABLE OF CONTENTS <a id=3D"show-toc" href=3D"http://www.ntu.edu.sg/home=
+/ehchua/programming/java/JSPByExample.html#show-toc">(HIDE)</a></h5>
+<div id=3D"toc"><a class=3D"toc-H3" href=3D"http://www.ntu.edu.sg/home/ehch=
+ua/programming/java/JSPByExample.html#zz-1.">1.&nbsp;&nbsp;Introduction</a>=
+<br><a class=3D"toc-H3" href=3D"http://www.ntu.edu.sg/home/ehchua/programmi=
+ng/java/JSPByExample.html#zz-2.">2.&nbsp;&nbsp;First JSP Example - "<em>Jav=
+a inside HTML</em>"</a><br><a class=3D"toc-H3" href=3D"http://www.ntu.edu.s=
+g/home/ehchua/programming/java/JSPByExample.html#zz-3.">3.&nbsp;&nbsp;Revis=
+it Java Servlets</a><br><a class=3D"toc-H3" href=3D"http://www.ntu.edu.sg/h=
+ome/ehchua/programming/java/JSPByExample.html#zz-4.">4.&nbsp;&nbsp;Second J=
+SP example - Echoing HTML Request  Parameters</a><br><a class=3D"toc-H3" hr=
+ef=3D"http://www.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html#=
+zz-5.">5.&nbsp;&nbsp;JSP Scripting Elements</a><br><a class=3D"toc-H4" href=
+=3D"http://www.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html#zz=
+-5.1">5.1&nbsp;&nbsp;JSP comment <span class=3D"font-code">&lt;%--  comment=
+s --%&gt;</span></a><br><a class=3D"toc-H4" href=3D"http://www.ntu.edu.sg/h=
+ome/ehchua/programming/java/JSPByExample.html#zz-5.2">5.2&nbsp;&nbsp;JSP Ex=
+pression <span class=3D"font-code">&lt;%=3D  Java Expression %&gt;</span></=
+a><br><a class=3D"toc-H4" href=3D"http://www.ntu.edu.sg/home/ehchua/program=
+ming/java/JSPByExample.html#zz-5.3">5.3&nbsp;&nbsp;JSP Scriptlet <span clas=
+s=3D"font-code">&lt;% Java statement(s) %&gt;</span></a><br><a class=3D"toc=
+-H4" href=3D"http://www.ntu.edu.sg/home/ehchua/programming/java/JSPByExampl=
+e.html#zz-5.4">5.4&nbsp;&nbsp;JSP Directive <span class=3D"font-code">&lt;%=
+@ page|include ... %&gt;</span></a><br><a class=3D"toc-H3" href=3D"http://w=
+ww.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html#zz-6.">6.&nbsp=
+;&nbsp;JSP Database Example</a><br><a class=3D"toc-H3" href=3D"http://www.n=
+tu.edu.sg/home/ehchua/programming/java/JSPByExample.html#zz-7.">7.&nbsp;&nb=
+sp;JSP Exercises</a><br><br></div> <!-- for showing the "Table of Content" =
+-->
+</div>
+
+<div id=3D"content-header">
+<h1>Java Server-side Programming</h1>
+<h2>Getting started with JSP by Examples</h2>
+</div>
+
+<div id=3D"content-main">
+
+<!-- @@ end change in v1 -->
+
+<h3>1.&nbsp;&nbsp;Introduction<a id=3D"zz-1."></a></h3>
+
+<p><em>JavaServer Page </em>(JSP) is Java's answer to the popular Microsoft=
+'s <em>Active Server Pages </em>(ASP). JSP, like ASP, provides a simplified=
+ and fast mean to generate <em>dynamic</em> web contents. It allows you to =
+mix <em>static</em> HTML with <em>dynamically generated</em> HTML - in the =
+way that the <em>business logic</em> and the <em>presentation</em> are well=
+ separated.</p>
+
+<p>The advantages of JSP are:</p>
+<ol>
+<li><span class=3D"line-heading">Separation of static and dynamic contents<=
+/span>: JSP enables the separation of <em>static</em> contents from <em>dyn=
+amic</em> contents. &nbsp;The dynamic contents are generated via programmin=
+g logic and inserted into the <em>static template</em>. This greatly simpli=
+fies the creation and maintenance of web contents.</li>
+
+<li><span class=3D"line-heading">Reuse of components and tag libraries:</sp=
+an> The dynamic contents can be provided by reusable components such as Jav=
+aBean, Enterprise JavaBean (EJB) and tag libraries - you do not have to re-=
+inventing the wheels.</li>
+
+<li><span class=3D"line-heading">Java's power and portability</span></li>
+</ol>
+
+<h5>JSPs are Internally Compiled into Java Servlets</h5>
+<p>That is to say, anything that can be done using JSPs can also be accompl=
+ished using Java servlets. However, it is important to note that servlets a=
+nd JSPs are <em>complementary</em> technologies, NOT replacement of each ot=
+her. Servlet can be viewed as "<strong><em>HTML inside Java</em></strong>",=
+ which is better for implementing business logic - as it is Java dominant. =
+JSP, on the other hand, is "<strong><em>Java inside HTML</em></strong>", wh=
+ich is superior for creating presentation - as it is HTML dominant. In a ty=
+pical <em>Model-View-Control</em> (MVC) application, servlets are often use=
+d for the Controller (C), which involves complex programming logic. JSPs ar=
+e often used for the View (V), which mainly deals with presentation. The Mo=
+del (M) is usually implemented using JavaBean or EJB.</p>
+
+<h5>Apache Tomcat Server</h5>
+<p>JSPs, like servlets, are server-side programs run inside a HTTP server. =
+To support JSP/servlet, a Java-capable HTTP server is required. Tomcat Serv=
+er (@ <a href=3D"http://tomcat.apache.org/">http://tomcat.apache.org</a>) i=
+s the official <em>reference implementation</em> (RI) for Java servlet and =
+JSP, provided <em>free</em> by Apache (@ <a href=3D"http://www.apache.org/"=
+>http://www.apache.org</a>) - an <em>open-source</em> software foundation.<=
+/p>
+
+<h3>2.&nbsp;&nbsp;First JSP Example - "<em>Java inside HTML</em>"<a id=3D"z=
+z-2."></a></h3>
+
+<p>Let's begin with a simple JSP example. We shall use the webapp called "<=
+code>hello</code>" that we have created in our earlier exercise.=20
+Use a programming text editor to enter the following HTML/JSP codes and sav=
+e as "<code>first.jsp</code>" (the file type of "<code>.jsp</code>" is mand=
+atory) in your webapp (web context) home directory (i.e., "<code>webapps\he=
+llo</code>".</p>
+
+<table class=3D"table-program">
+<colgroup><col class=3D"col-line-number">
+<col class=3D"col-program">
+</colgroup><tbody>
+<tr>
+<td>
+<pre class=3D"text-right">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre>
+</td>
+<td>
+<pre>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;First JSP&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  <span class=3D"color-new">&lt;%
+    double num =3D Math.random();
+    if (num &gt; 0.95) {
+  %&gt;</span>
+      &lt;h2&gt;You'll have a luck day!&lt;/h2&gt;&lt;p&gt;(<span class=3D"=
+color-new">&lt;%=3D num %&gt;</span>)&lt;/p&gt;
+  <span class=3D"color-new">&lt;%
+    } else {
+  %&gt;</span>
+      &lt;h2&gt;Well, life goes on ... &lt;/h2&gt;&lt;p&gt;(<span class=3D"=
+color-new">&lt;%=3D num %&gt;</span>)&lt;/p&gt;
+  <span class=3D"color-new">&lt;%
+    }
+  %&gt;</span>
+  &lt;a href=3D"<span class=3D"color-new">&lt;%=3D request.getRequestURI() =
+%&gt;</span>"&gt;&lt;h3&gt;Try Again&lt;/h3&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>To execute the JSP script: Simply start your Tomcat server and use a  br=
+owser to issue an URL to browse the JSP page (i.e., <code>http://localhost:=
+8080/hello/first.jsp</code>).</p>
+
+<p>From your browser, choose the "View Source" option to  check the respons=
+e message. It should be  either of the followings depending on the random n=
+umber generated.</p>
+
+<pre class=3D"color-example">&lt;html&gt;
+&lt;h2&gt;You'll have a luck day!&lt;/h2&gt;
+&lt;p&gt;(0.987)&lt;/p&gt;
+&lt;a href=3D"first.jsp"&gt;&lt;h3&gt;Try Again&lt;/h3&gt;&lt;/a&gt;
+&lt;/html&gt;</pre>
+
+<pre class=3D"color-example">&lt;html&gt;
+&lt;h2&gt; Well, life goes on ... &lt;/h2&gt;
+&lt;p&gt;(0.501)&lt;/p&gt;
+&lt;a href=3D"first.jsp"&gt;&lt;h3&gt;Try Again&lt;/h3&gt;&lt;/a&gt;
+&lt;/html&gt;</pre>
+
+<p>It is important to note that the client is not able to "view"  the origi=
+nal JSP script (otherwise, you may have security exposure), but merely  the=
+ result generated by the script.</p>
+
+<p><span class=3D"line-heading">Explanations</span></p>
+
+<ol>
+<li>A JSP script is a regular HTML page containing Java programs.&nbsp;Reca=
+ll that JSP is "<em>Java  inside HTML</em>" (whereas servlet is "<em>HTML i=
+nside Java</em>").&nbsp;The Java statements are enclosed by <code>&lt;% ...=
+ %&gt;</code> (called <em>JSP scriptlet</em>) or <code>&lt;%=3D ...  %&gt;<=
+/code> (called <em>JSP expression</em>).</li>
+
+<li><em>JSP Scriptlet</em> <code>&lt;% ...  %&gt;</code> is used to include=
+ Java statements.</li>
+
+<li><em>JSP Expression</em> <code>&lt;%=3D ...  %&gt;</code> is used to <em=
+>evaluate</em> a single Java expression and <em>display</em> its result.</l=
+i>
+
+<li>The method <code>request.getRequestURI()</code> is used to retrieve the=
+ URL of the <em>current</em> <em>page</em>. This is used in the anchor tag =
+<code>&lt;a&gt;</code> for refreshing  the page to obtain another random nu=
+mber.</li>
+ =20
+</ol>
+
+<h5>Behind the Scene</h5>
+
+<p>When  a JSP is first accessed, Tomcat <em>converts</em> the JSP into a s=
+ervlet; <em>compile</em> the servlet, and <em>execute</em> the servlet.&nbs=
+p;Check out the <em>generated servlet</em> for "<code>first.jsp</code>", an=
+d study the JSP-to-servlet conversion.&nbsp;Look under Tomcat's "<code>work=
+\Catalina\localhost\hello</code>" for "<code>first_jsp.java</code>".</p>
+
+<p>The relevant part of the <em>generated servlet</em> is extracted as foll=
+ows (with some simplifications):</p>
+
+<table class=3D"table-program">
+<colgroup><col class=3D"col-line-number">
+<col class=3D"col-program">
+</colgroup><tbody>
+<tr>
+<td>
+<pre class=3D"text-right">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre>
+</td>
+<td>
+<pre>out.write("&lt;html&gt;\r\n  ");
+double num =3D Math.random();
+if (num &gt; 0.95) {
+   out.write("&lt;h2&gt;You will have a luck day!");
+   out.write("&lt;/h2&gt;&lt;p&gt;(");
+   out.print( num );
+   out.write(")&lt;/p&gt;\r\n");
+} else {
+   out.write("\r\n    ");
+   out.write("&lt;h2&gt;Well, life goes on ... ");
+   out.write("&lt;/h2&gt;&lt;p&gt;(");
+   out.print( num );
+   out.write(")&lt;/p&gt;\r\n  ");
+}
+out.write("&lt;a href=3D\"");
+out.print( request.getRequestURI() );
+out.write("\"&gt;");
+out.write("&lt;h3&gt;Try Again&lt;/h3&gt;&lt;/a&gt;\r\n");
+out.write("&lt;/html&gt;\r\n");</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h5>Explanation</h5>
+<ol>
+<li>The HTML statements are written out as part of the response via out.wri=
+te(), as "it is".</li>
+<li>The JSP scriptlets <code>&lt;% ... %&gt;</code> are kept, as "it is", i=
+n the converted servlet as the  program logic.</li>
+
+<li>The JSP expressions <code>&lt;%=3D  ... %&gt;</code> are placed inside =
+a <code>out.print()</code>. Hence, the expression will be evaluated, and  t=
+he result of the evaluation written out as part of the response message.</l=
+i>
+</ol>
+ =20
+<p>Compare the JSP script and the internally generated servlet, you shall u=
+nderstand that servlet is "<em>HTML inside Java</em>", whereas JSP is "<em>=
+Java  inside HTML</em>".</p>
+
+<p>Subsequent  accesses to the same JSP will be much faster, because they w=
+ill be re-directed  to the converted and compiled servlet directly (no JSP-=
+to-servlet conversion  and servlet compilation needed again), unless the JS=
+P has been modified.</p>
+
+<h3>3.&nbsp;&nbsp;Revisit Java Servlets<a id=3D"zz-3."></a></h3>
+<p>A typical Java servlet (as shown below) contains three kinds of  methods=
+: <code>init()</code>, <code>destroy()</code>, and one or  more <code>servi=
+ce()</code> methods such  as <code>doGet()</code> and <code>doPost()</code>=
+. <code>init()</code> runs when the servlet is loaded. <code>destroy()</cod=
+e> runs when the  servlet is unloaded. <code>service()</code> runs once per=
+  HTTP request. The <code>service()</code> methods takes  two arguments: <c=
+ode>request</code> and <code>response</code>, corresponding  to the HTTP re=
+quest and response messages respectively. A <code>PrintWriter</code> called=
+ <code>out</code> is created for  writing out the response to the network.<=
+/p>
+
+<table class=3D"table-program">
+<colgroup><col class=3D"col-line-number">
+<col class=3D"col-program">
+</colgroup><tbody>
+<tr>
+<td>
+<pre class=3D"text-right">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre>
+</td>
+<td>
+<pre>import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+=20
+public class ...Servlet extends HttpServlet {
+=20
+   <span class=3D"color-comment">// Runs when the servlet is loaded onto th=
+e server.</span>
+   public void init() {
+      ......
+   }
+=20
+   <span class=3D"color-comment">// Runs on a thread whenever there is HTTP=
+ GET request</span>
+   <span class=3D"color-comment">// Take 2 arguments, corresponding to HTTP=
+ request and response</span>
+   public void doGet(HttpServletRequest request, HttpServletResponse respon=
+se)
+         throws IOException, ServletException {
+=20
+      <span class=3D"color-comment">// Set the MIME type for the response m=
+essage</span>
+      response.setContentType("text/html");
+      <span class=3D"color-comment">// Write to network</span>
+      PrintWriter out =3D response.getWriter();
+=20
+      <span class=3D"color-comment">// Your servlet's logic here</span>
+      out.println("&lt;html&gt;");
+      out.println( ...... );
+      out.println("&lt;/html&gt;");
+   }
+=20
+   <span class=3D"color-comment">// Runs as a thread whenever there is HTTP=
+ POST request</span>
+   public void doPost(HttpServletRequest request, HttpServletResponse respo=
+nse)
+         throws IOException, ServletException {
+      <span class=3D"color-comment">// do the same thing as HTTP GET reques=
+t</span>
+      doGet(request, response);
+   }
+=20
+   <span class=3D"color-comment">// Runs when the servlet is unloaded from =
+the server.</span>
+   public void destroy() {
+      ......
+   }
+=20
+   <span class=3D"color-comment">// Other instance variables and methods</s=
+pan>
+ }</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Java servlet produces HTML codes by calling <code>out.print()</code> met=
+hods. You have to <em>hardcode</em> all the HTML tags (and cannot use any W=
+YSIWYG web authoring tools).&nbsp;Any change to the  web page's presentatio=
+n (such as background color and font size) requires re-coding and re-compil=
+ation of servlet program.&nbsp;Servlet, in a nutshell, is "<em>HTML inside =
+ Java</em>", whereas JSP is "<em>Java inside HTML</em>".</p>
+
+<h3>4.&nbsp;&nbsp;Second JSP example - Echoing HTML Request  Parameters<a i=
+d=3D"zz-4."></a></h3>
+<p>Enter the following JSP script and save as "<code>echo.jsp</code>" in yo=
+ur <em>webapp's root directory</em>.</p>
+
+<table class=3D"table-program">
+<colgroup><col class=3D"col-line-number">
+<col class=3D"col-program">
+</colgroup><tbody>
+<tr>
+<td>
+<pre class=3D"text-right">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+</td>
+<td>
+<pre>&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Echoing HTML Request Parameters&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h3&gt;Choose an author:&lt;/h3&gt;
+  &lt;form method=3D"get"&gt;
+    &lt;input type=3D"checkbox" name=3D"author" value=3D"Tan Ah Teck"&gt;Ta=
+n
+    &lt;input type=3D"checkbox" name=3D"author" value=3D"Mohd Ali"&gt;Ali
+    &lt;input type=3D"checkbox" name=3D"author" value=3D"Kumar"&gt;Kumar
+    &lt;input type=3D"submit" value=3D"Query"&gt;
+  &lt;/form&gt;
+=20
+  <span class=3D"color-new">&lt;%
+  String[] authors =3D request.getParameterValues("author");
+  if (authors !=3D null) {
+  %&gt;</span>
+    &lt;h3&gt;You have selected author(s):&lt;/h3&gt;
+    &lt;ul&gt;
+  <span class=3D"color-new">&lt;%
+      for (int i =3D 0; i &lt; authors.length; ++i) {
+  %&gt;</span>
+        &lt;li&gt;<span class=3D"color-new">&lt;%=3D authors[i] %&gt;</span=
+>&lt;/li&gt;
+  <span class=3D"color-new">&lt;%
+      }
+  %&gt;</span>
+    &lt;/ul&gt;
+    &lt;a href=3D"<span class=3D"color-new">&lt;%=3D request.getRequestURI(=
+) %&gt;</span>"&gt;BACK&lt;/a&gt;
+  <span class=3D"color-new">&lt;%
+  }
+  %&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Browse the JSP page created and study the generated servlet.</p>
+
+<p><span class=3D"line-heading">Explanations</span></p>
+
+<ol>
+<li>This HTML page has a form with 3 checkboxes.&nbsp;The "<code>name=3Dval=
+ue</code>"  pair of the checkboxes is "<code>author=3Dso_and_so</code>"<cod=
+e></code>. No "<code>action</code>"  attribute is specified, the default "<=
+code>action</code>"  is the current page (i.e. the query will be sent to th=
+e same page).</li>
+
+<li>The JSP scriptlet checks if the query parameter "<code>author</code>" e=
+xists to decide whether to dynamically generate the enclosed codes.&nbsp;"<=
+code>author</code>" parameter is absent when the page is first requested.&n=
+bsp;Once the client fills in the form (by checking the boxes) and submits t=
+he form, "<code>author</code>" will be present in the HTTP request, and sub=
+mitted to the <em>same</em> page for  processing (with the default <code>&l=
+t;form&gt;</code>=E2=80=99s  "<code>action</code>" attribute).</li>
+
+<li>The <code>request.getParameterValues()</code> is used to retrieve all t=
+he values of the query parameter. The values are echoed back using an unord=
+ered list.</li>
+</ol>=20
+=20
+<h3>5.&nbsp;&nbsp;JSP Scripting Elements<a id=3D"zz-5."></a></h3>
+
+<p>JSP provides the following scripting elements:</p>
+
+<ul>
+<li>JSP Comment <code>&lt;%--  comments --&gt;</code></li>
+<li>JSP Expression <code>&lt;%=3D Java  Expression %&gt;</code></li>
+<li>JSP Scriptlet <code>&lt;% Java Statement(s) %&gt;</code></li>
+<li>JSP Directive <code>&lt;%@  page|include ... %&gt;</code></li>
+</ul>
+
+<p>To simplify the access of the HTTP <em>request</em> and <em>response</em=
+> messages, JSP has <em>pre-defined</em> the following variables:</p>
+<ul>
+<li><code>request</code>:&nbsp;corresponds to the HTTP request message.</li=
+>
+<li><code>response</code>: corresponds to the HTTP response message.</li>
+<li><code>out</code>: corresponds to the HTTP response message=E2=80=99s ou=
+tput stream.</li>
+<li>others such as <code>session</code>, <code>page</code>, <code>applicati=
+on</code>, <code>pageContext</code>, which are outside the scope of this tu=
+torial.</li>
+</ul>
+ =20
+<h4>5.1&nbsp;&nbsp;JSP comment <span class=3D"font-code">&lt;%--  comments =
+--%&gt;</span><a id=3D"zz-5.1"></a></h4>
+
+<p>JSP comments <code>&lt;%-- comments --%&gt;</code> are ignored by the JS=
+P engine.&nbsp;For example,</p>
+
+<pre class=3D"color-example">&lt;%-- anything but a closing tag here will b=
+e ignored --&gt;</pre>
+
+<p>Note that HTML comment is <code>&lt;!--  comments --&gt;</code>.&nbsp;JS=
+P expression within the HTML comment will be evaluated.&nbsp;For example,</=
+p>
+
+<pre class=3D"color-example">&lt;!-- HTML comments here <span class=3D"colo=
+r-new">&lt;%=3D  Math.random() %&gt;</span> more comments --&gt;</pre>
+
+<h4>5.2&nbsp;&nbsp;JSP Expression <span class=3D"font-code">&lt;%=3D  Java =
+Expression %&gt;</span><a id=3D"zz-5.2"></a></h4>
+
+<p>JSP Expression can be used to insert a <em>single</em> Java expression d=
+irectly into the response message.&nbsp;This expression will be placed insi=
+de a <code>out.print()</code> method.&nbsp;Hence, the expression will be ev=
+aluated and printed out as part of the response message.&nbsp; Any valid Ja=
+va expression can be used.&nbsp; There is no semi-colon at the end of the e=
+xpression.&nbsp;For examples:</p>
+
+<pre class=3D"color-example">&lt;p&gt;The square root of 5 is <span class=
+=3D"color-new">&lt;%=3D Math.sqrt(5) %&gt;</span>&lt;/p&gt;
+&lt;h5&gt;<span class=3D"color-new">&lt;%=3D item[10] %&gt;</span>&lt;/h5&g=
+t;
+&lt;p&gt;Current time is: <span class=3D"color-new">&lt;%=3D  new java.util=
+.Date() %&gt;</span>&lt;/p&gt;</pre>
+
+<p>The above JSP expressions will be converted to:</p>
+
+<pre class=3D"output">out.write("&lt;p&gt;The square root of 5 is ");
+out.print( <span class=3D"color-new">Math.sqrt(5)</span> );
+out.write("&lt;/p&gt;");
+out.write("&lt;h5&gt;");
+out.print( <span class=3D"color-new">item[10]</span> );
+out.write("&lt;/h5&gt;");
+out.write("&lt;p&gt;Current  time is: ");
+out.print( <span class=3D"color-new">new java.util.Date()</span>  );
+out.write("&lt;/p&gt;");</pre>
+
+<p>You can use the pre-defined variables, such as <code>request</code>, in =
+the expressions.&nbsp;For examples:</p>
+
+<pre class=3D"color-example">&lt;p&gt;You have choose author <span class=3D=
+"color-new">&lt;%=3D request.getParameter("author") %&gt;</span>&lt;/p&gt;
+<span class=3D"color-new">&lt;%=3D request.getRequestURI() %&gt;</span>
+<span class=3D"color-new">&lt;%=3D request.getHeader("Host") %&gt;</span></=
+pre>
+
+<h4>5.3&nbsp;&nbsp;JSP Scriptlet <span class=3D"font-code">&lt;% Java state=
+ment(s) %&gt;</span><a id=3D"zz-5.3"></a></h4>
+
+<p>JSP scriptlets allow you to do more <em>complex operations</em> than ins=
+erting a single Java expression (with the JSP expression).&nbsp;JSP scriptl=
+ets let you insert an arbitrary sequence of valid Java statement(s) into th=
+e <code>service()</code> method of the converted servlet.&nbsp;All the Java=
+  statements in a scriptlet are to be terminated with a semi-colon.&nbsp;Fo=
+r example:</p>
+
+<pre class=3D"color-example"><span class=3D"color-new">&lt;%
+  String author =3D request.getParameter("author");
+  if (author !=3D null &amp;&amp; !author.equals(""))) {=20
+%&gt;</span>
+    &lt;p&gt;You have choose author <span class=3D"color-new">&lt;%=3D auth=
+or %&gt;</span>&lt;/p&gt;
+<span class=3D"color-new">&lt;%
+  }
+%&gt;</span></pre>
+
+<p>In the converted servlet, the above will be inserted into the <code>serv=
+ice()</code> method as follows:</p>
+
+<pre class=3D"output">String author =3D request.getParameter("author");
+if (author !=3D null &amp;&amp; !author.equals(""))) {
+  out.write("&lt;p&gt;You have choose author ");
+  out.print( <span class=3D"color-new">author </span>);
+  out.write("&lt;/p&gt;");
+}</pre>
+
+<p>Notice that the Java codes inside a scriptlet are inserted exactly as th=
+ey are written, and used as the programming logic.&nbsp;The HTML codes are =
+passed to an <code>out.write()</code> method and written out as part of the=
+ response message.</p>
+
+<h4>5.4&nbsp;&nbsp;JSP Directive <span class=3D"font-code">&lt;%@ page|incl=
+ude ... %&gt;</span><a id=3D"zz-5.4"></a></h4>
+
+<p>JSP directives provide instructions to the JSP engine.&nbsp;The syntax o=
+f the JSP directive is:</p>
+
+<pre class=3D"color-syntax">&lt;%@ <em>directive_name</em>
+  <em>attribute1</em>=3D"<em>value1</em>"
+  <em>attribute2</em>=3D"<em>value2</em>"
+  ......
+  <em>attributeN</em>=3D"<em>valueN</em>" %&gt;</pre>
+
+<h5>JSP <span class=3D"font-code">page</span> Directive</h5>
+<p>The "<code>page</code>" directive lets you import classes and customize =
+the page properties.&nbsp;For examples,</p>
+
+<pre class=3D"color-example"><span class=3D"color-comment">&lt;%-- import p=
+ackage java.sql.*  --&gt;</span>
+&lt;%@ page import=3D"java.sql.*" %&gt;
+=20
+<span class=3D"color-comment">&lt;%-- Set the output MIME type  --&gt;</spa=
+n>
+&lt;%@ page contentType=3D"image/gif" %&gt;
+=20
+<span class=3D"color-comment">&lt;%-- Set an information message for getSer=
+vletInfo() method --&gt;</span>
+&lt;%@ page info=3D"Hello-world example" %&gt;</pre>
+
+<h5>JSP <span class=3D"font-code">include</span> Directive</h5>
+   =20
+<p>The "<code>include</code>" directive lets you include another file(s) at=
+ the time when the JSP page is compiled into a servlet.&nbsp;You can includ=
+e any JSP files, or static HTML files. You can use <code>include</code> dir=
+ective to include navigation bar, copyright statement, logo, etc. on every =
+JSP pages.&nbsp;The syntax is:</p>
+
+<pre class=3D"color-syntax">&lt;%@ include file=3D"<em>url</em>" <strong>%&=
+gt;</strong></pre>
+
+<p>For example:</p>
+
+<pre class=3D"color-example">&lt;%@ include file=3D"header.html" %&gt;
+......
+&lt;%@ include file=3D"footer.html" %&gt;</pre>
+
+<h3>6.&nbsp;&nbsp;JSP Database Example<a id=3D"zz-6."></a></h3>
+
+<p>Let's revisit our e-shop, which was created using Java Servlet.</p>
+
+<h5>Database</h5>
+<pre class=3D"color-example">Database: <strong>ebookshop</strong>
+Table: <strong>books</strong>
++-------+----------------------------+---------------+---------+-------+
+| <strong>id  </strong>  | <strong>title</strong>                      | <s=
+trong>author</strong>        | <strong>price</strong>   | <strong>qty  </st=
+rong> |
+| (INT) | (VARCHAR(50))              | (VARCHAR(50)) | (FLOAT) | (INT) |
++-------+----------------------------+---------------+---------+-------+
+| 1001  | Java for dummies           | Tan Ah Teck   | 11.11   | 11    |
+| 1002  | More Java for dummies      | Tan Ah Teck   | 22.22   | 22    |
+| 1003  | More Java for more dummies | Mohammad Ali  | 33.33   | 33    |
+| 1004  | A Cup of Java              | Kumar         | 44.44   | 44    |
+| 1005  | A Teaspoon of Java         | Kevin Jones   | 55.55   | 55    |
++-------+----------------------------+---------------+---------+-------+</p=
+re>
+
+<h5>Querying - "<span class=3D"font-code">query.jsp</span>"</h5>
+<p>Let's create the query page called "<code>query.jsp</code>".</p>
+
+<table class=3D"table-program">
+<colgroup><col class=3D"col-line-number">
+<col class=3D"col-program">
+</colgroup><tbody>
+<tr>
+<td>
+<pre class=3D"text-right">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+</td>
+<td>
+<pre>&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Book Query&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Another E-Bookstore&lt;/h1&gt;
+  &lt;h3&gt;Choose Author(s):&lt;/h3&gt;
+  &lt;form method=3D"get"&gt;
+    &lt;input type=3D"checkbox" name=3D"author" value=3D"Tan Ah Teck"&gt;Ta=
+n
+    &lt;input type=3D"checkbox" name=3D"author" value=3D"Mohd Ali"&gt;Ali
+    &lt;input type=3D"checkbox" name=3D"author" value=3D"Kumar"&gt;Kumar
+    &lt;input type=3D"submit" value=3D"Query"&gt;
+  &lt;/form&gt;
+=20
+  <span class=3D"color-new">&lt;%
+    String[] authors =3D request.getParameterValues("author");
+    if (authors !=3D null) {
+  %&gt;</span>
+  <span class=3D"color-new">&lt;%@ page import =3D "java.sql.*" %&gt;</span=
+>
+  <span class=3D"color-new">&lt;%
+      Connection conn =3D DriverManager.getConnection(
+          "jdbc:mysql://localhost:8888/ebookshop", "myuser", "xxxx"); <span=
+ class=3D"color-comment">// &lt;=3D=3D Check!</span>
+      <span class=3D"color-comment">// Connection conn =3D</span>
+      <span class=3D"color-comment">//    DriverManager.getConnection("jdbc=
+:odbc:eshopODBC");  // Access</span>
+      Statement stmt =3D conn.createStatement();
+=20
+      String sqlStr =3D "SELECT * FROM books WHERE author IN (";
+      sqlStr +=3D "'" + authors[0] + "'";  <span class=3D"color-comment">//=
+ First author</span>
+      for (int i =3D 1; i &lt; authors.length; ++i) {
+         sqlStr +=3D ", '" + authors[i] + "'";  <span class=3D"color-commen=
+t">// Subsequent authors need a leading commas</span>
+      }
+      sqlStr +=3D ") AND qty &gt; 0 ORDER BY author ASC, title ASC";
+=20
+      <span class=3D"color-comment">// for debugging</span>
+      System.out.println("Query statement is " + sqlStr);
+      ResultSet rset =3D stmt.executeQuery(sqlStr);
+  %&gt;</span>
+      &lt;hr&gt;
+      &lt;form method=3D"get" action=3D"order.jsp"&gt;
+        &lt;table border=3D1 cellpadding=3D5&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Order&lt;/th&gt;
+            &lt;th&gt;Author&lt;/th&gt;
+            &lt;th&gt;Title&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+            &lt;th&gt;Qty&lt;/th&gt;
+          &lt;/tr&gt;
+  <span class=3D"color-new">&lt;%
+      while (rset.next()) {
+        int id =3D rset.getInt("id");
+  %&gt;</span>
+          &lt;tr&gt;
+            &lt;td&gt;&lt;input type=3D"checkbox" name=3D"id" value=3D"<spa=
+n class=3D"color-comment">&lt;%=3D id %&gt;</span>"&gt;&lt;/td&gt;
+            &lt;td&gt;<span class=3D"color-new">&lt;%=3D rset.getString("au=
+thor") %&gt;</span>&lt;/td&gt;
+            &lt;td&gt;<span class=3D"color-new">&lt;%=3D rset.getString("ti=
+tle") %&gt;</span>&lt;/td&gt;
+            &lt;td&gt;<span class=3D"color-new">$&lt;%=3D rset.getInt("pric=
+e") %&gt;</span>&lt;/td&gt;
+            &lt;td&gt;<span class=3D"color-new">&lt;%=3D rset.getInt("qty")=
+ %&gt;</span>&lt;/td&gt;
+          &lt;/tr&gt;
+  <span class=3D"color-new">&lt;%
+      }
+  %&gt;</span>
+        &lt;/table&gt;
+        &lt;br&gt;
+        &lt;input type=3D"submit" value=3D"Order"&gt;
+        &lt;input type=3D"reset" value=3D"Clear"&gt;
+      &lt;/form&gt;
+      &lt;a href=3D"<span class=3D"color-new">&lt;%=3D request.getRequestUR=
+I() %&gt;</span>"&gt;&lt;h3&gt;Back&lt;/h3&gt;&lt;/a&gt;
+  <span class=3D"color-new">&lt;%
+      rset.close();
+      stmt.close();
+      conn.close();
+    }
+  %&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h5>Explanations</h5>
+<ol>
+<li>This HTML page has a form with 3 checkboxes.&nbsp;The "<code>name=3Dval=
+ue</code>" pair of the checkboxes is "<code>author=3Dso_and_so</code>".&nbs=
+p;No "<code>action</code>" attribute is specified, hence, it defaulted to c=
+urrent page. The processing script is contained in the <em>same</em> page.<=
+/li>
+
+<li>The method <code>request.getParameter("author")</code> is used to check=
+ if the query parameter "<code>author</code>"  exists.&nbsp; "<code>author<=
+/code>" is absent during the first reference of the page.</li>
+
+<li>The <code>&lt;%@ page  .. %&gt;</code> contains a JSP "<code>page</code=
+>" directive to import the <code>java.sql</code> package.</li>
+
+<li>The scriptlet performs the database query operation.&nbsp;The steps are=
+:
+<ol>
+<li>Establish a database connection via a <code>java.sql.Connection</code> =
+object;</li>
+<li>Allocate a <code>java.sql.Statement</code> object under the <code>Conne=
+ction</code>;</li>
+<li>Prepare a SQL SELECT string;</li>
+<li>Execute the SQL SELECT using <code>executeQuery()</code> method.&nbsp;T=
+he result of query is returned in an object of <code>java.sql.ResultSet</co=
+de>;</li>
+<li>Process the <code>ResultSet</code> row by row via <code>ResultSet.next(=
+)</code>;</li>
+<li>Free resources and close the <code>Connection</code>.</li>
+</ol></li>
+
+<li>The query result is tabulated in a HTML table. Note the mixing of HTML =
+and Java in producing the table.</li>
+</ol>
+ =20
+<p>Notice that JSP carries out the presentation much better and neater than=
+ servlet.&nbsp;The presentation can be changed easily with JSP.&nbsp;The JS=
+P pages can be created and modified using a WYSIWYG web authoring tool and =
+reload to see the effect on the presentation.&nbsp; Whereas, in the case of=
+ servlet, you have to <em>explicitly</em> code all the HTML tags inside the=
+ servlet program and re-compile the program.</p>
+
+<h5>Ordering - "<span class=3D"font-code">order.jsp</span>"</h5>
+
+<p>Let's write the "<code>order.jsp</code>" for processing the order, by up=
+dating the appropriate records in the database.</p>
+
+<table class=3D"table-program">
+<colgroup><col class=3D"col-line-number">
+<col class=3D"col-program">
+</colgroup><tbody>
+<tr>
+<td>
+<pre class=3D"text-right">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre>
+</td>
+<td>
+<pre>&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Order Book&lt;/title&gt;
+&lt;/head&gt;
+=20
+&lt;body&gt;
+  &lt;h1&gt;Another E-Bookstore&lt;/h1&gt;
+  &lt;h2&gt;Thank you for ordering...&lt;/h2&gt;
+=20
+  <span class=3D"color-new">&lt;%
+    String[] ids =3D request.getParameterValues("id");
+    if (ids !=3D null) {
+  %&gt;
+  &lt;%@ page import =3D "java.sql.*" %&gt;
+  &lt;%
+      Connection conn =3D DriverManager.getConnection(
+          "jdbc:mysql://localhost:8888/ebookshop", "myuser", "xxxx"); <span=
+ class=3D"color-comment">// &lt;=3D=3D Check!</span>
+      <span class=3D"color-comment">// Connection conn =3D</span>
+      <span class=3D"color-comment">//    DriverManager.getConnection("jdbc=
+:odbc:eshopODBC");  // Access</span>
+      Statement stmt =3D conn.createStatement();
+      String sqlStr;
+      int recordUpdated;
+      ResultSet rset;
+  %&gt;</span>
+      &lt;table border=3D1 cellpadding=3D3 cellspacing=3D0&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Author&lt;/th&gt;
+          &lt;th&gt;Title&lt;/th&gt;
+          &lt;th&gt;Price&lt;/th&gt;
+          &lt;th&gt;Qty In Stock&lt;/th&gt;
+        &lt;/tr&gt;
+  <span class=3D"color-new">&lt;%
+      for (int i =3D 0; i &lt; ids.length; ++i) {
+        <span class=3D"color-comment">// Subtract the QtyAvailable by one</=
+span>
+        sqlStr =3D "UPDATE books SET qty =3D qty - 1 WHERE id =3D " + ids[i=
+];
+        recordUpdated =3D stmt.executeUpdate(sqlStr);
+        <span class=3D"color-comment">// carry out a query to confirm</span=
+>
+        sqlStr =3D "SELECT * FROM books WHERE id =3D" + ids[i];
+        rset =3D stmt.executeQuery(sqlStr);
+        while (rset.next()) {
+  %&gt;</span>
+          &lt;tr&gt;
+            &lt;td&gt;<span class=3D"color-new">&lt;%=3D rset.getString("au=
+thor") %&gt;</span>&lt;/td&gt;
+            &lt;td&gt;<span class=3D"color-new">&lt;%=3D rset.getString("ti=
+tle") %&gt;</span>&lt;/td&gt;
+            &lt;td&gt;<span class=3D"color-new">$&lt;%=3D rset.getInt("pric=
+e") %&gt;</span>&lt;/td&gt;
+            &lt;td&gt;<span class=3D"color-new">&lt;%=3D rset.getInt("qty")=
+ %&gt;</span>&lt;/td&gt;
+          &lt;/tr&gt;
+  <span class=3D"color-new">&lt;%    }
+        rset.close();
+      }
+      stmt.close();
+      conn.close();
+    }
+  %&gt;</span>
+  &lt;/table&gt;
+  &lt;a href=3D"query.jsp"&gt;&lt;h3&gt;BACK&lt;/h3&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3>7.&nbsp;&nbsp;JSP Exercises<a id=3D"zz-7."></a></h3>
+<p>[TODO]</p>
+
+<p class=3D"references">REFERENCES &amp; RESOURCES</p>
+
+<ol>
+<li>JavaServer Pages Technology @ <a href=3D"http://java.sun.com/products/j=
+sp">http://java.sun.com/products/jsp</a>.</li>
+<li>Java Servlet Technology @ <a href=3D"http://java.sun.com/products/servl=
+et">http://java.sun.com/products/servlet</a>.</li>
+<li>Apache Tomcat @ <a href=3D"http://tomcat.apache.org/">http://tomcat.apa=
+che.org</a>, Apache Software  Foundation.</li>
+<li>The Java EE 5 Tutorial @ <a href=3D"http://java.sun.com/javaee/5/docs/t=
+utorial/doc/">http://java.sun.com/javaee/5/docs/tutorial/doc/</a>.</li>
+<li>Marty Hall, et al., "<em>Core Servlets and JavaServer Pages</em>", vol.=
+1 (2nd eds, 2003) and vol. 2 (2nd eds, 2006), Prentice Hall.</li>
+<li>Java Database Connectivity (JDBC) @ <a href=3D"http://java.sun.com/prod=
+ucts/jdbc">http://java.sun.com/products/jdbc</a>.</li>
+<li>RFC2616 "<em>Hypertext Transfer Protocol HTTP 1.1</em>", World-Wide-Web=
+ Consortium (W3C), June 1999.</li>
+<li>"<em>HTML 4.01 Specification</em>", W3C Recommendation, 24 Dec 1999.</l=
+i>
+</ol>
+
+</div> <!-- End the content-main division -->
+
+<div id=3D"content-footer">
+<p>Latest version tested: Tomcat 7.0.32, JDK 1.7.0_07<br>
+Last modified: October, 2012</p>
+</div>
+
+</div> <!-- End the wrap-inner division -->
+
+<!-- footer filled by JavaScript -->
+<div id=3D"footer" class=3D"header-footer"><p>Feedback, comments, correctio=
+ns, and errata can be sent to Chua Hock-Chuan (ehchua@ntu.edu.sg) &nbsp;&nb=
+sp;|&nbsp;&nbsp; <a href=3D"http://www.ntu.edu.sg/home/ehchua/programming/i=
+ndex.html">HOME</a></p></div>
+
+</div> <!-- End the wrap-outer division -->
+<!-- @@ end change in v1 -->
+
+
+</body></html>
+------MultipartBoundary--WUBJSeyi6cd8QZDKnIfRpyYxbdjNRSNQbjm5f0plmz----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ntu.edu.sg/home/ehchua/programming/css/programming_notes_v1.css
+
+@charset "utf-8";
+
+* { margin: 0px; padding: 0px; }
+
+body { background-color: rgb(202, 251, 237); color: rgb(0, 0, 0); font-fami=
+ly: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", Ubuntu, Tahoma, Arial, Hel=
+vetica, Verdana, sans-serif; font-size: 14px; text-align: justify; line-hei=
+ght: 1.5; }
+
+#wrap-outer { margin: 20px; padding: 0px; }
+
+#wrap-inner { background-color: rgb(255, 255, 255); margin: 0px; border: 1p=
+x solid rgb(221, 221, 221); padding: 25px 15px; box-shadow: rgb(221, 221, 2=
+21) 5px 5px 0px; }
+
+#content-header { margin: 0px; padding: 50px 0px 10px; }
+
+#content-main { margin: 0px; padding: 30px 0px 20px; }
+
+#content-footer { font-family: "Century Gothic", "Segoe UI", Segoe, "Nimbus=
+ Sans L", Ubuntu, Verdana, Tahoma, Arial, Helvetica, sans-serif; font-size:=
+ 13px; text-align: right; color: rgb(192, 80, 77); margin: 30px 0px 0px; pa=
+dding: 0px; border-top: 4px solid rgb(12, 155, 116); }
+
+.header-footer { font-family: "Century Gothic", "Segoe UI", Segoe, "Nimbus =
+Sans L", Ubuntu, Verdana, Tahoma, Arial, Helvetica, sans-serif; color: rgb(=
+192, 80, 77); font-size: 13px; text-align: right; margin: 10px 0px 5px; pad=
+ding: 5px 4px; }
+
+.header-footer a { color: rgb(192, 80, 77); text-decoration: underline; }
+
+.header-footer a:focus, .header-footer a:hover { text-decoration: none; col=
+or: rgb(11, 83, 149); }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Century Gothic", "Trebuchet MS", "Se=
+goe UI", Segoe, "Nimbus Sans L", Ubuntu, Verdana, Tahoma, Arial, Helvetica,=
+ sans-serif; margin: 0px; color: rgb(10, 132, 100); letter-spacing: 1px; li=
+ne-height: 1.2; text-align: left; }
+
+h1 { font-size: 40px; font-weight: 400; padding: 0.2em 0px; }
+
+h2 { font-size: 36px; font-weight: 400; padding: 0.2em 0px; }
+
+h3 { font-size: 22px; border-bottom: thin solid rgb(12, 155, 116); padding:=
+ 1.5em 0px 0.3em; }
+
+h4 { font-family: "Segoe UI", Segoe, "Nimbus Sans L", Ubuntu, Verdana, Taho=
+ma, Arial, Helvetica, sans-serif; font-size: 18px; padding: 1.3em 0px 0.2em=
+; border-bottom: thin dotted rgb(12, 155, 116); }
+
+h5, h6 { font-family: "Segoe UI", Segoe, "Nimbus Sans L", Ubuntu, Verdana, =
+Tahoma, Arial, Helvetica, sans-serif; font-size: 15px; color: rgb(68, 68, 6=
+8); padding: 1.2em 0px 0px; letter-spacing: 1px; }
+
+.line-heading { color: rgb(68, 68, 68); font-size: 15px; font-weight: bold;=
+ letter-spacing: 1px; padding: 0.2em 0px; }
+
+.line-heading-code-new { font-family: Consolas, "DejaVu Sans Mono", "Lucida=
+ Console", "Courier New", Courier, monospace; color: rgb(227, 27, 35); font=
+-size: 15px; font-weight: normal; }
+
+p { margin-top: 0.6em; margin-bottom: 0.4em; }
+
+pre { font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", "Courier=
+ New", Courier, monospace; font-size: 13px; margin: 5px 0px 8px; border: 2p=
+x solid rgb(248, 248, 248); padding: 5px 10px; line-height: 135%; }
+
+code { font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", "Courie=
+r New", Courier, monospace; }
+
+ul { margin: 0.3em 0px 0.2em 1.8em; padding: 0px; list-style-image: url("im=
+ages/BulletSquare.png"); }
+
+ul ul li { list-style-image: url("images/BulletRound.png"); }
+
+ul ul u1 li { list-style-type: circle; list-style-image: none; }
+
+ol { list-style-type: decimal; margin: 0.3em 0px 0.2em 2.5em; padding: 0px;=
+ }
+
+ol ol li { list-style-type: lower-alpha; }
+
+ol ol o1 li { list-style-type: lower-roman; }
+
+li { margin: 0.4em 0px; }
+
+.float-left-ol-ul { overflow: hidden; }
+
+.float-left-li { position: relative; left: 20px; margin-right: 20px; }
+
+a { color: rgb(11, 83, 149); text-decoration: none; }
+
+a:hover, a:focus { color: rgb(192, 80, 77); text-decoration: underline; }
+
+a.references { display: block; width: 30em; font-size: 18px; font-weight: b=
+old; margin: 4em 0px 0px; }
+
+p.references { font-size: 18px; font-weight: bold; margin: 4em 0px 0px; }
+
+.center-block { margin: 10px auto; }
+
+.text-center { text-align: center; }
+
+.text-right { text-align: right; }
+
+.underline { text-decoration: underline; }
+
+.font-code { font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", "=
+Courier New", Courier, monospace; }
+
+.font-code-text { font-family: Consolas, "DejaVu Sans Mono", "Lucida Consol=
+e", "Courier New", Courier, monospace; font-size: 14px; }
+
+.font-code-smaller { font-family: Consolas, "DejaVu Sans Mono", "Lucida Con=
+sole", "Courier New", Courier, monospace; font-size: 13px; }
+
+.font-normal { font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", Ub=
+untu, Tahoma, Arial, Helvetica, Verdana, sans-serif; }
+
+.pre { white-space: pre; }
+
+.color-example { background-color: rgb(215, 236, 211); }
+
+.color-example-light { background-color: rgb(236, 246, 234); }
+
+.color-syntax, .color-command { background-color: rgb(204, 238, 241); }
+
+.color-explanation { background-color: rgb(238, 238, 238); }
+
+.color-comment { color: rgb(0, 153, 0); }
+
+.color-new { color: rgb(227, 27, 35); }
+
+.color-error { color: rgb(255, 0, 153); }
+
+.color-plain { background-color: rgb(255, 255, 255); }
+
+.color-highlight { background-color: rgb(255, 255, 0); }
+
+.color-highlight-new { background-color: rgb(255, 255, 204); }
+
+.output { background-color: rgb(236, 246, 234); border: 2px solid rgb(248, =
+248, 248); padding: 4px 8px; }
+
+.side-note { margin-top: 15px; margin-left: 40px; padding: 3px 8px; backgro=
+und-color: rgb(231, 231, 231); }
+
+img.image-center { display: block; margin: 10px auto; }
+
+img.image-border { border: thin solid rgb(221, 221, 221); }
+
+img.image-float-left { float: left; margin: 8px 15px 15px 0px; border: thin=
+ solid rgb(221, 221, 221); }
+
+img.image-float-right { float: right; margin: 8px 0px 15px 15px; border: th=
+in solid rgb(221, 221, 221); }
+
+.float-clear { clear: both; }
+
+.table-zebra, .table-program { border-collapse: collapse; border: 0px; marg=
+in: 0px auto; padding: 0px; width: 100%; background-color: rgb(231, 240, 24=
+8); text-align: left; vertical-align: top; }
+
+.table-zebra tr > th { color: rgb(255, 255, 255); background-color: rgb(0, =
+157, 217); margin: 0px; border: 2px solid white; padding: 4px 10px; font-si=
+ze: 15px; letter-spacing: 1px; text-align: center; }
+
+.table-zebra tr > td { margin: 0px; border: 2px solid white; padding: 2px 8=
+px; vertical-align: top; }
+
+.table-zebra tr:nth-child(2n+1) > td { background-color: rgb(203, 223, 241)=
+; }
+
+td > pre { font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", "Co=
+urier New", Courier, monospace; font-size: 14px; margin: 0px; border: none;=
+ padding: 2px 0px 5px; line-height: 135%; }
+
+.table-program th { color: rgb(255, 255, 255); background-color: rgb(0, 157=
+, 217); margin: 0px; border: 2px solid white; padding: 4px 10px; font-size:=
+ 15px; letter-spacing: 1px; text-align: center; }
+
+.table-program td { margin: 0px; border: 0px; padding: 0px; }
+
+.table-program td pre { margin: 0px; border: 2px solid rgb(248, 248, 248); =
+padding: 5px 10px; }
+
+.table-program td pre.text-right { text-align: right; }
+
+.col-desc { background-color: rgb(231, 240, 248); }
+
+.col-code, .tr-alt { background-color: rgb(203, 223, 241); }
+
+.col-example { background-color: rgb(238, 238, 238); }
+
+.col-line-number { width: 40px; background-color: rgb(225, 233, 207); }
+
+.col-program { background-color: rgb(240, 244, 233); }
+
+#wrap-toc { display: block; background: none 0px 0px repeat scroll rgb(231,=
+ 246, 239); float: right; width: 230px; z-index: 100; line-height: 1.5; mar=
+gin: 0px 0px 0px 15px; padding: 5px 8px 10px; text-align: left; white-space=
+: nowrap; }
+
+#wrap-toc h5 { letter-spacing: 1px; margin: 0px; text-transform: uppercase;=
+ color: rgb(68, 68, 68); padding: 0.5em 0px; }
+
+a#show-toc { color: rgb(192, 80, 77); text-decoration: none; letter-spacing=
+: 1px; }
+
+#toc { overflow: auto; }
+
+#toc a.toc-H3 { margin-left: 0px; font-size: 15px; }
+
+#toc a.toc-H4 { margin-left: 20px; font-size: 14px; }
+
+#toc a.toc-H5 { margin-left: 40px; font-size: 14px; }
+------MultipartBoundary--WUBJSeyi6cd8QZDKnIfRpyYxbdjNRSNQbjm5f0plmz----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ntu.edu.sg/home/ehchua/programming/css/images/BulletSquare.png
+
+iVBORw0KGgoAAAANSUhEUgAAAAkAAAANAQMAAABBztZFAAAABlBMVEUAAwBjjJzG2b5OAAAAAXRS
+TlMAQObYZgAAABBJREFUCNdjYMAG7FARAwMADXkBNzRuJgIAAAAASUVORK5CYII=
+------MultipartBoundary--WUBJSeyi6cd8QZDKnIfRpyYxbdjNRSNQbjm5f0plmz------
